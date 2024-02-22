@@ -1,7 +1,7 @@
 package shared_entity.message;
 
-import shared_entity.message.message_state.MessageCreated;
 import shared_entity.message.message_state.MessageState;
+import shared_entity.message.message_state.MessageWaiting;
 import shared_entity.user.User;
 
 import javax.swing.*;
@@ -18,10 +18,18 @@ public class Message implements Serializable {
     private Date sentToClient;
 
     public Message() {
-        messageState = new MessageCreated();
+        messageState = new MessageWaiting();
     }
 
-    public void sendMessage() {
-        messageState.sendMessage();
+    public void nextState() {
+        messageState.next(this);
+    }
+
+    public void previousState() {
+        messageState.prev(this);
+    }
+
+    public void printStatus() {
+        messageState.printStatus();
     }
 }
