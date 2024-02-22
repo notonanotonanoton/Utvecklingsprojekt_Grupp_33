@@ -21,6 +21,10 @@ public class Message implements Serializable {
         messageState = new MessageWaiting();
     }
 
+    public void setState(MessageState messageState) {
+        this.messageState = messageState;
+    }
+
     public void nextState() {
         messageState.next(this);
     }

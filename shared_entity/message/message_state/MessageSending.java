@@ -5,16 +5,16 @@ import shared_entity.message.Message;
 public class MessageSending implements MessageState{
     @Override
     public void next(Message message) {
-        //TODO
+        message.setState(new MessageSent());
     }
 
     @Override
     public void prev(Message message) {
-        //TODO
+        message.setState(new MessageWaiting());
     }
 
     @Override
     public void printStatus() {
-        //TODO
+        System.out.println("Message Status: " + this.getClass().getSimpleName());
     }
 }
