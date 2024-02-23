@@ -20,6 +20,9 @@ public class Message implements Serializable {
     public Message() {
         messageState = new MessageWaiting();
     }
+    public Message(String messageText) {
+        this.messageText = messageText;
+    }
 
     public void setState(MessageState messageState) {
         this.messageState = messageState;
@@ -37,5 +40,11 @@ public class Message implements Serializable {
         messageState.printStatus();
     }
 
+    public String getMessageText() {
+        return messageText;
+    }
 
+    public void setMessageText(String messageText) {
+        this.messageText = messageText;
+    }
 }

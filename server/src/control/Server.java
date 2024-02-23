@@ -33,6 +33,7 @@ public class Server extends Thread {
         while (!Thread.interrupted()) {
             try {
                 new ClientLogin(new Client(serverSocket.accept())).start();
+                System.out.println("Server connected with client");
             } catch (IOException ioe) {
                 System.out.println("Server: Client Socket Error");
             }
@@ -53,11 +54,16 @@ public class Server extends Thread {
 
         @Override
         public void run() {
-            try (ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(client.getSocket().getOutputStream()));
-                 ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(client.getSocket().getInputStream()))) {
+            Socket clientSocket = client.getSocket();
+            if (clientSocket != null) {
+                System.out.println("Got socket!!!! Closed?: " + clientSocket.isClosed());
+            } else {
+                System.out.println("blegh");
+            }
+            try (ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));
+                 ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()))) {
                 while (!client.getSocket().isClosed()) {
-                    oos.writeObject(messageList.getFirst());
-                    oos.flush();
+
                 }
             } catch (IOException ioe) {
                 ioe.printStackTrace();
@@ -66,33 +72,34 @@ public class Server extends Thread {
 
         }
     }
+
     private class ClientLogin extends Thread {
         Client client;
 
         private ClientLogin(Client client) {
             this.client = client;
         }
+
         @Override
         public void run() {
             Socket clientSocket = client.getSocket();
-            boolean registering = true;
             try (DataInputStream dsr = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
                  DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()))) {
-                while (registering) {
-                    String username = dsr.readUTF();
-                    User user = registeredUsers.findUser(username);
-                    String respondToClient = "Logging in to user: " + username;
-                    if(user != null) {
-                        new ClientHandler(client, user).start();
-                    }
-                    else {
-                        respondToClient = "Creating new user: " + username;
-                        registeredUsers.addUser(user);
-                        new ClientHandler(client, user).start();
-                    }
-                    dos.writeUTF(respondToClient);
-                    registering = false;
+                System.out.println("Awaiting String read");
+                String username = dsr.readUTF();
+                System.out.println("Read String: " + username);
+                User user = registeredUsers.findUser(username);
+                int respondToClient = 10;
+                if (user != null) {
+                    respondToClient = 11;
+                    System.out.println("Logging in to user: " + username);
+                    new ClientHandler(client, user).start();
+                } else {
+                    System.out.println("Creating new user: " + username);
+                    registeredUsers.addUser(new User(username));
+                    new ClientHandler(client, user).start();
                 }
+                dos.writeInt(respondToClient);
             } catch (IOException ioe) {
                 ioe.printStackTrace();
                 System.out.println("Server: IO Exception");
