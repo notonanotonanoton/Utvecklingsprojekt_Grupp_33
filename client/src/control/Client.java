@@ -39,7 +39,6 @@ public class Client {
         @Override
         public void run() {
             System.out.println("Client active");
-            boolean bool = true;
             if(clientSocket != null) {
                 System.out.println("Got socket!!!! Closed?: " + clientSocket.isClosed());
             } else {
@@ -87,6 +86,11 @@ public class Client {
             } catch (IOException ioe) {
                 ioe.printStackTrace();
                 System.out.println("Client: Login Error");
+            }
+            if(clientSocket != null) {
+                System.out.println("Got socket at the end of login!!!! Closed?: " + clientSocket.isClosed());
+            } else {
+                System.out.println("blegh");
             }
         }
     }
