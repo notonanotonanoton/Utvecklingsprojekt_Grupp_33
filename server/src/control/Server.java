@@ -58,21 +58,21 @@ public class Server extends Thread {
         public void run() {
             Socket clientSocket = client.getSocket();
             System.out.println("Server: Client Handler Started");
-            System.out.println("Server: Is Socket Closed?: " + clientSocket.isClosed());
             try (ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));
                  ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()))) {
-                System.out.println("Server: Is Socket Closed?: " + clientSocket.isClosed());
+                oos.flush(); //required because of buffer
                 while (!clientSocket.isClosed()) {
                     try {
                         System.out.println("Server: Trying to Read Object");
                         Message message = (Message)ois.readObject();
                         System.out.println(message.getMessageText());
+                        oos.writeObject(message);
+                        oos.flush();
                     } catch (ClassNotFoundException cnfe) {
                         System.out.println("Server: Message Type Mismatch");
                     }
-
-
                 }
+                System.out.println("Server: Client Socket Closed");
             } catch (IOException ioe) {
                 ioe.printStackTrace();
                 System.out.println("Server: IO Exception");

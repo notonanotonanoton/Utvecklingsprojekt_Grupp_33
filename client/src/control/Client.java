@@ -53,6 +53,7 @@ public class Client {
             System.out.println("Client active");
             try {
                 oos = new ObjectOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));
+                oos.flush(); //required because of buffer
                 ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()));
                 System.out.println("Client active, test sending message");
                 sendMessageToServer("Hej hej!", null); //TODO remove
@@ -64,7 +65,6 @@ public class Client {
                     } catch (ClassNotFoundException cnfe) {
                         System.out.println("Client: Message Type Mismatch");
                     }
-
                 }
             } catch (IOException ioe) {
                 ioe.printStackTrace();
