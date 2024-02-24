@@ -13,13 +13,15 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Server extends Thread {
+    private ServerSocket serverLoginSocket;
     private ServerSocket serverSocket;
     private Clients activeClients;
     private RegisteredUsers registeredUsers;
 
-    public Server(int port) {
+    public Server(int port, int loginPort) {
         try {
             serverSocket = new ServerSocket(port);
+            serverLoginSocket = new ServerSocket(loginPort);
         } catch (IOException ioe) {
             System.out.println("Server: Port Error");
         }
@@ -32,7 +34,7 @@ public class Server extends Thread {
     public void run() {
         while (!Thread.interrupted()) {
             try {
-                new ClientLogin(new Client(serverSocket.accept())).start();
+                new ClientLogin(new Client(serverLoginSocket.accept())).start();
                 System.out.println("Server connected with client");
             } catch (IOException ioe) {
                 System.out.println("Server: Client Socket Error");
@@ -55,14 +57,20 @@ public class Server extends Thread {
         @Override
         public void run() {
             Socket clientSocket = client.getSocket();
-            if (clientSocket != null) {
-                System.out.println("Got socket!!!! Closed?: " + clientSocket.isClosed());
-            } else {
-                System.out.println("blegh");
-            }
+            System.out.println("Server: Client Handler Started");
+            System.out.println("Server: Is Socket Closed?: " + clientSocket.isClosed());
             try (ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));
                  ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()))) {
-                while (!client.getSocket().isClosed()) {
+                System.out.println("Server: Is Socket Closed?: " + clientSocket.isClosed());
+                while (!clientSocket.isClosed()) {
+                    try {
+                        System.out.println("Server: Trying to Read Object");
+                        Message message = (Message)ois.readObject();
+                        System.out.println(message.getMessageText());
+                    } catch (ClassNotFoundException cnfe) {
+                        System.out.println("Server: Message Type Mismatch");
+                    }
+
 
                 }
             } catch (IOException ioe) {
@@ -89,17 +97,19 @@ public class Server extends Thread {
                 String username = dsr.readUTF();
                 System.out.println("Read String: " + username);
                 User user = registeredUsers.findUser(username);
-                int respondToClient = 10;
+                int responseToClient = 10;
                 if (user != null) {
-                    respondToClient = 11;
+                    responseToClient = 11;
                     System.out.println("Logging in to user: " + username);
-                    new ClientHandler(client, user).start();
                 } else {
                     System.out.println("Creating new user: " + username);
                     registeredUsers.addUser(new User(username));
-                    new ClientHandler(client, user).start();
                 }
-                dos.writeInt(respondToClient);
+                dos.writeInt(responseToClient);
+                dos.flush();
+                System.out.println("Wrote response to client");
+                new ClientHandler(new Client(serverSocket.accept()), user).start();
+                System.out.println("Established new connection");
             } catch (IOException ioe) {
                 ioe.printStackTrace();
                 System.out.println("Server: IO Exception");
