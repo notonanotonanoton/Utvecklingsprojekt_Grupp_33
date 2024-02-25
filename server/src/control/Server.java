@@ -1,70 +1,58 @@
 package control;
 
-import entity.Client;
-import entity.Clients;
+import entity.ClientConnection;
+import entity.ActiveClients;
 import entity.RegisteredUsers;
 import shared_entity.message.Message;
 import shared_entity.user.User;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Server extends Thread {
-    private ServerSocket serverLoginSocket;
+public class Server {
     private ServerSocket serverSocket;
-    private Clients activeClients;
+    private ActiveClients activeClients;
     private RegisteredUsers registeredUsers;
 
-    public Server(int port, int loginPort) {
-        try {
-            serverSocket = new ServerSocket(port);
-            serverLoginSocket = new ServerSocket(loginPort);
-        } catch (IOException ioe) {
-            System.out.println("Server: Port Error");
-        }
-        activeClients = new Clients();
-        registeredUsers = new RegisteredUsers(); //TODO do not create new, read from file instead
-        start();
+    public Server(ServerSocket serverSocket, RegisteredUsers registeredUsers) {
+        activeClients = ActiveClients.getInstance();
+        registeredUsers = registeredUsers; //TODO read from file instead
     }
 
-    @Override
-    public void run() {
-        while (!Thread.interrupted()) {
-            try {
-                new ClientLogin(new Client(serverLoginSocket.accept())).start();
-                System.out.println("Server connected with client");
-            } catch (IOException ioe) {
-                System.out.println("Server: Client Socket Error");
-            }
-        }
+    public void connectClient(User user) {
+        new ClientHandler(user).start();
     }
 
-    //TODO functionality undefined
     private class ClientHandler extends Thread {
-        Client client;
         User user;
+        ClientConnection clientConnection;
+        Socket clientSocket;
+        ObjectOutputStream oos;
+        ObjectInputStream ois;
         List<Message> messageList;
 
-        private ClientHandler(Client client, User user) {
-            this.client = client;
+        private ClientHandler(User user) {
             this.user = user;
+            this.clientConnection = activeClients.get(user);
+            this.clientSocket = clientConnection.getSocket();
+            this.oos = clientConnection.getOutputStream();
+            this.ois = clientConnection.getInputStream();
             messageList = new LinkedList<>();
         }
 
         @Override
         public void run() {
-            Socket clientSocket = client.getSocket();
             System.out.println("Server: Client Handler Started");
-            try (ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));
-                 ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()))) {
-                oos.flush(); //required because of buffer
+            try {
                 while (!clientSocket.isClosed()) {
                     try {
                         System.out.println("Server: Trying to Read Object");
-                        Message message = (Message)ois.readObject();
+                        Message message = (Message) ois.readObject();
                         System.out.println(message.getMessageText());
                         oos.writeObject(message);
                         oos.flush();
@@ -78,43 +66,6 @@ public class Server extends Thread {
                 System.out.println("Server: IO Exception");
             }
 
-        }
-    }
-
-    private class ClientLogin extends Thread {
-        Client client;
-
-        private ClientLogin(Client client) {
-            this.client = client;
-        }
-
-        @Override
-        public void run() {
-            Socket clientSocket = client.getSocket();
-            try (DataInputStream dsr = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
-                 DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()))) {
-                System.out.println("Awaiting String read");
-                String username = dsr.readUTF();
-                System.out.println("Read String: " + username);
-                User user = registeredUsers.findUser(username);
-                int responseToClient = 10;
-                if (user != null) {
-                    responseToClient = 11;
-                    System.out.println("Logging in to user: " + username);
-                } else {
-                    System.out.println("Creating new user: " + username);
-                    user = new User(username);
-                    registeredUsers.addUser(user);
-                }
-                dos.writeInt(responseToClient);
-                dos.flush();
-                System.out.println("Wrote response to client");
-                new ClientHandler(new Client(serverSocket.accept()), user).start();
-                System.out.println("Established new connection");
-            } catch (IOException ioe) {
-                ioe.printStackTrace();
-                System.out.println("Server: IO Exception");
-            }
         }
     }
 }
