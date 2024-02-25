@@ -103,7 +103,8 @@ public class Server extends Thread {
                     System.out.println("Logging in to user: " + username);
                 } else {
                     System.out.println("Creating new user: " + username);
-                    registeredUsers.addUser(new User(username));
+                    user = new User(username);
+                    registeredUsers.addUser(user);
                 }
                 dos.writeInt(responseToClient);
                 dos.flush();
