@@ -7,29 +7,16 @@ import java.io.*;
 import java.net.Socket;
 
 public class Client {
-    private String ip;
-    private int port;
-    private int loginPort;
     private String userName;
     private Socket clientSocket;
     ObjectInputStream ois;
     ObjectOutputStream oos;
 
-    //TODO remove tempUsers
-    public Client(String ip, int port, int loginPort, String tempUser) {
-        this.ip = ip;
-        this.port = port;
-        this.loginPort = loginPort;
-        this.userName = tempUser;
-        new LoginClient().start();
-    }
-
-    public void establishConnectionToServer(int port) {
-        try {
-            clientSocket = new Socket(ip, port);
-        } catch (IOException ioe) {
-            System.out.println("Client: Host Error");
-        }
+    public Client(Socket clientSocket, ObjectOutputStream oos, ObjectInputStream ois) {
+        this.clientSocket = clientSocket;
+        this.oos = oos;
+        this.ois = ois;
+        new ActiveClient().start();
     }
 
     public void sendMessageToServer(String messageBody, ImageIcon messageIcon) {
@@ -49,16 +36,11 @@ public class Client {
 
         @Override
         public void run() {
-            establishConnectionToServer(port);
             System.out.println("Client active");
             try {
-                oos = new ObjectOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));
-                oos.flush(); //required because of buffer
-                ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()));
                 System.out.println("Client active, test sending message");
-                sendMessageToServer("Hej hej!", null); //TODO remove
+                sendMessageToServer("Hej hej!", null); //TODO remove test
                 while (!clientSocket.isClosed()) {
-                    //TODO
                     try {
                         Message message = ((Message) ois.readObject());
                         System.out.println(message.getMessageText());
@@ -69,29 +51,6 @@ public class Client {
             } catch (IOException ioe) {
                 ioe.printStackTrace();
                 System.out.println("Client: Error");
-            }
-        }
-    }
-
-    private class LoginClient extends Thread {
-        @Override
-        public void run() {
-            establishConnectionToServer(loginPort);
-            try (DataInputStream dis = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
-                 DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()))) {
-                dos.writeUTF("GroundZeroGreta");
-                dos.flush();
-                int response = dis.readInt();
-                System.out.println("Server Response: " + response);
-                if (response >= 10) {
-                    clientSocket.close();
-                    new ActiveClient().start();
-                } else {
-                    System.out.println("Client: Code Mismatch");
-                }
-            } catch (IOException ioe) {
-                ioe.printStackTrace();
-                System.out.println("Client: Login Error");
             }
         }
     }
