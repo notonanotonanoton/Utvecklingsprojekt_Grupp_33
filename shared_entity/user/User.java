@@ -55,4 +55,9 @@ public class User implements Serializable {
     public void addContact(User user) {
         contacts.add(user);
     }
+
+    @Override
+    public String toString() {
+        return "Username: " + userName;
+    }
 }

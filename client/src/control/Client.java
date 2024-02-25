@@ -21,7 +21,13 @@ public class Client {
         this.port = port;
         this.loginPort = loginPort;
         this.userName = tempUser;
-        new LoginClient().start();
+        LoginClient loginClient = new LoginClient();
+        loginClient.start();
+        try {
+            loginClient.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void establishConnectionToServer(int port) {
@@ -56,7 +62,7 @@ public class Client {
                 oos.flush(); //required because of buffer
                 ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()));
                 System.out.println("Client active, test sending message");
-                sendMessageToServer("Hej hej!", null); //TODO remove
+                //sendMessageToServer("Hej hej!", null); //TODO remove
                 while (!clientSocket.isClosed()) {
                     //TODO
                     try {
@@ -79,7 +85,7 @@ public class Client {
             establishConnectionToServer(loginPort);
             try (DataInputStream dis = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
                  DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()))) {
-                dos.writeUTF("GroundZeroGreta");
+                dos.writeUTF(userName);
                 dos.flush();
                 int response = dis.readInt();
                 System.out.println("Server Response: " + response);

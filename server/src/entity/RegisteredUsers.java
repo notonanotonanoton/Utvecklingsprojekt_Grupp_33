@@ -4,6 +4,7 @@ import shared_entity.user.User;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class RegisteredUsers {
@@ -16,10 +17,11 @@ public class RegisteredUsers {
     }
 
     public User findUser(String username) {
-
-        for(User user : userList) {
-            if(user.equals(username));
-            return user;
+        System.out.println(userList);
+        for (User user : userList) {
+            if (user.equals(username)) {
+                return user;
+            }
         }
         return null;
     }
