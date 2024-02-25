@@ -5,20 +5,22 @@ import shared_entity.user.User;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 public class UnsentMessages {
-    private HashMap<User, ArrayList<Message>> unsentMessages = new HashMap<>();
+    private HashMap<User, LinkedList<Message>> unsentMessages = new HashMap<>();
 
     public synchronized void put(User user,Message message) {
-        ArrayList<Message> userMessages = unsentMessages.get(user);
+        LinkedList<Message> userMessages = unsentMessages.get(user);
         if (userMessages == null) {
-            userMessages = new ArrayList<>();
+            userMessages = new LinkedList<>();
             unsentMessages.put(user, userMessages);
         }
         userMessages.add(message);
     }
 
-    public synchronized ArrayList<Message> get(User user) {
+    public synchronized LinkedList<Message> get(User user) {
         return unsentMessages.get(user); // kan returnerna null
     }
 }

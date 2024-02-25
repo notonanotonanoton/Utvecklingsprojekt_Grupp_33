@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class RegisteredUsers {
-    private List<User> userList;
+    private ArrayList<User> userList;
     private final static String FILE_NAME = "users.dat";
 
     public RegisteredUsers() {
@@ -42,7 +42,7 @@ public class RegisteredUsers {
 
     private void loadUsersFromFile() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
-            userList = (List<User>) in.readObject();
+            userList = (ArrayList<User>) in.readObject(); //does it have to be List?
         } catch (IOException e) {
             System.out.println("IOException, failed to load users from file - " + e.getMessage());
             e.printStackTrace();
