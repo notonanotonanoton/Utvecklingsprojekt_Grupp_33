@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//TODO make singleton
 public class RegisteredUsers {
     private ArrayList<User> userList;
     private final static String FILE_NAME = "users.dat";
