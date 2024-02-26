@@ -7,10 +7,9 @@ import java.io.*;
 import java.net.Socket;
 
 public class Client {
-    private String userName;
     private Socket clientSocket;
-    ObjectInputStream ois;
-    ObjectOutputStream oos;
+    private ObjectOutputStream oos;
+    private ObjectInputStream ois;
 
     public Client(Socket clientSocket, ObjectOutputStream oos, ObjectInputStream ois) {
         this.clientSocket = clientSocket;
@@ -19,9 +18,9 @@ public class Client {
         new ActiveClient().start();
     }
 
-    public void sendMessageToServer(String messageBody, ImageIcon messageIcon) {
-        System.out.println("Message Text: " + messageBody);
-        Message message = new Message(messageBody);
+    public void sendMessageToServer(String messageText, ImageIcon messageImage) {
+        System.out.println("Message Text: " + messageText);
+        Message message = new Message(messageText);
         try {
             oos.writeObject(message);
             oos.flush();

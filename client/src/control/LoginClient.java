@@ -54,4 +54,5 @@ public class LoginClient {
     private String enterDetails() {
         return userName;
     }
+
 }
