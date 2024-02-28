@@ -57,4 +57,8 @@ public class Message implements Serializable {
     public void setMessageText(String messageText) {
         this.messageText = messageText;
     }
+
+    public List<User> getReceivers() {
+        return receivers;
+    }
 }
