@@ -1,5 +1,7 @@
 package entity;
 
+import control.Server;
+
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
@@ -8,6 +10,7 @@ public class ClientConnection {
     private Socket socket;
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
+    private Server.ClientHandler clientHandler;
 
     public ClientConnection(Socket socket) {
         this.socket = socket;
@@ -47,5 +50,12 @@ public class ClientConnection {
 
     public void setInputStream(ObjectInputStream ois) {
         this.ois = ois;
+    }
+
+    public void addThread(Server.ClientHandler clientHandler) {
+        this.clientHandler = clientHandler;
+    }
+    public Server.ClientHandler getThread() {
+        return clientHandler;
     }
 }
