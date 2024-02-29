@@ -31,7 +31,7 @@ public class RegisteredUsers {
         userList.addLast(user);
     }
 
-    private void saveUsersToFile() {
+    public void saveUsersToFile() {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             out.writeObject(userList);
             System.out.println("Users saved to file!");
@@ -41,7 +41,7 @@ public class RegisteredUsers {
         }
     }
 
-    private void loadUsersFromFile() {
+    public void loadUsersFromFile() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
             userList = (ArrayList<User>) in.readObject(); //does it have to be List?
         } catch (IOException e) {

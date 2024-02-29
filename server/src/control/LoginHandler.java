@@ -1,7 +1,8 @@
 package control;
 
+import boundary.LoginBoundary;
 import entity.ClientConnection;
-import entity.ActiveClients;
+import entity.ClientConnectionList;
 import entity.RegisteredUsers;
 import shared_entity.user.User;
 
@@ -12,13 +13,13 @@ import java.net.Socket;
 public class LoginHandler extends Thread {
     private ServerSocket serverSocket;
     private RegisteredUsers registeredUsers;
-    private ActiveClients activeClients;
+    private ClientConnectionList clientConnectionList;
     private Server server;
 
     public LoginHandler(ServerSocket serverSocket, Server server, RegisteredUsers registeredUsers) {
         this.serverSocket = serverSocket;
         this.registeredUsers = registeredUsers; //TODO read from file instead
-        activeClients = ActiveClients.getInstance();
+        clientConnectionList = ClientConnectionList.getInstance();
         this.server = server;
         start();
     }
@@ -27,7 +28,7 @@ public class LoginHandler extends Thread {
     public void run() {
         while (!Thread.interrupted()) {
             try {
-                new ClientLogin(serverSocket.accept()).start();
+                new ClientLogin(serverSocket.accept());
                 System.out.println("Server connected with client");
             } catch (IOException ioe) {
                 System.out.println("Server: Client Socket Error");
@@ -36,46 +37,52 @@ public class LoginHandler extends Thread {
     }
 
 
-    private class ClientLogin extends Thread {
+    public class ClientLogin extends Thread {
         Socket clientSocket;
         User user;
+        ObjectOutputStream oos;
+        ObjectInputStream ois;
+        ClientConnection clientConnection;
+        LoginBoundary loginBoundary;
 
-        private ClientLogin(Socket clientSocket) {
+        public ClientLogin(Socket clientSocket) {
             this.clientSocket = clientSocket;
+            try {
+                oos = new ObjectOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));
+                oos.flush(); //required because of buffer
+                ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()));
+                clientConnection = new ClientConnection(clientSocket, oos, ois);
+                loginBoundary = new LoginBoundary(this, oos, ois);
+            } catch (IOException ioe) {
+                ioe.printStackTrace();
+                System.out.println("Login Server: Initialization Error");
+            }
         }
-
 
         @Override
         public void run() {
-            try {
-                ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));
-                oos.flush(); //required because of buffer
-                ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()));
-                ClientConnection clientConnection = new ClientConnection(clientSocket, oos, ois);
-                System.out.println("Awaiting String read");
-                String username = ois.readUTF();
-                System.out.println("Read String: " + username);
-                user = registeredUsers.findUser(username);
-                int responseToClient = 10;
-                if (user != null) {
-                    responseToClient = 11;
-                    System.out.println("Logging in to user: " + username);
-                } else {
-                    System.out.println("Creating new user: " + username);
-                    user = new User(username);
-                    registeredUsers.addUser(user);
-                }
-                activeClients.put(user, clientConnection);
-                System.out.println("Added user and client to ActiveClients");
-                oos.writeInt(responseToClient);
-                oos.flush();
-                System.out.println("Wrote response to client");
-                server.connectClient(user);
-            } catch (IOException ioe) {
-                activeClients.removeClient(user);
-                ioe.printStackTrace();
-                System.out.println("Server: IO Exception, Login Aborted");
+            while(!Thread.interrupted()) {
+                //keep alive during login
             }
+            System.out.println("Login Server: Login Thread Closing");
+        }
+
+        public void loginUser(String username) {
+            user = registeredUsers.findUser(username);
+            int responseToClient = 10;
+            if (user != null) {
+                responseToClient = 11;
+                System.out.println("Logging in to user: " + username);
+            } else {
+                System.out.println("Creating new user: " + username);
+                user = new User(username);
+                registeredUsers.addUser(user);
+            }
+            clientConnectionList.put(user, clientConnection);
+            loginBoundary.writeResponseToClient(responseToClient);
+            System.out.println("Added user and client to ClientConnectionList");
+            server.connectClient(user);
+            interrupt();
         }
     }
 }

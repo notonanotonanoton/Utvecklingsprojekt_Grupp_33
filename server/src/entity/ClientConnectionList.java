@@ -5,17 +5,17 @@ import shared_entity.user.User;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public final class ActiveClients {
-    private static ActiveClients INSTANCE;
+public final class ClientConnectionList {
+    private static ClientConnectionList INSTANCE;
     private HashMap<User, ClientConnection> clients = new HashMap<>();
 
-    private ActiveClients() {
+    private ClientConnectionList() {
 
     }
 
-    public synchronized static ActiveClients getInstance() {
+    public synchronized static ClientConnectionList getInstance() {
         if(INSTANCE == null) {
-            INSTANCE = new ActiveClients();
+            INSTANCE = new ClientConnectionList();
         }
         return INSTANCE;
     }
