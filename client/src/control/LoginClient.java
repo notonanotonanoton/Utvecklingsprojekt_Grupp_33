@@ -23,8 +23,10 @@ public class LoginClient {
         String username = enterDetails();
         connectToServer();
         try {
+            System.out.println("writing username");
             oos.writeUTF(username);
             oos.flush();
+            System.out.println("waiting for response");
             int response = ois.readInt();
             System.out.println("Server Response: " + response);
             if (response >= 10) {
