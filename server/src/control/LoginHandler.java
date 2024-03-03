@@ -37,52 +37,49 @@ public class LoginHandler extends Thread {
     }
 
 
-    public class ClientLogin extends Thread {
-        Socket clientSocket;
-        User user;
-        ObjectOutputStream oos;
-        ObjectInputStream ois;
-        ClientConnection clientConnection;
-        LoginBoundary loginBoundary;
+    public class ClientLogin {
+        private User user;
+        private ClientConnection clientConnection;
+        private LoginBoundary loginBoundary;
 
         public ClientLogin(Socket clientSocket) {
-            this.clientSocket = clientSocket;
             try {
-                oos = new ObjectOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));
+                ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));
                 oos.flush(); //required because of buffer
-                ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()));
+                ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()));
                 clientConnection = new ClientConnection(clientSocket, oos, ois);
                 loginBoundary = new LoginBoundary(this, oos, ois);
             } catch (IOException ioe) {
                 ioe.printStackTrace();
                 System.out.println("Login Server: Initialization Error");
             }
+            loginUser();
         }
 
-        @Override
-        public void run() {
-            while(!Thread.interrupted()) {
-                //keep alive during login
-            }
-            System.out.println("Login Server: Login Thread Closing");
-        }
-
-        public void loginUser(String username) {
-            user = registeredUsers.findUser(username);
+        public void loginUser() {
             int responseToClient = 10;
+            String username = loginBoundary.readUsernameFromClient();
+            System.out.println("Username: " + username + " was put in");
+            while (username.length() <3 && username.length() >18 && !username.matches("^[a-zA-Z0-9]+")) {
+                System.out.println("Invalid username");
+                loginBoundary.writeResponseToClient(responseToClient);
+                username = loginBoundary.readUsernameFromClient();
+            }
+            user = registeredUsers.findUser(username);
             if (user != null) {
                 responseToClient = 11;
                 System.out.println("Logging in to user: " + username);
             } else {
+                responseToClient = 12;
                 System.out.println("Creating new user: " + username);
                 user = new User(username);
                 registeredUsers.addUser(user);
             }
             clientConnectionList.put(user, clientConnection);
+            server.connectClient(user, clientConnection);
+            System.out.println("Connected client to main server");
             loginBoundary.writeResponseToClient(responseToClient);
             System.out.println("Added user and client to ClientConnectionList");
-            server.connectClient(user);
-            interrupt();
         }
     }
 }

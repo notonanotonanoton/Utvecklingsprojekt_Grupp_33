@@ -22,12 +22,12 @@ public class Server {
 
     public Server(ServerSocket serverSocket, RegisteredUsers registeredUsers) {
         clientConnectionList = ClientConnectionList.getInstance();
-        //unsentMessage = unsentMessages.getInstance(); //TODO
+        //unsentMessages = unsentMessages.getInstance(); //TODO
         registeredUsers = registeredUsers; //TODO read from file instead
     }
 
-    public void connectClient(User user) {
-        new ClientHandler(user).start();
+    public void connectClient(User user, ClientConnection clientConnection) {
+        new ClientHandler(user, clientConnection).start();
     }
 
     //TODO doesn't work yet
@@ -46,19 +46,16 @@ public class Server {
         private User user;
         private ClientConnection clientConnection;
         private Socket clientSocket;
-        private ObjectOutputStream oos;
-        private ObjectInputStream ois;
         private LinkedBlockingQueue<Message> messageList;
         private ServerBoundary serverBoundary;
 
-        public ClientHandler(User user) {
+        public ClientHandler(User user, ClientConnection clientConnection) {
             this.user = user;
-            this.clientConnection = clientConnectionList.get(user);
+            this.clientConnection = clientConnection;
             clientConnection.addThread(this);
             this.clientSocket = clientConnection.getSocket();
-            this.oos = clientConnection.getOutputStream();
-            this.ois = clientConnection.getInputStream();
-            this.serverBoundary = new ServerBoundary(Server.this, oos, ois);
+            this.serverBoundary = new ServerBoundary(Server.this,
+                    clientConnection.getOutputStream(), clientConnection.getInputStream());
             messageList = new LinkedBlockingQueue<Message>();
         }
 
@@ -77,13 +74,14 @@ public class Server {
 
         public void addMessageToHandlerList(Message message) {
             try {
-                messageList.put(message); //TODO not fully implemented, might work?
+                messageList.put(message);
             } catch (InterruptedException ie) {
                 //thread waiting to put Messages
             }
 
         }
 
+        //TODO solution to fix redundancy?
         public Message getMessageFromHandlerList() {
             Message message = new Message();
             try {
