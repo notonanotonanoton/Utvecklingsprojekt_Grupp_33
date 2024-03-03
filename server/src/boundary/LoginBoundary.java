@@ -6,16 +6,15 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-public class LoginBoundary extends Thread {
-    LoginHandler.ClientLogin clientLogin;
-    ObjectOutputStream oos;
-    ObjectInputStream ois;
+public class LoginBoundary {
+    private LoginHandler.ClientLogin clientLogin;
+    private ObjectOutputStream oos;
+    private ObjectInputStream ois;
 
-    public LoginBoundary(LoginHandler.ClientLogin clientLogin, ObjectOutputStream oos, ObjectInputStream ois) throws IOException {
+    public LoginBoundary(LoginHandler.ClientLogin clientLogin, ObjectOutputStream oos, ObjectInputStream ois) {
         this.clientLogin = clientLogin;
         this.oos = oos;
         this.ois = ois;
-        start();
     }
 
     public void writeResponseToClient(int responseNbr) {
@@ -28,16 +27,17 @@ public class LoginBoundary extends Thread {
         }
     }
 
-    @Override
-    public void run() {
+    public String readUsernameFromClient() {
+        String username = "";
         try {
             System.out.println("Awaiting String read");
-            String username = ois.readUTF();
+            username = ois.readUTF();
             System.out.println("Read String: " + username);
-            clientLogin.loginUser(username);
         } catch (IOException ioe) {
             ioe.printStackTrace();
             System.out.println("Server Login Boundary: Read IO Exception");
+        } finally {
+            return username;
         }
     }
 }
