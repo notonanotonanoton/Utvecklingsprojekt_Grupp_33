@@ -38,11 +38,6 @@ public class ServerBoundary extends Thread {
         }
     }
 
-    public void addMessageToHandlerList(Message message) {
-        server.sendMessageToHandler(message);
-
-    }
-
     public void writeMessageToClient(Message message) {
         try {
             oos.writeObject(message);

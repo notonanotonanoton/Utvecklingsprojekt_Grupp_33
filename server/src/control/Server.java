@@ -56,7 +56,7 @@ public class Server {
             this.clientSocket = clientConnection.getSocket();
             this.serverBoundary = new ServerBoundary(Server.this,
                     clientConnection.getOutputStream(), clientConnection.getInputStream());
-            messageList = new LinkedBlockingQueue<Message>();
+            messageList = new LinkedBlockingQueue<>();
         }
 
         @Override
@@ -81,7 +81,7 @@ public class Server {
 
         }
 
-        //TODO solution to fix redundancy?
+        //TODO solution to fix redundancy? is this going to be used?
         public Message getMessageFromHandlerList() {
             Message message = new Message();
             try {

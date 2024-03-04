@@ -25,6 +25,7 @@ public class LoginClient {
             oos.flush(); //required because of buffer
             ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()));
         } catch (IOException ioe) {
+            ioe.printStackTrace();
             System.out.println("Client: Server Connection Failed");
         }
         this.loginView = new LoginView(this, oos, ois);

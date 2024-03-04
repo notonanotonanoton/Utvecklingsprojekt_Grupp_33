@@ -60,7 +60,8 @@ public class LoginHandler extends Thread {
             int responseToClient = 10;
             String username = loginBoundary.readUsernameFromClient();
             System.out.println("Username: " + username + " was put in");
-            while (username.length() <3 && username.length() >18 && !username.matches("^[a-zA-Z0-9]+")) {
+            //TODO currently looping infinitely if this doesn't pass because Client automatically inputs same name
+            while (!(username.length() > 3 && username.length() < 18 && username.matches("^[a-zA-Z0-9]+"))) {
                 System.out.println("Invalid username");
                 loginBoundary.writeResponseToClient(responseToClient);
                 username = loginBoundary.readUsernameFromClient();
