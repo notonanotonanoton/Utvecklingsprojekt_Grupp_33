@@ -42,4 +42,24 @@ public class Message implements Serializable {
     public List<User> getReceivers() {
         return receivers;
     }
+
+    public void setReceivers(List<User> receivers) {
+        this.receivers = receivers;
+    }
+
+    public User getSender() {
+        return sender;
+    }
+
+    public void setSender(User sender) {
+        this.sender = sender;
+    }
+
+    public ImageIcon getMessageImage() {
+        return messageImage;
+    }
+
+    public void setMessageImage(ImageIcon messageImage) {
+        this.messageImage = messageImage;
+    }
 }

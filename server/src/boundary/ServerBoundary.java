@@ -40,6 +40,7 @@ public class ServerBoundary extends Thread {
 
     public void writeMessageToClient(Message message) {
         try {
+            System.out.println("writing message to client");
             oos.writeObject(message);
             oos.flush();
         } catch (IOException io) {

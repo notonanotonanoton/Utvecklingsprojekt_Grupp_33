@@ -4,6 +4,7 @@ import boundary.LoginBoundary;
 import entity.ClientConnection;
 import entity.ClientConnectionList;
 import entity.RegisteredUsers;
+import shared_entity.message.LoginMessage;
 import shared_entity.user.User;
 
 import java.io.*;
@@ -59,7 +60,7 @@ public class LoginHandler extends Thread {
         public void loginUser() {
             int responseToClient = 10;
             String username = loginBoundary.readUsernameFromClient();
-            System.out.println("Username: " + username + " was put in");
+            System.out.println("Username: " + username + " was put in from user");
             //TODO currently looping infinitely if this doesn't pass because Client automatically inputs same name
             while (!(username.length() > 3 && username.length() < 18 && username.matches("^[a-zA-Z0-9]+"))) {
                 System.out.println("Invalid username");
@@ -76,11 +77,13 @@ public class LoginHandler extends Thread {
                 user = new User(username);
                 registeredUsers.addUser(user);
             }
-            clientConnectionList.put(user, clientConnection);
+            loginBoundary.writeResponseToClient(responseToClient);
+
+            LoginMessage loginMessage = new LoginMessage(user);
+            loginBoundary.writeUserMessageToClient(loginMessage);
+
             server.connectClient(user, clientConnection);
             System.out.println("Connected client to main server");
-            loginBoundary.writeResponseToClient(responseToClient);
-            System.out.println("Added user and client to ClientConnectionList");
         }
     }
 }

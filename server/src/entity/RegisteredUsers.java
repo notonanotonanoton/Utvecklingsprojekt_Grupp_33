@@ -18,7 +18,7 @@ public class RegisteredUsers {
     }
 
     public User findUser(String username) {
-        System.out.println(userList);
+        System.out.println("Registered Users Object: Pre-existing users: " + userList);
         for (User user : userList) {
             if (user.equals(username)) {
                 return user;

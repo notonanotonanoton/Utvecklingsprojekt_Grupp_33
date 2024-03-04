@@ -1,11 +1,15 @@
 package control;
 
 import boundary.LoginView;
+import shared_entity.message.LoginMessage;
+import shared_entity.message.Message;
+import shared_entity.user.User;
 
 import java.io.*;
 import java.net.Socket;
 
-public class LoginClient {
+//TODO should not extend Thread!!! only for message send test!!!
+public class LoginClient extends Thread {
     private String ip;
     private int port;
     private String userName;
@@ -43,7 +47,30 @@ public class LoginClient {
                 System.out.println("Server Response: " + response);
             }
             if (!clientSocket.isClosed()) {
-                new Client(clientSocket, oos, ois);
+                try {
+                    Message message = loginView.getUserMessageFromServer();
+                    if (!(message instanceof LoginMessage)) {
+                        System.out.println("Login Client: Login Aborted, Wrong Message Type");
+                        return;
+                    }
+                    User user = message.getSender();
+                    System.out.println("Received user '" + user.getUserName() + "' from server");
+                    Client client = new Client(user, clientSocket, oos, ois);
+                    try {
+                        sleep(3000);
+                    } catch (InterruptedException ie) {
+                        //hhhh
+                    }
+
+                    //TODO remove this test later
+                    client.assembleMessage("Hej hej!", null);
+
+                } catch (ClassNotFoundException cfe) {
+                    cfe.printStackTrace();
+                    System.out.println("Client: Read Object Class Mismatch");
+                    return;
+                }
+
             } else {
                 System.out.println("Login Client: Login Aborted, Socket is Closed");
             }
@@ -53,6 +80,8 @@ public class LoginClient {
             System.out.println("Client: Login Error");
         }
     }
+
+
 
     //TODO remove after adding real LoginView implementation
     public String enterUsername() {

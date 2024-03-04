@@ -1,6 +1,7 @@
 package boundary;
 
 import control.LoginHandler;
+import shared_entity.message.Message;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -27,6 +28,17 @@ public class LoginBoundary {
         }
     }
 
+    public void writeUserMessageToClient(Message message) {
+        try {
+            oos.writeObject(message);
+            oos.flush();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+            System.out.println("Server Login Boundary: Write IO Exception");
+        }
+    }
+
+
     public String readUsernameFromClient() {
         String username = "";
         try {
@@ -36,8 +48,7 @@ public class LoginBoundary {
         } catch (IOException ioe) {
             ioe.printStackTrace();
             System.out.println("Server Login Boundary: Read IO Exception");
-        } finally {
-            return username;
         }
+        return username;
     }
 }
