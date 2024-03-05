@@ -3,6 +3,7 @@ package control;
 import boundary.ClientMainView;
 import entity.OnlineUsers;
 import shared_entity.message.Message;
+import shared_entity.message.UserMessage;
 import shared_entity.message.UsersOnlineMessage;
 import shared_entity.user.User;
 
@@ -34,8 +35,8 @@ public class Client {
         }
     }
 
-    public void assembleMessage(String messageText, ImageIcon messageImage) {
-        Message message = new Message();
+    public void assembleUserToUserMessage(String messageText, ImageIcon messageImage) {
+        UserMessage message = new UserMessage();
         if(messageText != null) {
             message.setMessageText(messageText);
         }

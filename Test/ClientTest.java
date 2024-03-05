@@ -25,11 +25,12 @@ public class ClientTest {
         Server server = new Server(serverSocket, registeredUsers);
         new LoginHandler(serverSocket, server, registeredUsers);
         //try {
-            //Thread.sleep(1000);
+        //Thread.sleep(1000);
         //} catch (InterruptedException e) {
-            //throw new RuntimeException(e);
+        //throw new RuntimeException(e);
         //}
 
-        LoginClient client = new LoginClient("127.0.0.1", 3343, "GroundZeroGreta");
+        LoginClient client = new LoginClient("127.0.0.1", 3343, "Orvar");
+        LoginClient client2 = new LoginClient("127.0.0.1", 3343, "GroundZeroGreta");
     }
 }

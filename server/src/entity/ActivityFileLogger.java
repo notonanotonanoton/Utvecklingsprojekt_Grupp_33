@@ -23,7 +23,7 @@ public class ActivityFileLogger implements ActivityLogger{
     }
 
     private void writeToLogFile(String logMessage, LocalDateTime date) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(LOG_FILE_PATH))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(LOG_FILE_PATH, true))) {
             String formattedDateTime = date.format(DATE_FORMATTER);
             writer.write(formattedDateTime + " " + logMessage);
             writer.newLine();

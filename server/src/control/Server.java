@@ -8,8 +8,6 @@ import shared_entity.user.User;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.time.LocalDateTime;
@@ -111,7 +109,7 @@ public class Server implements PropertyChangeListener {
         }
 
         //TODO solution to fix redundancy? is this going to be used?
-        public Message getMessageFromHandlerList() {
+         /*public Message getMessageFromHandlerList() {
             Message message = new Message();
             try {
                 message = (messageList.take());
@@ -119,6 +117,6 @@ public class Server implements PropertyChangeListener {
                 //thread waiting for Messages
             }
             return message;
-        }
+        } */
     }
 }

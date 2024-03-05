@@ -1,0 +1,10 @@
+2024-03-05 14:56:52 [INFO] Creating new user Orvar
+2024-03-05 14:56:52 [INFO] Connected user Orvar to main server
+2024-03-05 14:56:52 [INFO] Sent UsersOnlineMessage: [Orvar]
+2024-03-05 14:56:55 [INFO] Creating new user GroundZeroGreta
+2024-03-05 14:56:55 [INFO] shared_entity.message.UserMessage@36ef7741
+2024-03-05 14:56:55 [INFO] Sent UsersOnlineMessage: [Orvar, GroundZeroGreta]
+2024-03-05 14:56:55 [INFO] Connected user GroundZeroGreta to main server
+2024-03-05 14:56:55 [INFO] Sent UsersOnlineMessage: [Orvar, GroundZeroGreta]
+2024-03-05 14:56:58 [INFO] shared_entity.message.UserMessage@6d1f56e3
+2024-03-05 14:56:58 [INFO] shared_entity.message.UserMessage@6d1f56e3

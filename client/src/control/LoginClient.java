@@ -65,7 +65,7 @@ public class LoginClient extends Thread {
                     }
 
                     //TODO remove this test later
-                    client.assembleMessage("Hej hej!", null);
+                    client.assembleUserToUserMessage("Hej hej!", null);
 
                 } catch (ClassNotFoundException cfe) {
                     cfe.printStackTrace();
