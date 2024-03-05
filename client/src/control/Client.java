@@ -30,7 +30,11 @@ public class Client {
     public void handleMessage(Message message) {
         if (message instanceof UsersOnlineMessage) {
             onlineUsers = new OnlineUsers(message.getReceivers());
-        } else {
+
+        } else if (message instanceof UserMessage) {
+            System.out.println("Message content: " + message.getMessageText() + ", Sender of message: " + message.getSender() + ", receivers: " + message.getReceivers());
+        }
+        else {
             mainView.readMessageFromServer(message);
         }
     }

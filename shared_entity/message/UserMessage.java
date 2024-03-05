@@ -19,6 +19,6 @@ public class UserMessage extends Message {
 
     @Override
     public String toString() {
-        return "Sent UserMessage from " + sender + ""
+        return "Sent UserMessage from " + sender + " to " + super.getReceivers();
     }
 }

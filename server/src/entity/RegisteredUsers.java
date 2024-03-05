@@ -11,12 +11,14 @@ import java.util.List;
 public final class RegisteredUsers {
 
     private static RegisteredUsers INSTANCE;
-    private ArrayList<User> userList = new ArrayList<>();
+    private ArrayList<User> userList;
     private final static String FILE_NAME = "users.dat";
 
     public RegisteredUsers() {
-        //userList = new ArrayList<>();
-        //loadUsersFromFile();
+        loadUsersFromFile();
+        if (userList == null) {
+            userList = new ArrayList<>();
+        }
     }
 
     public static synchronized RegisteredUsers getInstance() {
@@ -26,10 +28,10 @@ public final class RegisteredUsers {
         return INSTANCE;
     }
 
-    public synchronized User findUser(String username) {
+    public synchronized User findUser(String userName) {
         System.out.println("Registered Users Object: Pre-existing users: " + userList);
         for (User user : userList) {
-            if (user.equals(username)) {
+            if (user.getUserName().equals(userName)) {
                 return user;
             }
         }

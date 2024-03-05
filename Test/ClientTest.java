@@ -32,5 +32,12 @@ public class ClientTest {
 
         LoginClient client = new LoginClient("127.0.0.1", 3343, "Orvar");
         LoginClient client2 = new LoginClient("127.0.0.1", 3343, "GroundZeroGreta");
+        LoginClient client3 = new LoginClient("127.0.0.1", 3343, "Manne");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException IE) {
+
+        }
+        // registeredUsers.saveUsersToFile();
     }
 }

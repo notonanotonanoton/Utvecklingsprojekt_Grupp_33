@@ -13,6 +13,6 @@ public class UsersOnlineMessage extends Message implements Serializable {
     }
     @Override
     public String toString() {
-        return "Sent UsersOnlineMessage: " + super.getReceivers();
+        return "Sent UsersOnlineMessage: " + super.getReceivers() + " to clients with username: " + super.getReceivers();
     }
 }
