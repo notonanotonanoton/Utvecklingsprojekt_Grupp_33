@@ -21,15 +21,22 @@ public class ClientTest {
         } catch (IOException ioe) {
             System.out.println("ServerMain: Port Error");
         }
-        RegisteredUsers registeredUsers = new RegisteredUsers(); //TODO do not create new, read from file instead
-        Server server = new Server(serverSocket, registeredUsers);
-        new LoginHandler(serverSocket, server, registeredUsers);
+        Server server = new Server(serverSocket);
+        new LoginHandler(serverSocket, server, RegisteredUsers.getInstance());
         //try {
-            //Thread.sleep(1000);
+        //Thread.sleep(1000);
         //} catch (InterruptedException e) {
-            //throw new RuntimeException(e);
+        //throw new RuntimeException(e);
         //}
 
-        LoginClient client = new LoginClient("127.0.0.1", 3343, "GroundZeroGreta");
+        LoginClient client = new LoginClient("127.0.0.1", 3343, "Orvar");
+        LoginClient client2 = new LoginClient("127.0.0.1", 3343, "GroundZeroGreta");
+        LoginClient client3 = new LoginClient("127.0.0.1", 3343, "Manne");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException IE) {
+
+        }
+        // registeredUsers.saveUsersToFile();
     }
 }

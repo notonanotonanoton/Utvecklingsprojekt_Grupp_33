@@ -2,7 +2,6 @@ package boundary;
 
 import control.LoginClient;
 import shared_entity.message.Message;
-import shared_entity.user.User;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

@@ -3,6 +3,7 @@ package control;
 import boundary.ClientMainView;
 import entity.OnlineUsers;
 import shared_entity.message.Message;
+import shared_entity.message.UserMessage;
 import shared_entity.message.UsersOnlineMessage;
 import shared_entity.user.User;
 
@@ -29,13 +30,17 @@ public class Client {
     public void handleMessage(Message message) {
         if (message instanceof UsersOnlineMessage) {
             onlineUsers = new OnlineUsers(message.getReceivers());
-        } else {
+
+        } else if (message instanceof UserMessage) {
+            System.out.println("Message content: " + message.getMessageText() + ", Sender of message: " + message.getSender() + ", receivers: " + message.getReceivers());
+        }
+        else {
             mainView.readMessageFromServer(message);
         }
     }
 
-    public void assembleMessage(String messageText, ImageIcon messageImage) {
-        Message message = new Message();
+    public void assembleUserToUserMessage(String messageText, ImageIcon messageImage) {
+        UserMessage message = new UserMessage();
         if(messageText != null) {
             message.setMessageText(messageText);
         }

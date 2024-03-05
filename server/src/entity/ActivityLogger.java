@@ -1,5 +1,8 @@
 package entity;
 
-public class ActivityLogger {
-    //TODO writes activity to file. Methods should be called from LoginHandler and ClientHandler
+import java.time.LocalDateTime;
+
+public interface ActivityLogger {
+    void logInfo(String message, LocalDateTime date);
+    void logError(String message, LocalDateTime date);
 }

@@ -1,6 +1,7 @@
 package control;
 
 import boundary.LoginBoundary;
+import entity.ActivityFileLogger;
 import entity.ClientConnection;
 import entity.ClientConnectionList;
 import entity.RegisteredUsers;
@@ -10,18 +11,21 @@ import shared_entity.user.User;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.time.LocalDateTime;
 
 public class LoginHandler extends Thread {
     private ServerSocket serverSocket;
     private RegisteredUsers registeredUsers;
     private ClientConnectionList clientConnectionList;
     private Server server;
+    private ActivityFileLogger logger;
 
     public LoginHandler(ServerSocket serverSocket, Server server, RegisteredUsers registeredUsers) {
         this.serverSocket = serverSocket;
         this.registeredUsers = registeredUsers; //TODO read from file instead
         clientConnectionList = ClientConnectionList.getInstance();
         this.server = server;
+        this.logger = new ActivityFileLogger();
         start();
     }
 
@@ -71,9 +75,11 @@ public class LoginHandler extends Thread {
             if (user != null) {
                 responseToClient = 11;
                 System.out.println("Logging in to user: " + username);
+                logger.logInfo("Logging in to user " + username, LocalDateTime.now());
             } else {
                 responseToClient = 12;
                 System.out.println("Creating new user: " + username);
+                logger.logInfo("Creating new user " + username, LocalDateTime.now());
                 user = new User(username);
                 registeredUsers.addUser(user);
             }
@@ -83,6 +89,7 @@ public class LoginHandler extends Thread {
             loginBoundary.writeUserMessageToClient(loginMessage);
 
             server.connectClient(user, clientConnection);
+            logger.logInfo("Connected user " + user + " to main server", LocalDateTime.now());
             System.out.println("Connected client to main server");
         }
     }

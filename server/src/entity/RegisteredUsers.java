@@ -7,31 +7,42 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-//TODO make singleton
-public class RegisteredUsers {
+
+public final class RegisteredUsers {
+
+    private static RegisteredUsers INSTANCE;
     private ArrayList<User> userList;
     private final static String FILE_NAME = "users.dat";
 
-    public RegisteredUsers() {
-        userList = new ArrayList<>();
-        //loadUsersFromFile();
+    private RegisteredUsers() {
+        loadUsersFromFile();
+        if (userList == null) {
+            userList = new ArrayList<>();
+        }
     }
 
-    public User findUser(String username) {
+    public static synchronized RegisteredUsers getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new RegisteredUsers();
+        }
+        return INSTANCE;
+    }
+
+    public synchronized User findUser(String userName) {
         System.out.println("Registered Users Object: Pre-existing users: " + userList);
         for (User user : userList) {
-            if (user.equals(username)) {
+            if (user.getUserName().equals(userName)) {
                 return user;
             }
         }
         return null;
     }
 
-    public void addUser(User user) {
+    public synchronized void addUser(User user) {
         userList.addLast(user);
     }
 
-    public void saveUsersToFile() {
+    public synchronized void saveUsersToFile() {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             out.writeObject(userList);
             System.out.println("Users saved to file!");
@@ -41,7 +52,7 @@ public class RegisteredUsers {
         }
     }
 
-    public void loadUsersFromFile() {
+    public synchronized void loadUsersFromFile() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
             userList = (ArrayList<User>) in.readObject(); //does it have to be List?
         } catch (IOException e) {

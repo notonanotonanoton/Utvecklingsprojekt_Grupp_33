@@ -1,34 +1,23 @@
 package shared_entity.message;
-
 import shared_entity.user.User;
 
-import javax.swing.*;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
-public class Message implements Serializable {
+public abstract class Message implements Serializable {
     private User sender;
     private List<User> receivers;
     private String messageText;
-    private ImageIcon messageImage;
-    private Date receivedByServer;
-    private Date receivedByUser;
+    private LocalDateTime receivedByServer;
+    private LocalDateTime recievedByUser;
 
-    public Message() {
+    public List<User> getReceivers() {
+        return receivers;
+    }
 
-    }
-    public Message(String messageText) {
-        this();
-        this.messageText = messageText;
-    }
-    public Message(ImageIcon messageImage) {
-        this();
-        this.messageImage = messageImage;}
-    public Message(String messageText, ImageIcon messageImage) {
-        this();
-        this.messageText = messageText;
-        this.messageImage = messageImage;
+    public void setReceivers(List<User> receivers) {
+        this.receivers = receivers;
     }
 
     public String getMessageText() {
@@ -39,27 +28,19 @@ public class Message implements Serializable {
         this.messageText = messageText;
     }
 
-    public List<User> getReceivers() {
-        return receivers;
+    public LocalDateTime receivedByServer() {
+        return this.receivedByServer;
     }
 
-    public void setReceivers(List<User> receivers) {
-        this.receivers = receivers;
+    public LocalDateTime receivedByUser() {
+        return this.recievedByUser;
     }
 
     public User getSender() {
-        return sender;
+        return this.sender;
     }
 
-    public void setSender(User sender) {
-        this.sender = sender;
-    }
-
-    public ImageIcon getMessageImage() {
-        return messageImage;
-    }
-
-    public void setMessageImage(ImageIcon messageImage) {
-        this.messageImage = messageImage;
+    public void setSender(User user) {
+        this.sender = user;
     }
 }
