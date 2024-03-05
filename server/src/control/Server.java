@@ -1,10 +1,7 @@
 package control;
 
 import boundary.ServerBoundary;
-import entity.ClientConnection;
-import entity.ClientConnectionList;
-import entity.RegisteredUsers;
-import entity.UnsentMessages;
+import entity.*;
 import shared_entity.message.Message;
 import shared_entity.message.UsersOnlineMessage;
 import shared_entity.user.User;
@@ -15,6 +12,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.time.LocalDateTime;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class Server implements PropertyChangeListener {
@@ -71,6 +69,7 @@ public class Server implements PropertyChangeListener {
         private Socket clientSocket;
         private LinkedBlockingQueue<Message> messageList;
         private ServerBoundary serverBoundary;
+        private ActivityFileLogger logger;
 
         public ClientHandler(User user, ClientConnection clientConnection) {
             this.user = user;
@@ -81,6 +80,7 @@ public class Server implements PropertyChangeListener {
             this.serverBoundary = new ServerBoundary(Server.this,
                     clientConnection.getOutputStream(), clientConnection.getInputStream());
             messageList = new LinkedBlockingQueue<>();
+            logger = new ActivityFileLogger();
             //careful of timing, ClientConnectionList has listener that sends Message
             clientConnectionList.put(user, clientConnection);
         }
@@ -90,7 +90,9 @@ public class Server implements PropertyChangeListener {
             System.out.println("Server: Client Handler Started");
             while (!clientSocket.isClosed()) {
                 try {
-                    serverBoundary.writeMessageToClient(messageList.take());
+                    Message message = messageList.take();
+                    serverBoundary.writeMessageToClient(message);
+                    logger.logInfo(message.toString(), LocalDateTime.now());
                 } catch (InterruptedException ie) {
                     //waiting for messageList
                     System.out.println("Server: Interrupted Take");

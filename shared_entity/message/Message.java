@@ -62,4 +62,9 @@ public class Message implements Serializable {
     public void setMessageImage(ImageIcon messageImage) {
         this.messageImage = messageImage;
     }
+
+    @Override
+    public String toString() {
+        return "User " + sender + " sent a message to: " + getReceivers().toString();
+    }
 }
