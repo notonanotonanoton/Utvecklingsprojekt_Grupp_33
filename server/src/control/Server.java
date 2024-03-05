@@ -19,12 +19,12 @@ public class Server implements PropertyChangeListener {
     private RegisteredUsers registeredUsers;
     private UnsentMessages unsentMessages;
 
-    public Server(ServerSocket serverSocket, RegisteredUsers registeredUsers) {
+    public Server(ServerSocket serverSocket) {
         this.serverSocket = serverSocket;
         clientConnectionList = ClientConnectionList.getInstance();
         clientConnectionList.addPropertyChangeListener(this);
-        //unsentMessages = unsentMessages.getInstance(); //TODO
-        this.registeredUsers = registeredUsers; //TODO read from file instead
+        unsentMessages = UnsentMessages.getInstance();
+        this.registeredUsers = RegisteredUsers.getInstance(); //TODO read from file instead
     }
 
     public synchronized void connectClient(User user, ClientConnection clientConnection) {

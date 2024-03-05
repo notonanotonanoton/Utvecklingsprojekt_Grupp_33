@@ -7,7 +7,16 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class UnsentMessages {
+    private static UnsentMessages INSTANCE;
+
     private HashMap<User, LinkedList<Message>> unsentMessages = new HashMap<>();
+
+    public static synchronized UnsentMessages getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new UnsentMessages();
+        }
+        return INSTANCE;
+    }
 
     public synchronized void put(User user, Message message) {
         LinkedList<Message> userMessages = unsentMessages.get(user);

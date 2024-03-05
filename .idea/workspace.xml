@@ -8,10 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/ClientTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/activity_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/activity_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/control/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/control/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/ServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/control/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/control/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/entity/RegisteredUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/entity/RegisteredUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared_entity/message/UserMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared_entity/message/UserMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared_entity/message/UsersOnlineMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared_entity/message/UsersOnlineMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/entity/UnsentMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/entity/UnsentMessages.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,7 @@
       <workItem from="1709631662347" duration="6392000" />
       <workItem from="1709638063673" duration="890000" />
       <workItem from="1709638959597" duration="43000" />
-      <workItem from="1709639012758" duration="13313000" />
+      <workItem from="1709639012758" duration="15069000" />
     </task>
     <servers />
   </component>

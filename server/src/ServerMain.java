@@ -13,8 +13,7 @@ public class ServerMain {
         } catch (IOException ioe) {
             System.out.println("ServerMain: Port Error");
         }
-        RegisteredUsers registeredUsers = new RegisteredUsers(); //TODO do not create new, read from file instead
-        Server server = new Server(serverSocket, registeredUsers);
-        new LoginHandler(serverSocket, server, registeredUsers);
+        Server server = new Server(serverSocket);
+        new LoginHandler(serverSocket, server, RegisteredUsers.getInstance());
     }
 }

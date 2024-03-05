@@ -1,18 +1,1 @@
-2024-03-05 16:17:24 [INFO] Logging in to user Orvar
-2024-03-05 16:17:24 [INFO] Connected user Orvar to main server
-2024-03-05 16:17:24 [INFO] Sent UsersOnlineMessage: [Orvar] to clients with username: [Orvar]
-2024-03-05 16:17:27 [INFO] Logging in to user GroundZeroGreta
-2024-03-05 16:17:27 [INFO] Sent UserMessage from Orvar to [Orvar]
-2024-03-05 16:17:27 [INFO] Connected user GroundZeroGreta to main server
-2024-03-05 16:17:27 [INFO] Sent UsersOnlineMessage: [Orvar, GroundZeroGreta] to clients with username: [Orvar, GroundZeroGreta]
-2024-03-05 16:17:27 [INFO] Sent UsersOnlineMessage: [Orvar, GroundZeroGreta] to clients with username: [Orvar, GroundZeroGreta]
-2024-03-05 16:17:30 [INFO] Logging in to user Manne
-2024-03-05 16:17:30 [INFO] Sent UserMessage from GroundZeroGreta to [Orvar, GroundZeroGreta]
-2024-03-05 16:17:30 [INFO] Sent UserMessage from GroundZeroGreta to [Orvar, GroundZeroGreta]
-2024-03-05 16:17:30 [INFO] Sent UsersOnlineMessage: [Orvar, Manne, GroundZeroGreta] to clients with username: [Orvar, Manne, GroundZeroGreta]
-2024-03-05 16:17:30 [INFO] Connected user Manne to main server
-2024-03-05 16:17:30 [INFO] Sent UsersOnlineMessage: [Orvar, Manne, GroundZeroGreta] to clients with username: [Orvar, Manne, GroundZeroGreta]
-2024-03-05 16:17:30 [INFO] Sent UsersOnlineMessage: [Orvar, Manne, GroundZeroGreta] to clients with username: [Orvar, Manne, GroundZeroGreta]
-2024-03-05 16:17:33 [INFO] Sent UserMessage from Manne to [Orvar, Manne, GroundZeroGreta]
-2024-03-05 16:17:33 [INFO] Sent UserMessage from Manne to [Orvar, Manne, GroundZeroGreta]
-2024-03-05 16:17:33 [INFO] Sent UserMessage from Manne to [Orvar, Manne, GroundZeroGreta]
+

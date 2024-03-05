@@ -14,7 +14,7 @@ public final class RegisteredUsers {
     private ArrayList<User> userList;
     private final static String FILE_NAME = "users.dat";
 
-    public RegisteredUsers() {
+    private RegisteredUsers() {
         loadUsersFromFile();
         if (userList == null) {
             userList = new ArrayList<>();
