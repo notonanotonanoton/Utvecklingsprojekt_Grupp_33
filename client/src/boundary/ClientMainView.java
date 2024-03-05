@@ -2,6 +2,7 @@ package boundary;
 
 import control.Client;
 import shared_entity.message.Message;
+import shared_entity.user.User;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -40,12 +41,16 @@ public class ClientMainView extends Thread {
     //TODO add full implementation, show message in Boundary/Boundaries
     public void readMessageFromServer(Message message) {
         if (message.getMessageText() != null) {
-            System.out.println("Read message text: '" + message.getMessageText() + "' from " + message.getSender());
+            String userList = "";
+            for(User user : message.getReceivers()) {
+                userList += user + ", ";
+            }
+            System.out.println("Read message text: '" + message.getMessageText() + "' from " + message.getSender() +
+                    " to " + userList);
         }
     }
 
     public void sendMessageToServer(Message message) {
-        System.out.println("Message Text: " + message.getMessageText());
         try {
             oos.writeObject(message);
             oos.flush();
@@ -56,7 +61,6 @@ public class ClientMainView extends Thread {
     }
 
     public void handleMessage(Message message) {
-        System.out.println("message handled");
         client.handleMessage(message);
     }
 }

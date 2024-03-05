@@ -56,6 +56,8 @@ public class LoginClient extends Thread {
                     User user = message.getSender();
                     System.out.println("Received user '" + user.getUserName() + "' from server");
                     Client client = new Client(user, clientSocket, oos, ois);
+
+                    //TODO timing issue that can possibly be fixed? assembleMessage doesn't work if immediately called
                     try {
                         sleep(3000);
                     } catch (InterruptedException ie) {
