@@ -1,14 +1,17 @@
 package shared_entity.message;
+
 import shared_entity.user.User;
 
+import javax.swing.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public abstract class Message implements Serializable {
+public class Message implements Serializable {
     private User sender;
     private List<User> receivers;
     private String messageText;
+    private ImageIcon messageIcon;
     private LocalDateTime receivedByServer;
     private LocalDateTime recievedByUser;
 
@@ -28,6 +31,14 @@ public abstract class Message implements Serializable {
         this.messageText = messageText;
     }
 
+    public ImageIcon getMessageImage() {
+        return messageIcon;
+    }
+
+    public void setMessageImage(ImageIcon messageIcon) {
+        this.messageIcon = messageIcon;
+    }
+
     public LocalDateTime receivedByServer() {
         return this.receivedByServer;
     }
@@ -42,5 +53,10 @@ public abstract class Message implements Serializable {
 
     public void setSender(User user) {
         this.sender = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Sent Message from: " + getSender() + ", to: " + getReceivers();
     }
 }

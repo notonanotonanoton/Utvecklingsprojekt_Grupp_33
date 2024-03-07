@@ -9,6 +9,7 @@ import java.io.ObjectOutputStream;
 
 public class LoginView {
     private LoginClient loginClient;
+    private LoginFrame loginFrame;
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
 
@@ -16,24 +17,38 @@ public class LoginView {
         this.loginClient = loginClient;
         this.oos = oos;
         this.ois = ois;
+        this.loginFrame = new LoginFrame(this);
     }
 
     //TODO add real implementation
-    public String enterUsername() {
-        return loginClient.enterUsername();
+
+    public void sendUsernameToServer(String username) {
+        try {
+            System.out.println("writing username: " + username);
+            oos.writeUTF(username);
+            oos.flush();
+        } catch (IOException ioe) {
+            System.out.println("IOException - " + ioe.getMessage());
+            ioe.printStackTrace();
+        }
     }
 
-    public void sendUsernameToServer(String username) throws IOException {
-        System.out.println("writing username: " + username);
-        oos.writeUTF(username);
-        oos.flush();
-    }
-
-    public int readResponseFromServer() throws IOException {
-        return ois.readInt();
+    public int readResponseFromServer() {
+        int response = -1;
+        try {
+            response = ois.readInt();
+        } catch (IOException ioe) {
+            System.out.println("IOException - " + ioe.getMessage());
+            ioe.printStackTrace();
+        }
+        return response;
     }
 
     public Message getUserMessageFromServer() throws IOException, ClassNotFoundException {
         return (Message)ois.readObject();
+    }
+
+    public void closeLoginWindow() {
+        loginFrame.dispose();
     }
 }

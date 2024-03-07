@@ -1,1 +1,137 @@
 
+2024-03-07 19:42:52 [INFO] Logging in to user GroundZeroGreta
+2024-03-07 19:42:52 [INFO] Connected user GroundZeroGreta to main server
+2024-03-07 19:42:52 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta] to clients with username: [GroundZeroGreta]
+2024-03-07 19:42:55 [INFO] Sent Message from: GroundZeroGreta, to: [GroundZeroGreta]
+2024-03-07 19:43:19 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 19:43:19 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta, BarnacleBarnaby] to clients with username: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:43:19 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 19:43:19 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta, BarnacleBarnaby] to clients with username: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:43:22 [INFO] Sent Message from: BarnacleBarnaby, to: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:43:22 [INFO] Sent Message from: BarnacleBarnaby, to: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:45:27 [INFO] Logging in to user GroundZeroGreta
+2024-03-07 19:45:27 [INFO] Connected user GroundZeroGreta to main server
+2024-03-07 19:45:27 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta] to clients with username: [GroundZeroGreta]
+2024-03-07 19:45:30 [INFO] Sent Message from: GroundZeroGreta, to: [GroundZeroGreta]
+2024-03-07 19:45:38 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 19:45:38 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 19:45:38 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta, BarnacleBarnaby] to clients with username: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:45:38 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta, BarnacleBarnaby] to clients with username: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:45:41 [INFO] Sent Message from: BarnacleBarnaby, to: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:45:41 [INFO] Sent Message from: BarnacleBarnaby, to: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:46:45 [INFO] Logging in to user GroundZeroGreta
+2024-03-07 19:46:45 [INFO] Connected user GroundZeroGreta to main server
+2024-03-07 19:46:45 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta] to clients with username: [GroundZeroGreta]
+2024-03-07 19:46:48 [INFO] Sent Message from: GroundZeroGreta, to: [GroundZeroGreta]
+2024-03-07 19:46:56 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 19:46:56 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 19:46:56 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta, BarnacleBarnaby] to clients with username: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:46:56 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta, BarnacleBarnaby] to clients with username: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:46:59 [INFO] Sent Message from: BarnacleBarnaby, to: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:46:59 [INFO] Sent Message from: BarnacleBarnaby, to: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 19:49:07 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 19:49:07 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 19:49:07 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-07 19:49:10 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-07 19:49:15 [INFO] Logging in to user GroundZeroGreta
+2024-03-07 19:49:15 [INFO] Connected user GroundZeroGreta to main server
+2024-03-07 19:49:15 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 19:49:15 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 19:49:18 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 19:49:18 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:02:33 [INFO] Logging in to user GroundZeroGreta
+2024-03-07 20:02:33 [INFO] Connected user GroundZeroGreta to main server
+2024-03-07 20:02:33 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta] to clients with username: [GroundZeroGreta]
+2024-03-07 20:02:36 [INFO] Sent Message from: GroundZeroGreta, to: [GroundZeroGreta]
+2024-03-07 20:02:42 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 20:02:42 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 20:02:42 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta, BarnacleBarnaby] to clients with username: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 20:02:42 [INFO] Sent UsersOnlineMessage: [GroundZeroGreta, BarnacleBarnaby] to clients with username: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 20:02:45 [INFO] Sent Message from: BarnacleBarnaby, to: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 20:02:45 [INFO] Sent Message from: BarnacleBarnaby, to: [GroundZeroGreta, BarnacleBarnaby]
+2024-03-07 20:04:50 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 20:04:50 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 20:04:50 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-07 20:04:53 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-07 20:04:58 [INFO] Logging in to user GroundZeroGreta
+2024-03-07 20:04:58 [INFO] Connected user GroundZeroGreta to main server
+2024-03-07 20:04:58 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:04:58 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:05:01 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:05:01 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:09:40 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 20:09:40 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 20:09:40 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-07 20:09:43 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-07 20:09:50 [INFO] Logging in to user GroundZeroGreta
+2024-03-07 20:09:50 [INFO] Connected user GroundZeroGreta to main server
+2024-03-07 20:09:50 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:09:50 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:09:53 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:09:53 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:15:08 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 20:15:08 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 20:15:08 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-07 20:15:11 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-07 20:15:17 [INFO] Logging in to user GroundZeroGreta
+2024-03-07 20:15:17 [INFO] Connected user GroundZeroGreta to main server
+2024-03-07 20:15:17 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:15:17 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:15:20 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:15:20 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:17:12 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 20:17:12 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 20:17:12 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-07 20:17:15 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-07 20:18:16 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 20:18:16 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 20:18:16 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-07 20:18:19 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-07 20:18:27 [INFO] Logging in to user GroundZeroGreta
+2024-03-07 20:18:27 [INFO] Connected user GroundZeroGreta to main server
+2024-03-07 20:18:27 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:18:27 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:18:30 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:18:30 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:21:04 [INFO] Creating new user aaaaa
+2024-03-07 20:21:04 [INFO] Connected user aaaaa to main server
+2024-03-07 20:21:04 [INFO] Sent UsersOnlineMessage: [aaaaa] to clients with username: [aaaaa]
+2024-03-07 20:21:07 [INFO] Sent Message from: aaaaa, to: [aaaaa]
+2024-03-07 20:21:12 [INFO] Creating new user bbbbb
+2024-03-07 20:21:12 [INFO] Connected user bbbbb to main server
+2024-03-07 20:21:12 [INFO] Sent UsersOnlineMessage: [bbbbb, aaaaa] to clients with username: [bbbbb, aaaaa]
+2024-03-07 20:21:12 [INFO] Sent UsersOnlineMessage: [bbbbb, aaaaa] to clients with username: [bbbbb, aaaaa]
+2024-03-07 20:21:15 [INFO] Sent Message from: bbbbb, to: [bbbbb, aaaaa]
+2024-03-07 20:21:15 [INFO] Sent Message from: bbbbb, to: [bbbbb, aaaaa]
+2024-03-07 20:23:25 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 20:23:25 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 20:23:25 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-07 20:23:28 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-07 20:24:49 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 20:24:49 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 20:24:49 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-07 20:24:53 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-07 20:25:08 [INFO] Logging in to user GroundZeroGreta
+2024-03-07 20:25:08 [INFO] Connected user GroundZeroGreta to main server
+2024-03-07 20:25:08 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:25:08 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:25:11 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:25:11 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:28:07 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 20:28:07 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 20:28:07 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-07 20:28:10 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-07 20:32:19 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 20:32:19 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 20:32:19 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-07 20:32:22 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-07 20:37:35 [INFO] Creating new user BarnacleBarnaby
+2024-03-07 20:37:35 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-07 20:37:35 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-07 20:37:38 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-07 20:37:45 [INFO] Logging in to user GroundZeroGreta
+2024-03-07 20:37:45 [INFO] Connected user GroundZeroGreta to main server
+2024-03-07 20:37:45 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:37:45 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:37:48 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-07 20:37:48 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]

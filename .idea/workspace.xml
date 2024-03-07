@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" name="Changes" comment="" />
+    <list default="true" id="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/boundary/LoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/activity_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/boundary/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/control/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/control/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/control/LoginClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/control/LoginClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared_entity/message/LoginMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared_entity/message/LoginMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared_entity/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared_entity/message/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared_entity/message/UserMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared_entity/message/UsersOnlineMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared_entity/message/UsersOnlineMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ClientTest.java" afterDir="false" />
+    </list>
+    <list id="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" name="Changes by holmberg" comment="">
+      <change beforePath="$PROJECT_DIR$/client/src/boundary/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/control/LoginClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/control/LoginClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/control/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/control/LoginHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/entity/UnsentMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/entity/UnsentMessages.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,13 +37,34 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/client/src/control/LoginClient.java">
+      <ranges>
+        <range start1="12" end1="14" start2="12" end2="12" changelist="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" />
+        <range start1="22" end1="24" start2="20" end2="21" changelist="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" />
+        <range start1="42" end1="44" start2="39" end2="39" changelist="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" />
+        <range start1="48" end1="48" start2="43" end2="44" changelist="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" />
+        <range start1="84" end1="92" start2="80" end2="80" changelist="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/client/src/boundary/LoginView.java">
+      <ranges>
+        <range start1="11" end1="11" start2="11" end2="12" changelist="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" />
+        <range start1="18" end1="18" start2="19" end2="20" changelist="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" />
+        <range start1="21" end1="24" start2="23" end2="23" changelist="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" />
+        <range start1="25" end1="29" start2="24" end2="33" changelist="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" />
+        <range start1="31" end1="33" start2="35" end2="44" changelist="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" />
+        <range start1="38" end1="38" start2="49" end2="53" changelist="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -34,7 +76,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BoundaryTest.executor": "Run",
+    "Application.Client.executor": "Run",
+    "Application.ClientMainFrame.executor": "Run",
+    "Application.LoginFrame.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.Server.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.ClientTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -42,10 +89,12 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "mans__branch",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "265",
+    "git-widget-placeholder": "anton__branch",
+    "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/holmberg/kurser/Utvecklingsprojekt_Grupp_33/Test",
+    "last_opened_file_path": "C:/Users/Asaky/courses/da343a/inlamningsuppgifter/projekt/DA343A_UP_33/client/src/boundary",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,14 +108,43 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asaky\courses\da343a\inlamningsuppgifter\projekt\DA343A_UP_33\client\src\boundary" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asaky\courses\da343a\inlamningsuppgifter\projekt\DA343A_UP_33\client\src\boundary" />
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ClientMain" />
+      <module name="client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ServerMain" />
+      <module name="server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.Client" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-3183f394aec4-aba903c2" />
       </set>
     </attachedChunks>
   </component>
@@ -82,6 +160,7 @@
       <workItem from="1709638063673" duration="890000" />
       <workItem from="1709638959597" duration="43000" />
       <workItem from="1709639012758" duration="15624000" />
+      <workItem from="1709815197348" duration="22309000" />
     </task>
     <servers />
   </component>

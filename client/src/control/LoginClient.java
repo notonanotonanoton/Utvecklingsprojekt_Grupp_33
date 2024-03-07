@@ -10,8 +10,6 @@ import java.net.Socket;
 
 //TODO should not extend Thread!!! only for message send test!!!
 public class LoginClient extends Thread {
-    private String ip;
-    private int port;
     private String userName;
     private Socket clientSocket;
     private ObjectOutputStream oos;
@@ -20,8 +18,7 @@ public class LoginClient extends Thread {
 
     //TODO remove tempUser parameter (& instance variable) and enterUsername after adding real LoginClient implementation
     public LoginClient(String ip, int port, String tempUser) {
-        this.ip = ip;
-        this.port = port;
+
         this.userName = tempUser;
         try {
             clientSocket = new Socket(ip, port);
@@ -40,12 +37,11 @@ public class LoginClient extends Thread {
         try {
             int response = -1;
             while(!(response >= 11)) {
-                String username = loginView.enterUsername();
-                loginView.sendUsernameToServer(username);
                 System.out.println("waiting for response");
                 response = loginView.readResponseFromServer();
                 System.out.println("Server Response: " + response);
             }
+            loginView.closeLoginWindow();
             if (!clientSocket.isClosed()) {
                 try {
                     Message message = loginView.getUserMessageFromServer();
@@ -82,12 +78,4 @@ public class LoginClient extends Thread {
             System.out.println("Client: Login Error");
         }
     }
-
-
-
-    //TODO remove after adding real LoginView implementation
-    public String enterUsername() {
-        return userName;
-    }
-
 }

@@ -11,6 +11,10 @@ public class UnsentMessages {
 
     private HashMap<User, LinkedList<Message>> unsentMessages = new HashMap<>();
 
+    private UnsentMessages() {
+
+    }
+
     public static synchronized UnsentMessages getInstance() {
         if (INSTANCE == null) {
             INSTANCE = new UnsentMessages();

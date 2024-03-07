@@ -41,7 +41,6 @@ public class LoginHandler extends Thread {
         }
     }
 
-
     public class ClientLogin {
         private User user;
         private ClientConnection clientConnection;

@@ -2,11 +2,9 @@ package shared_entity.message;
 
 import shared_entity.user.User;
 
-import java.io.Serializable;
-import java.util.AbstractCollection;
 import java.util.List;
 
-public class UsersOnlineMessage extends Message implements Serializable {
+public class UsersOnlineMessage extends Message {
 
     public UsersOnlineMessage(List<User> userList) {
         setReceivers(userList);

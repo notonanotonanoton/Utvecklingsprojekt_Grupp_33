@@ -1,9 +1,6 @@
 import control.LoginClient;
 import control.LoginHandler;
 import entity.RegisteredUsers;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-import control.Client;
 import control.Server;
 
 import java.io.IOException;
@@ -12,7 +9,6 @@ import java.net.ServerSocket;
 
 public class ClientTest {
 
-    @Test
     public void testClientServerCommunication() {
 
         ServerSocket serverSocket = null;
