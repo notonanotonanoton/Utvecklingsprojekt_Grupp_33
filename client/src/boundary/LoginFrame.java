@@ -29,6 +29,11 @@ public class LoginFrame extends JFrame {
 
         loginButton.addActionListener(e -> {
             String username = usernameField.getText();
+            if (username.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please enter a username.");
+                return;
+            }
+            
             loginView.sendUsernameToServer(username);
         });
     }
