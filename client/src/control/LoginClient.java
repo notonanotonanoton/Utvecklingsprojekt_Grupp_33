@@ -8,18 +8,13 @@ import shared_entity.user.User;
 import java.io.*;
 import java.net.Socket;
 
-//TODO should not extend Thread!!! only for message send test!!!
-public class LoginClient extends Thread {
-    private String userName;
+public class LoginClient {
     private Socket clientSocket;
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
     private LoginView loginView;
 
-    //TODO remove tempUser parameter (& instance variable) and enterUsername after adding real LoginClient implementation
-    public LoginClient(String ip, int port, String tempUser) {
-
-        this.userName = tempUser;
+    public LoginClient(String ip, int port) {
         try {
             clientSocket = new Socket(ip, port);
             oos = new ObjectOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));
@@ -49,38 +44,28 @@ public class LoginClient extends Thread {
             loginView.closeLoginWindow();
             if (!clientSocket.isClosed()) {
                 try {
-                    Message message = loginView.getUserMessageFromServer();
+                    Message message = (Message)loginView.getUserMessageFromServer();
                     if (!(message instanceof LoginMessage)) {
                         System.out.println("Login Client: Login Aborted, Wrong Message Type");
                         return;
                     }
                     User user = message.getSender();
                     System.out.println("Received user '" + user.getUserName() + "' from server");
-                    Client client = new Client(user, clientSocket, oos, ois);
-
-                    //TODO timing issue that can possibly be fixed? assembleMessage doesn't work if immediately called
-                    try {
-                        sleep(3000);
-                    } catch (InterruptedException ie) {
-                        //hhhh
-                    }
-
-                    //TODO remove this test later
-                    client.assembleUserToUserMessage("Hej hej!", null);
+                    new Client(user, clientSocket, oos, ois);
 
                 } catch (ClassNotFoundException cfe) {
                     cfe.printStackTrace();
-                    System.out.println("Client: Read Object Class Mismatch");
+                    System.out.println("Login Client: Read Object Class Mismatch");
                     return;
                 }
 
             } else {
                 System.out.println("Login Client: Login Aborted, Socket is Closed");
             }
-            System.out.println("Login Finished");
+            System.out.println("Login Finished, closing...");
         } catch (IOException ioe) {
             ioe.printStackTrace();
-            System.out.println("Client: Login Error");
+            System.out.println("Login Client: Login Error");
         }
     }
 }

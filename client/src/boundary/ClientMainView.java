@@ -18,7 +18,7 @@ public class ClientMainView extends Thread {
         this.client = client;
         this.oos = oos;
         this.ois = ois;
-        mainFrame = new ClientMainFrame();
+        mainFrame = new ClientMainFrame(this);
         start();
     }
 
@@ -57,5 +57,9 @@ public class ClientMainView extends Thread {
 
     public void addMessageRow(Object[] messageInfo) {
         mainFrame.addMessageRow(messageInfo);
+    }
+
+    public void createMessage(String messageText, ImageIcon messageImage) {
+        client.assembleUserToUserMessage(messageText, messageImage);
     }
 }

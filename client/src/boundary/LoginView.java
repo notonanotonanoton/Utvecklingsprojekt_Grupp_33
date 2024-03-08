@@ -1,7 +1,6 @@
 package boundary;
 
 import control.LoginClient;
-import shared_entity.message.Message;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -19,8 +18,6 @@ public class LoginView {
         this.ois = ois;
         this.loginFrame = new LoginFrame(this);
     }
-
-    //TODO add real implementation
 
     public void sendUsernameToServer(String username) {
         try {
@@ -54,8 +51,8 @@ public class LoginView {
         return response;
     }
 
-    public Message getUserMessageFromServer() throws IOException, ClassNotFoundException {
-        return (Message)ois.readObject();
+    public Object getUserMessageFromServer() throws IOException, ClassNotFoundException {
+        return ois.readObject();
     }
 
     public void closeLoginWindow() {

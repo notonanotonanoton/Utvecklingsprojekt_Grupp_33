@@ -151,3 +151,44 @@
 2024-03-08 11:15:29 [INFO] Connected user fredrik to main server
 2024-03-08 11:15:29 [INFO] Sent UsersOnlineMessage: [fredrik] to clients with username: [fredrik]
 2024-03-08 11:15:32 [INFO] Sent Message from: fredrik, to: [fredrik]
+2024-03-08 18:22:26 [INFO] Creating new user BarnacleBarnaby
+2024-03-08 18:22:39 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-08 18:22:39 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-08 19:11:23 [INFO] Creating new user BarnacleBarnaby
+2024-03-08 19:11:48 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-08 19:11:48 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-08 19:11:54 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-08 19:12:45 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-08 19:31:29 [INFO] Creating new user BarnacleBarnaby
+2024-03-08 19:32:52 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-08 19:32:52 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-08 19:36:15 [INFO] Creating new user BarnacleBarnaby
+2024-03-08 19:37:12 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-08 19:37:12 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-08 19:37:34 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-08 19:41:30 [INFO] Creating new user BarnacleBarnaby
+2024-03-08 19:42:30 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-08 19:42:30 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-08 19:42:44 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-08 20:01:29 [INFO] Creating new user BarnacleBarnaby
+2024-03-08 20:01:31 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-08 20:01:31 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-08 20:05:22 [INFO] Creating new user BarnacleBarnaby
+2024-03-08 20:05:24 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-08 20:05:24 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-08 20:05:32 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-08 20:11:30 [INFO] Creating new user BarnacleBarnaby
+2024-03-08 20:11:33 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-08 20:11:33 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-08 20:11:42 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-08 20:12:08 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-08 20:31:23 [INFO] Creating new user BarnacleBarnaby
+2024-03-08 20:31:25 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-08 20:31:25 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-08 20:34:04 [INFO] Creating new user BarnacleBarnaby
+2024-03-08 20:34:06 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-08 20:34:06 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-08 20:35:27 [INFO] Creating new user BarnacleBarnaby
+2024-03-08 20:35:36 [INFO] Connected user BarnacleBarnaby to main server
+2024-03-08 20:35:36 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
+2024-03-08 20:35:56 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]

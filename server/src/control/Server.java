@@ -24,7 +24,7 @@ public class Server implements PropertyChangeListener {
         clientConnectionList = ClientConnectionList.getInstance();
         clientConnectionList.addPropertyChangeListener(this);
         unsentMessages = UnsentMessages.getInstance();
-        this.registeredUsers = RegisteredUsers.getInstance(); //TODO read from file instead
+        registeredUsers = RegisteredUsers.getInstance(); //TODO read from file instead
     }
 
     public synchronized void connectClient(User user, ClientConnection clientConnection) {
@@ -41,7 +41,8 @@ public class Server implements PropertyChangeListener {
         }
     }
 
-    public synchronized void sendMessageToHandler(Message message) {
+    public synchronized void sendMessageToHandler(Object messageObject) {
+        Message message = (Message) messageObject;
         System.out.println("send to message handler received");
 
         //TODO remove check
@@ -75,7 +76,7 @@ public class Server implements PropertyChangeListener {
             clientConnection.addThread(this);
             System.out.println("Added user '" + user.getUserName() + "' and connection to ClientConnectionList");
             this.clientSocket = clientConnection.getSocket();
-            this.serverBoundary = new ServerBoundary(Server.this,
+            this.serverBoundary = new ServerBoundary(Server.this, clientSocket,
                     clientConnection.getOutputStream(), clientConnection.getInputStream());
             messageList = new LinkedBlockingQueue<>();
             logger = new ActivityFileLogger();
@@ -107,16 +108,5 @@ public class Server implements PropertyChangeListener {
                 System.out.println("Server: Interrupted Put");
             }
         }
-
-        //TODO solution to fix redundancy? is this going to be used?
-         /*public Message getMessageFromHandlerList() {
-            Message message = new Message();
-            try {
-                message = (messageList.take());
-            } catch (InterruptedException ie) {
-                //thread waiting for Messages
-            }
-            return message;
-        } */
     }
 }

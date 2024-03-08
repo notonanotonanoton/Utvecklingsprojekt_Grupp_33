@@ -1,7 +1,6 @@
 package boundary;
 
 import control.LoginHandler;
-import shared_entity.message.Message;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -28,9 +27,9 @@ public class LoginBoundary {
         }
     }
 
-    public void writeUserMessageToClient(Message message) {
+    public void writeUserMessageToClient(Object messageObject) {
         try {
-            oos.writeObject(message);
+            oos.writeObject(messageObject);
             oos.flush();
         } catch (IOException ioe) {
             ioe.printStackTrace();
