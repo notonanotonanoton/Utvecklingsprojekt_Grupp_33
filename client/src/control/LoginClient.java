@@ -41,6 +41,11 @@ public class LoginClient extends Thread {
                 response = loginView.readResponseFromServer();
                 System.out.println("Server Response: " + response);
             }
+
+            if (response == 12) {
+                loginView.selectProfilePicture();
+            }
+
             loginView.closeLoginWindow();
             if (!clientSocket.isClosed()) {
                 try {

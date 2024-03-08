@@ -51,4 +51,15 @@ public class LoginBoundary {
         }
         return username;
     }
+
+    public byte[] readProfilePictureFromClient() {
+        byte[] profilePicture = null;
+        try {
+            profilePicture = (byte[]) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("Server Login Boundary: Read IO Exception");
+        }
+        return profilePicture;
+    }
 }
