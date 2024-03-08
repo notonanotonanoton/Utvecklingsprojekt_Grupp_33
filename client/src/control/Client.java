@@ -26,6 +26,7 @@ public class Client {
     //TODO add full implementation when possible
     public void handleMessage(Object messageObject) {
         Message message = (Message) messageObject;
+        message.setReceivedByUser(); // correct?
         if (message instanceof UsersOnlineMessage) {
             onlineUsers = new OnlineUsers(message.getReceivers());
         }

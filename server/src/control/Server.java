@@ -43,6 +43,7 @@ public class Server implements PropertyChangeListener {
 
     public synchronized void sendMessageToHandler(Object messageObject) {
         Message message = (Message) messageObject;
+        message.setReceivedByServer(); // correct?
         System.out.println("send to message handler received");
 
         //TODO remove check
