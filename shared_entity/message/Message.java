@@ -47,6 +47,14 @@ public class Message implements Serializable {
         return this.recievedByUser;
     }
 
+    public void setReceivedByServer() {
+        this.receivedByServer = LocalDateTime.now();
+    }
+
+    public void setReceivedByUser() {
+        this.recievedByUser = LocalDateTime.now();
+    }
+
     public User getSender() {
         return this.sender;
     }

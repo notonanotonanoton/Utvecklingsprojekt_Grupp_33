@@ -48,3 +48,21 @@
 2024-03-08 23:13:26 [INFO] Sent Message from: orren, to: [bertil, orren]
 2024-03-08 23:14:00 [INFO] Sent Message from: orren, to: [bertil, orren]
 2024-03-08 23:14:00 [INFO] Sent Message from: orren, to: [bertil, orren]
+2024-03-08 23:17:14 [INFO] Creating new user Tjenare
+2024-03-08 23:17:19 [INFO] Connected user Tjenare to main server
+2024-03-08 23:17:19 [INFO] Sent UsersOnlineMessage: [Tjenare] to clients with username: [Tjenare]
+2024-03-08 23:17:22 [INFO] Creating new user johan
+2024-03-08 23:17:25 [INFO] Connected user johan to main server
+2024-03-08 23:17:25 [INFO] Sent UsersOnlineMessage: [johan, Tjenare] to clients with username: [johan, Tjenare]
+2024-03-08 23:17:25 [INFO] Sent UsersOnlineMessage: [johan, Tjenare] to clients with username: [johan, Tjenare]
+2024-03-08 23:17:33 [INFO] Creating new user kerstin
+2024-03-08 23:17:38 [INFO] Connected user kerstin to main server
+2024-03-08 23:17:38 [INFO] Sent UsersOnlineMessage: [johan, Tjenare, kerstin] to clients with username: [johan, Tjenare, kerstin]
+2024-03-08 23:17:38 [INFO] Sent UsersOnlineMessage: [johan, Tjenare, kerstin] to clients with username: [johan, Tjenare, kerstin]
+2024-03-08 23:17:38 [INFO] Sent UsersOnlineMessage: [johan, Tjenare, kerstin] to clients with username: [johan, Tjenare, kerstin]
+2024-03-08 23:17:42 [INFO] Sent Message from: kerstin, to: [johan, Tjenare, kerstin]
+2024-03-08 23:17:42 [INFO] Sent Message from: kerstin, to: [johan, Tjenare, kerstin]
+2024-03-08 23:17:42 [INFO] Sent Message from: kerstin, to: [johan, Tjenare, kerstin]
+2024-03-08 23:18:14 [INFO] Sent Message from: Tjenare, to: [johan, Tjenare, kerstin]
+2024-03-08 23:18:14 [INFO] Sent Message from: Tjenare, to: [johan, Tjenare, kerstin]
+2024-03-08 23:18:14 [INFO] Sent Message from: Tjenare, to: [johan, Tjenare, kerstin]
