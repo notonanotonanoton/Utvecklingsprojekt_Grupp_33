@@ -7,16 +7,8 @@
     <list default="true" id="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/activity_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/activity_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ClientMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/boundary/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/control/LoginClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/control/LoginClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/boundary/LoginBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/boundary/LoginBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/boundary/ServerBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/boundary/ServerBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/control/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/control/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/control/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/control/LoginHandler.java" afterDir="false" />
     </list>
     <list id="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" name="Changes by holmberg" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +56,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "268",
-    "git-widget-placeholder": "anton__branch",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
@@ -90,7 +82,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />

@@ -10,6 +10,7 @@ import shared_entity.user.User;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.ServerSocket;
@@ -89,9 +90,9 @@ public class LoginHandler extends Thread {
                     byte[] profilePicture = loginBoundary.readProfilePictureFromClient();
                     ByteArrayInputStream bis = new ByteArrayInputStream(profilePicture);
                     BufferedImage bufferedImage = ImageIO.read(bis);
-                    ImageIcon imageIcon = new ImageIcon(bufferedImage);
-                    user.setUserIcon(imageIcon);
-                    System.out.println("Nås?");
+                    Image scaledImage = bufferedImage.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
+                    ImageIcon scaledIcon = new ImageIcon(scaledImage);
+                    user.setUserIcon(scaledIcon);
                 } catch (IOException ioe) {
                     ioe.printStackTrace();
                     System.out.println("Login Server: Profile Picture Error");

@@ -192,3 +192,24 @@
 2024-03-08 20:35:36 [INFO] Connected user BarnacleBarnaby to main server
 2024-03-08 20:35:36 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby] to clients with username: [BarnacleBarnaby]
 2024-03-08 20:35:56 [INFO] Sent Message from: BarnacleBarnaby, to: [BarnacleBarnaby]
+2024-03-08 21:34:51 [INFO] Creating new user jarl
+2024-03-08 21:35:19 [INFO] Connected user jarl to main server
+2024-03-08 21:35:19 [INFO] Sent UsersOnlineMessage: [jarl] to clients with username: [jarl]
+2024-03-08 21:35:40 [INFO] Sent Message from: jarl, to: [jarl]
+2024-03-08 21:35:45 [INFO] Sent Message from: jarl, to: [jarl]
+2024-03-08 21:35:54 [INFO] Sent Message from: jarl, to: [jarl]
+2024-03-08 21:37:33 [INFO] Sent Message from: jarl, to: [jarl]
+2024-03-08 21:50:55 [INFO] Creating new user jutta
+2024-03-08 21:51:00 [INFO] Connected user jutta to main server
+2024-03-08 21:51:00 [INFO] Sent UsersOnlineMessage: [jutta] to clients with username: [jutta]
+2024-03-08 21:51:04 [INFO] Sent Message from: jutta, to: [jutta]
+2024-03-08 21:53:58 [INFO] Creating new user hans
+2024-03-08 21:54:04 [INFO] Connected user hans to main server
+2024-03-08 21:54:04 [INFO] Sent UsersOnlineMessage: [hans] to clients with username: [hans]
+2024-03-08 21:54:09 [INFO] Sent Message from: hans, to: [hans]
+2024-03-08 21:54:30 [INFO] Sent Message from: hans, to: [hans]
+2024-03-08 21:58:46 [INFO] Sent Message from: hans, to: [hans]
+2024-03-08 21:58:48 [INFO] Sent Message from: hans, to: [hans]
+2024-03-08 21:58:48 [INFO] Sent Message from: hans, to: [hans]
+2024-03-08 21:58:49 [INFO] Sent Message from: hans, to: [hans]
+2024-03-08 21:58:49 [INFO] Sent Message from: hans, to: [hans]

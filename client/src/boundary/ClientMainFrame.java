@@ -166,7 +166,7 @@ public class ClientMainFrame extends JFrame {
                         if (messageImage != null) {
                             toggleInsertColor();
                         }
-                        messageImage = new ImageIcon(ImageIO.read(selectedFile));
+                        messageImage = new ImageIcon(ImageIO.read(selectedFile).getScaledInstance(100, 100, Image.SCALE_SMOOTH));
 
                         break; // Exit the loop if the file is valid
                     } else {
