@@ -1,5 +1,8 @@
 package boundary;
 import javax.swing.*;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 
 public class LoginFrame extends JFrame {
 
@@ -29,8 +32,40 @@ public class LoginFrame extends JFrame {
 
         loginButton.addActionListener(e -> {
             String username = usernameField.getText();
+            if (username.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please enter a username.");
+                return;
+            }
             loginView.sendUsernameToServer(username);
         });
+    }
+
+    public void selectProfilePicture() {
+        JFileChooser fileChooser = new JFileChooser();
+        while (true) {
+            int result = fileChooser.showOpenDialog(this);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File selectedFile = fileChooser.getSelectedFile();
+                try {
+                    byte[] fileContent = Files.readAllBytes(selectedFile.toPath());
+                    if (isValidFormat(selectedFile)) {
+                        loginView.sendProfilePictureToServer(fileContent);
+                        break; // Exit the loop if the file is valid
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Please select a valid image file.");
+                    }
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+            } else {
+                break;
+            }
+        }
+    }
+
+    private boolean isValidFormat(File file) {
+        String name = file.getName().toLowerCase();
+        return name.endsWith(".jpg") || name.endsWith(".jpeg") || name.endsWith(".png");
     }
 
 //    public static void main(String[] args) {

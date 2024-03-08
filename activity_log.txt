@@ -135,3 +135,19 @@
 2024-03-07 20:37:45 [INFO] Sent UsersOnlineMessage: [BarnacleBarnaby, GroundZeroGreta] to clients with username: [BarnacleBarnaby, GroundZeroGreta]
 2024-03-07 20:37:48 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
 2024-03-07 20:37:48 [INFO] Sent Message from: GroundZeroGreta, to: [BarnacleBarnaby, GroundZeroGreta]
+2024-03-08 10:41:10 [INFO] Creating new user kebab
+2024-03-08 10:41:10 [INFO] Connected user kebab to main server
+2024-03-08 10:41:10 [INFO] Sent UsersOnlineMessage: [kebab] to clients with username: [kebab]
+2024-03-08 10:41:34 [INFO] Sent Message from: kebab, to: [kebab]
+2024-03-08 10:41:58 [INFO] Creating new user usher
+2024-03-08 10:41:59 [INFO] Connected user usher to main server
+2024-03-08 10:41:59 [INFO] Sent UsersOnlineMessage: [usher] to clients with username: [usher]
+2024-03-08 10:42:07 [INFO] Sent Message from: usher, to: [usher]
+2024-03-08 11:08:43 [INFO] Creating new user porjus
+2024-03-08 11:09:40 [INFO] Creating new user isak
+2024-03-08 11:12:57 [INFO] Creating new user gustav
+2024-03-08 11:14:02 [INFO] Creating new user pengar
+2024-03-08 11:15:21 [INFO] Creating new user fredrik
+2024-03-08 11:15:29 [INFO] Connected user fredrik to main server
+2024-03-08 11:15:29 [INFO] Sent UsersOnlineMessage: [fredrik] to clients with username: [fredrik]
+2024-03-08 11:15:32 [INFO] Sent Message from: fredrik, to: [fredrik]

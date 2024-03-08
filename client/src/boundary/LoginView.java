@@ -33,6 +33,16 @@ public class LoginView {
         }
     }
 
+    public void sendProfilePictureToServer(byte[] profilePicture) {
+        try {
+            oos.writeObject(profilePicture);
+            oos.flush();
+        } catch (IOException ioe) {
+            System.out.println("IOException - " + ioe.getMessage());
+            ioe.printStackTrace();
+        }
+    }
+
     public int readResponseFromServer() {
         int response = -1;
         try {
@@ -50,5 +60,9 @@ public class LoginView {
 
     public void closeLoginWindow() {
         loginFrame.dispose();
+    }
+
+    public void selectProfilePicture() {
+        loginFrame.selectProfilePicture();
     }
 }

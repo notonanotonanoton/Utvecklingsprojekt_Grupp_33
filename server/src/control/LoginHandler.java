@@ -8,6 +8,9 @@ import entity.RegisteredUsers;
 import shared_entity.message.LoginMessage;
 import shared_entity.user.User;
 
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -81,9 +84,19 @@ public class LoginHandler extends Thread {
                 logger.logInfo("Creating new user " + username, LocalDateTime.now());
                 user = new User(username);
                 registeredUsers.addUser(user);
+                loginBoundary.writeResponseToClient(responseToClient);
+                try {
+                    byte[] profilePicture = loginBoundary.readProfilePictureFromClient();
+                    ByteArrayInputStream bis = new ByteArrayInputStream(profilePicture);
+                    BufferedImage bufferedImage = ImageIO.read(bis);
+                    ImageIcon imageIcon = new ImageIcon(bufferedImage);
+                    user.setUserIcon(imageIcon);
+                    System.out.println("Nås?");
+                } catch (IOException ioe) {
+                    ioe.printStackTrace();
+                    System.out.println("Login Server: Profile Picture Error");
+                }
             }
-            loginBoundary.writeResponseToClient(responseToClient);
-
             LoginMessage loginMessage = new LoginMessage(user);
             loginBoundary.writeUserMessageToClient(loginMessage);
 
