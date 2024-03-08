@@ -1,3 +1,4 @@
+import boundary.ActionLogView;
 import control.LoginHandler;
 import control.Server;
 import entity.RegisteredUsers;
@@ -14,6 +15,7 @@ public class ServerMain {
             System.out.println("ServerMain: Port Error");
         }
         Server server = new Server(serverSocket);
+        ActionLogView actionLogView = new ActionLogView();
         new LoginHandler(serverSocket, server, RegisteredUsers.getInstance());
     }
 }

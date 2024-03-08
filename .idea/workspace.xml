@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/client/src/ClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ClientMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/activity_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/ServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/boundary/ActionLogView.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/boundary/ActionLogView.java" afterDir="false" />
     </list>
     <list id="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" name="Changes by holmberg" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +40,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ActionLogView.executor": "Run",
     "Application.BoundaryTest.executor": "Run",
     "Application.Client.executor": "Run",
     "Application.ClientMain.executor": "Run",
@@ -80,6 +84,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="ActionLogView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="boundary.ActionLogView" />
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="boundary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -101,7 +118,13 @@
     <list>
       <item itemvalue="Application.Server" />
       <item itemvalue="Application.Client" />
+      <item itemvalue="Application.ActionLogView" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ActionLogView" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
