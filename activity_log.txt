@@ -66,3 +66,307 @@
 2024-03-08 23:18:14 [INFO] Sent Message from: Tjenare, to: [johan, Tjenare, kerstin]
 2024-03-08 23:18:14 [INFO] Sent Message from: Tjenare, to: [johan, Tjenare, kerstin]
 2024-03-08 23:18:14 [INFO] Sent Message from: Tjenare, to: [johan, Tjenare, kerstin]
+2024-03-09 13:46:10 [INFO] Creating new user Kalle
+2024-03-09 13:46:15 [INFO] Connected user Kalle to main server
+2024-03-09 13:46:15 [INFO] Sent UsersOnlineMessage: [Kalle] to clients with username: [Kalle]
+2024-03-09 13:46:18 [INFO] Creating new user Lisa
+2024-03-09 13:46:21 [INFO] Connected user Lisa to main server
+2024-03-09 13:46:21 [INFO] Sent UsersOnlineMessage: [Kalle, Lisa] to clients with username: [Kalle, Lisa]
+2024-03-09 13:46:21 [INFO] Sent UsersOnlineMessage: [Kalle, Lisa] to clients with username: [Kalle, Lisa]
+2024-03-09 13:46:30 [INFO] Creating new user Jarl
+2024-03-09 13:46:33 [INFO] Connected user Jarl to main server
+2024-03-09 13:46:33 [INFO] Sent UsersOnlineMessage: [Kalle, Jarl, Lisa] to clients with username: [Kalle, Jarl, Lisa]
+2024-03-09 13:46:33 [INFO] Sent UsersOnlineMessage: [Kalle, Jarl, Lisa] to clients with username: [Kalle, Jarl, Lisa]
+2024-03-09 13:46:33 [INFO] Sent UsersOnlineMessage: [Kalle, Jarl, Lisa] to clients with username: [Kalle, Jarl, Lisa]
+2024-03-09 13:46:37 [INFO] Sent Message from: Lisa, to: [Kalle, Jarl, Lisa]
+2024-03-09 13:46:37 [INFO] Sent Message from: Lisa, to: [Kalle, Jarl, Lisa]
+2024-03-09 13:46:37 [INFO] Sent Message from: Lisa, to: [Kalle, Jarl, Lisa]
+2024-03-09 13:46:41 [INFO] Sent Message from: Jarl, to: [Kalle, Jarl, Lisa]
+2024-03-09 13:46:41 [INFO] Sent Message from: Jarl, to: [Kalle, Jarl, Lisa]
+2024-03-09 13:46:41 [INFO] Sent Message from: Jarl, to: [Kalle, Jarl, Lisa]
+2024-03-09 13:46:46 [INFO] Sent Message from: Kalle, to: [Kalle, Jarl, Lisa]
+2024-03-09 13:46:46 [INFO] Sent Message from: Kalle, to: [Kalle, Jarl, Lisa]
+2024-03-09 13:46:46 [INFO] Sent Message from: Kalle, to: [Kalle, Jarl, Lisa]
+2024-03-09 13:59:09 [INFO] Creating new user Lisa
+2024-03-09 13:59:12 [INFO] Connected user Lisa to main server
+2024-03-09 13:59:12 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-09 13:59:16 [INFO] Creating new user Hugo
+2024-03-09 13:59:21 [INFO] Connected user Hugo to main server
+2024-03-09 13:59:21 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-09 13:59:21 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-09 13:59:26 [INFO] Sent Message from: Lisa, to: [Hugo, Lisa]
+2024-03-09 13:59:26 [INFO] Sent Message from: Lisa, to: [Hugo, Lisa]
+2024-03-09 13:59:33 [INFO] Creating new user Pelle
+2024-03-09 13:59:35 [INFO] Connected user Pelle to main server
+2024-03-09 13:59:35 [INFO] Sent UsersOnlineMessage: [Pelle, Hugo, Lisa] to clients with username: [Pelle, Hugo, Lisa]
+2024-03-09 13:59:35 [INFO] Sent UsersOnlineMessage: [Pelle, Hugo, Lisa] to clients with username: [Pelle, Hugo, Lisa]
+2024-03-09 13:59:35 [INFO] Sent UsersOnlineMessage: [Pelle, Hugo, Lisa] to clients with username: [Pelle, Hugo, Lisa]
+2024-03-09 13:59:41 [INFO] Sent Message from: Pelle, to: [Pelle, Hugo, Lisa]
+2024-03-09 13:59:41 [INFO] Sent Message from: Pelle, to: [Pelle, Hugo, Lisa]
+2024-03-09 13:59:41 [INFO] Sent Message from: Pelle, to: [Pelle, Hugo, Lisa]
+2024-03-09 14:00:08 [INFO] Logging in to user Pelle
+2024-03-09 14:00:08 [INFO] Connected user Pelle to main server
+2024-03-09 14:00:08 [INFO] Sent UsersOnlineMessage: [Pelle, Hugo, Lisa] to clients with username: [Pelle, Hugo, Lisa]
+2024-03-09 14:00:08 [INFO] Sent UsersOnlineMessage: [Pelle, Hugo, Lisa] to clients with username: [Pelle, Hugo, Lisa]
+2024-03-09 14:00:08 [INFO] Sent UsersOnlineMessage: [Pelle, Hugo, Lisa] to clients with username: [Pelle, Hugo, Lisa]
+2024-03-09 14:00:39 [INFO] Logging in to user Pelle
+2024-03-09 14:00:39 [INFO] Connected user Pelle to main server
+2024-03-09 14:00:39 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:03:36 [INFO] Logging in to user Pelle
+2024-03-09 14:03:36 [INFO] Connected user Pelle to main server
+2024-03-09 14:03:36 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:06:11 [INFO] Logging in to user Pelle
+2024-03-09 14:06:11 [INFO] Connected user Pelle to main server
+2024-03-09 14:06:11 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:08:41 [INFO] Logging in to user Pelle
+2024-03-09 14:08:41 [INFO] Connected user Pelle to main server
+2024-03-09 14:08:41 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:12:26 [INFO] Logging in to user Pelle
+2024-03-09 14:12:26 [INFO] Connected user Pelle to main server
+2024-03-09 14:12:26 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:13:00 [INFO] Logging in to user Pelle
+2024-03-09 14:13:00 [INFO] Connected user Pelle to main server
+2024-03-09 14:13:00 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:16:48 [INFO] Logging in to user Pelle
+2024-03-09 14:16:48 [INFO] Connected user Pelle to main server
+2024-03-09 14:16:48 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:19:49 [INFO] Logging in to user Pelle
+2024-03-09 14:19:49 [INFO] Connected user Pelle to main server
+2024-03-09 14:19:49 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:21:43 [INFO] Logging in to user Pelle
+2024-03-09 14:21:43 [INFO] Connected user Pelle to main server
+2024-03-09 14:21:43 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:21:49 [INFO] Logging in to user Hugo
+2024-03-09 14:21:49 [INFO] Connected user Hugo to main server
+2024-03-09 14:21:49 [INFO] Sent UsersOnlineMessage: [Pelle, Hugo] to clients with username: [Pelle, Hugo]
+2024-03-09 14:21:49 [INFO] Sent UsersOnlineMessage: [Pelle, Hugo] to clients with username: [Pelle, Hugo]
+2024-03-09 14:21:56 [INFO] Sent Message from: Pelle, to: [Pelle, Hugo]
+2024-03-09 14:21:56 [INFO] Sent Message from: Pelle, to: [Pelle, Hugo]
+2024-03-09 14:22:00 [INFO] Sent Message from: Hugo, to: [Pelle, Hugo]
+2024-03-09 14:22:00 [INFO] Sent Message from: Hugo, to: [Pelle, Hugo]
+2024-03-09 14:22:13 [INFO] Creating new user Markus
+2024-03-09 14:22:18 [INFO] Connected user Markus to main server
+2024-03-09 14:22:18 [INFO] Sent UsersOnlineMessage: [Pelle, Hugo, Markus] to clients with username: [Pelle, Hugo, Markus]
+2024-03-09 14:22:18 [INFO] Sent UsersOnlineMessage: [Pelle, Hugo, Markus] to clients with username: [Pelle, Hugo, Markus]
+2024-03-09 14:22:18 [INFO] Sent UsersOnlineMessage: [Pelle, Hugo, Markus] to clients with username: [Pelle, Hugo, Markus]
+2024-03-09 14:22:22 [INFO] Sent Message from: Markus, to: [Pelle, Hugo, Markus]
+2024-03-09 14:22:22 [INFO] Sent Message from: Markus, to: [Pelle, Hugo, Markus]
+2024-03-09 14:22:22 [INFO] Sent Message from: Markus, to: [Pelle, Hugo, Markus]
+2024-03-09 14:24:59 [INFO] Logging in to user Markus
+2024-03-09 14:24:59 [INFO] Connected user Markus to main server
+2024-03-09 14:24:59 [INFO] Sent UsersOnlineMessage: [Markus] to clients with username: [Markus]
+2024-03-09 14:25:05 [INFO] Sent Message from: Markus, to: [Markus]
+2024-03-09 14:25:09 [INFO] Logging in to user Pelle
+2024-03-09 14:25:09 [INFO] Connected user Pelle to main server
+2024-03-09 14:25:09 [INFO] Sent UsersOnlineMessage: [Pelle, Markus] to clients with username: [Pelle, Markus]
+2024-03-09 14:25:09 [INFO] Sent UsersOnlineMessage: [Pelle, Markus] to clients with username: [Pelle, Markus]
+2024-03-09 14:25:14 [INFO] Sent Message from: Pelle, to: [Pelle, Markus]
+2024-03-09 14:25:14 [INFO] Sent Message from: Pelle, to: [Pelle, Markus]
+2024-03-09 14:25:30 [INFO] Logging in to user Lisa
+2024-03-09 14:25:30 [INFO] Connected user Lisa to main server
+2024-03-09 14:25:30 [INFO] Sent UsersOnlineMessage: [Pelle, Markus, Lisa] to clients with username: [Pelle, Markus, Lisa]
+2024-03-09 14:25:30 [INFO] Sent UsersOnlineMessage: [Pelle, Markus, Lisa] to clients with username: [Pelle, Markus, Lisa]
+2024-03-09 14:25:30 [INFO] Sent UsersOnlineMessage: [Pelle, Markus, Lisa] to clients with username: [Pelle, Markus, Lisa]
+2024-03-09 14:25:33 [INFO] Sent Message from: Lisa, to: [Pelle, Markus, Lisa]
+2024-03-09 14:25:33 [INFO] Sent Message from: Lisa, to: [Pelle, Markus, Lisa]
+2024-03-09 14:25:33 [INFO] Sent Message from: Lisa, to: [Pelle, Markus, Lisa]
+2024-03-09 14:31:20 [INFO] Logging in to user Pelle
+2024-03-09 14:31:20 [INFO] Connected user Pelle to main server
+2024-03-09 14:31:20 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:32:04 [INFO] Logging in to user Pelle
+2024-03-09 14:32:04 [INFO] Connected user Pelle to main server
+2024-03-09 14:32:04 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:32:07 [INFO] Logging in to user Lisa
+2024-03-09 14:32:07 [INFO] Connected user Lisa to main server
+2024-03-09 14:32:07 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 14:32:07 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 14:32:09 [INFO] Sent Message from: Lisa, to: [Pelle, Lisa]
+2024-03-09 14:32:09 [INFO] Sent Message from: Lisa, to: [Pelle, Lisa]
+2024-03-09 14:32:12 [INFO] Sent Message from: Pelle, to: [Pelle, Lisa]
+2024-03-09 14:32:12 [INFO] Sent Message from: Pelle, to: [Pelle, Lisa]
+2024-03-09 14:32:55 [INFO] Sent Message from: Pelle, to: [Pelle, Lisa]
+2024-03-09 14:32:55 [INFO] Sent Message from: Pelle, to: [Pelle, Lisa]
+2024-03-09 14:34:09 [INFO] Creating new user Boris
+2024-03-09 14:34:11 [INFO] Connected user Boris to main server
+2024-03-09 14:34:11 [INFO] Sent UsersOnlineMessage: [Pelle, Boris, Lisa] to clients with username: [Pelle, Boris, Lisa]
+2024-03-09 14:34:11 [INFO] Sent UsersOnlineMessage: [Pelle, Boris, Lisa] to clients with username: [Pelle, Boris, Lisa]
+2024-03-09 14:34:11 [INFO] Sent UsersOnlineMessage: [Pelle, Boris, Lisa] to clients with username: [Pelle, Boris, Lisa]
+2024-03-09 14:34:15 [INFO] Sent Message from: Boris, to: [Pelle, Boris, Lisa]
+2024-03-09 14:34:15 [INFO] Sent Message from: Boris, to: [Pelle, Boris, Lisa]
+2024-03-09 14:34:15 [INFO] Sent Message from: Boris, to: [Pelle, Boris, Lisa]
+2024-03-09 14:34:36 [INFO] Logging in to user Boris
+2024-03-09 14:34:36 [INFO] Connected user Boris to main server
+2024-03-09 14:34:36 [INFO] Sent UsersOnlineMessage: [Boris] to clients with username: [Boris]
+2024-03-09 14:34:41 [INFO] Sent Message from: Boris, to: [Boris]
+2024-03-09 14:35:08 [INFO] Logging in to user Lisa
+2024-03-09 14:35:08 [INFO] Connected user Lisa to main server
+2024-03-09 14:35:08 [INFO] Sent UsersOnlineMessage: [Boris, Lisa] to clients with username: [Boris, Lisa]
+2024-03-09 14:35:08 [INFO] Sent UsersOnlineMessage: [Boris, Lisa] to clients with username: [Boris, Lisa]
+2024-03-09 14:35:11 [INFO] Sent Message from: Lisa, to: [Boris, Lisa]
+2024-03-09 14:35:11 [INFO] Sent Message from: Lisa, to: [Boris, Lisa]
+2024-03-09 14:35:45 [INFO] Sent Message from: Lisa, to: [Boris, Lisa]
+2024-03-09 14:35:45 [INFO] Sent Message from: Lisa, to: [Boris, Lisa]
+2024-03-09 14:35:53 [INFO] Sent Message from: Boris, to: [Boris, Lisa]
+2024-03-09 14:35:53 [INFO] Sent Message from: Boris, to: [Boris, Lisa]
+2024-03-09 14:39:31 [INFO] Logging in to user Markus
+2024-03-09 14:39:31 [INFO] Connected user Markus to main server
+2024-03-09 14:39:31 [INFO] Sent UsersOnlineMessage: [Boris, Markus, Lisa] to clients with username: [Boris, Markus, Lisa]
+2024-03-09 14:39:31 [INFO] Sent UsersOnlineMessage: [Boris, Markus, Lisa] to clients with username: [Boris, Markus, Lisa]
+2024-03-09 14:39:31 [INFO] Sent UsersOnlineMessage: [Boris, Markus, Lisa] to clients with username: [Boris, Markus, Lisa]
+2024-03-09 14:39:33 [INFO] Sent Message from: Markus, to: [Boris, Markus, Lisa]
+2024-03-09 14:39:33 [INFO] Sent Message from: Markus, to: [Boris, Markus, Lisa]
+2024-03-09 14:39:33 [INFO] Sent Message from: Markus, to: [Boris, Markus, Lisa]
+2024-03-09 14:39:44 [INFO] Sent Message from: Boris, to: [Boris, Markus, Lisa]
+2024-03-09 14:39:44 [INFO] Sent Message from: Boris, to: [Boris, Markus, Lisa]
+2024-03-09 14:39:44 [INFO] Sent Message from: Boris, to: [Boris, Markus, Lisa]
+2024-03-09 14:40:59 [INFO] Creating new user Kukko
+2024-03-09 14:41:03 [INFO] Connected user Kukko to main server
+2024-03-09 14:41:03 [INFO] Sent UsersOnlineMessage: [Kukko] to clients with username: [Kukko]
+2024-03-09 14:41:06 [INFO] Sent Message from: Kukko, to: [Kukko]
+2024-03-09 14:41:20 [INFO] Logging in to user Kukko
+2024-03-09 14:41:20 [INFO] Connected user Kukko to main server
+2024-03-09 14:41:20 [INFO] Sent UsersOnlineMessage: [Kukko] to clients with username: [Kukko]
+2024-03-09 14:41:22 [INFO] Sent Message from: Kukko, to: [Kukko]
+2024-03-09 14:41:57 [INFO] Logging in to user Lisa
+2024-03-09 14:41:57 [INFO] Connected user Lisa to main server
+2024-03-09 14:41:57 [INFO] Sent UsersOnlineMessage: [Kukko, Lisa] to clients with username: [Kukko, Lisa]
+2024-03-09 14:41:57 [INFO] Sent UsersOnlineMessage: [Kukko, Lisa] to clients with username: [Kukko, Lisa]
+2024-03-09 14:42:00 [INFO] Sent Message from: Lisa, to: [Kukko, Lisa]
+2024-03-09 14:42:00 [INFO] Sent Message from: Lisa, to: [Kukko, Lisa]
+2024-03-09 14:45:32 [INFO] Logging in to user Pelle
+2024-03-09 14:45:32 [INFO] Connected user Pelle to main server
+2024-03-09 14:45:32 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:45:39 [INFO] Sent Message from: Pelle, to: [Pelle]
+2024-03-09 14:45:43 [INFO] Logging in to user Lisa
+2024-03-09 14:45:43 [INFO] Connected user Lisa to main server
+2024-03-09 14:45:43 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 14:45:43 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 14:45:46 [INFO] Sent Message from: Lisa, to: [Pelle, Lisa]
+2024-03-09 14:45:46 [INFO] Sent Message from: Lisa, to: [Pelle, Lisa]
+2024-03-09 14:47:18 [INFO] Logging in to user Pelle
+2024-03-09 14:47:18 [INFO] Connected user Pelle to main server
+2024-03-09 14:47:18 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 14:47:25 [INFO] Sent Message from: Pelle, to: [Pelle]
+2024-03-09 14:49:46 [INFO] Logging in to user Lisa
+2024-03-09 14:49:46 [INFO] Connected user Lisa to main server
+2024-03-09 14:49:46 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 14:49:46 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 14:50:11 [INFO] Sent Message from: Lisa, to: [Pelle, Lisa]
+2024-03-09 14:50:11 [INFO] Sent Message from: Lisa, to: [Pelle, Lisa]
+2024-03-09 14:52:10 [INFO] Logging in to user Markus
+2024-03-09 14:52:10 [INFO] Connected user Markus to main server
+2024-03-09 14:52:10 [INFO] Sent UsersOnlineMessage: [Pelle, Markus, Lisa] to clients with username: [Pelle, Markus, Lisa]
+2024-03-09 14:52:10 [INFO] Sent UsersOnlineMessage: [Pelle, Markus, Lisa] to clients with username: [Pelle, Markus, Lisa]
+2024-03-09 14:52:10 [INFO] Sent UsersOnlineMessage: [Pelle, Markus, Lisa] to clients with username: [Pelle, Markus, Lisa]
+2024-03-09 14:52:22 [INFO] Sent Message from: Markus, to: [Pelle, Markus, Lisa]
+2024-03-09 14:52:22 [INFO] Sent Message from: Markus, to: [Pelle, Markus, Lisa]
+2024-03-09 14:52:22 [INFO] Sent Message from: Markus, to: [Pelle, Markus, Lisa]
+2024-03-09 14:58:57 [INFO] Logging in to user Lisa
+2024-03-09 14:58:57 [INFO] Connected user Lisa to main server
+2024-03-09 14:58:57 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-09 14:59:14 [INFO] Sent Message from: Lisa, to: [Lisa]
+2024-03-09 15:00:32 [INFO] Logging in to user Boris
+2024-03-09 15:00:32 [INFO] Connected user Boris to main server
+2024-03-09 15:00:32 [INFO] Sent UsersOnlineMessage: [Boris, Lisa] to clients with username: [Boris, Lisa]
+2024-03-09 15:00:32 [INFO] Sent UsersOnlineMessage: [Boris, Lisa] to clients with username: [Boris, Lisa]
+2024-03-09 15:00:39 [INFO] Sent Message from: Boris, to: [Boris, Lisa]
+2024-03-09 15:00:39 [INFO] Sent Message from: Boris, to: [Boris, Lisa]
+2024-03-09 15:04:41 [INFO] Logging in to user Pelle
+2024-03-09 15:04:41 [INFO] Connected user Pelle to main server
+2024-03-09 15:04:41 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 15:04:44 [INFO] Sent Message from: Pelle, to: [Pelle]
+2024-03-09 15:06:34 [INFO] Creating new user Lisa
+2024-03-09 15:06:38 [INFO] Connected user Lisa to main server
+2024-03-09 15:06:38 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-09 15:06:47 [INFO] Sent Message from: Lisa, to: [Lisa]
+2024-03-09 15:06:52 [INFO] Creating new user Pelle
+2024-03-09 15:06:57 [INFO] Connected user Pelle to main server
+2024-03-09 15:06:57 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 15:06:57 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 15:07:02 [INFO] Sent Message from: Pelle, to: [Pelle, Lisa]
+2024-03-09 15:07:02 [INFO] Sent Message from: Pelle, to: [Pelle, Lisa]
+2024-03-09 15:07:25 [INFO] Logging in to user Lisa
+2024-03-09 15:07:25 [INFO] Connected user Lisa to main server
+2024-03-09 15:07:25 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-09 15:07:28 [INFO] Sent Message from: Lisa, to: [Lisa]
+2024-03-09 15:07:32 [INFO] Logging in to user Pelle
+2024-03-09 15:07:32 [INFO] Connected user Pelle to main server
+2024-03-09 15:07:32 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 15:07:32 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 15:07:35 [INFO] Sent Message from: Pelle, to: [Pelle, Lisa]
+2024-03-09 15:07:35 [INFO] Sent Message from: Pelle, to: [Pelle, Lisa]
+2024-03-09 15:07:45 [INFO] Creating new user Karl
+2024-03-09 15:07:48 [INFO] Connected user Karl to main server
+2024-03-09 15:07:48 [INFO] Sent UsersOnlineMessage: [Karl, Pelle, Lisa] to clients with username: [Karl, Pelle, Lisa]
+2024-03-09 15:07:48 [INFO] Sent UsersOnlineMessage: [Karl, Pelle, Lisa] to clients with username: [Karl, Pelle, Lisa]
+2024-03-09 15:07:48 [INFO] Sent UsersOnlineMessage: [Karl, Pelle, Lisa] to clients with username: [Karl, Pelle, Lisa]
+2024-03-09 15:07:50 [INFO] Sent Message from: Karl, to: [Karl, Pelle, Lisa]
+2024-03-09 15:07:50 [INFO] Sent Message from: Karl, to: [Karl, Pelle, Lisa]
+2024-03-09 15:07:50 [INFO] Sent Message from: Karl, to: [Karl, Pelle, Lisa]
+2024-03-09 15:08:09 [INFO] Logging in to user Lisa
+2024-03-09 15:08:09 [INFO] Connected user Lisa to main server
+2024-03-09 15:08:09 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-09 15:08:15 [INFO] Sent Message from: Lisa, to: [Lisa]
+2024-03-09 15:08:19 [INFO] Logging in to user Karl
+2024-03-09 15:08:19 [INFO] Connected user Karl to main server
+2024-03-09 15:08:19 [INFO] Sent UsersOnlineMessage: [Karl, Lisa] to clients with username: [Karl, Lisa]
+2024-03-09 15:08:19 [INFO] Sent UsersOnlineMessage: [Karl, Lisa] to clients with username: [Karl, Lisa]
+2024-03-09 15:08:20 [INFO] Sent Message from: Karl, to: [Karl, Lisa]
+2024-03-09 15:08:20 [INFO] Sent Message from: Karl, to: [Karl, Lisa]
+2024-03-09 15:08:26 [INFO] Logging in to user Pelle
+2024-03-09 15:08:26 [INFO] Sent UsersOnlineMessage: [Karl, Pelle, Lisa] to clients with username: [Karl, Pelle, Lisa]
+2024-03-09 15:08:26 [INFO] Connected user Pelle to main server
+2024-03-09 15:08:26 [INFO] Sent UsersOnlineMessage: [Karl, Pelle, Lisa] to clients with username: [Karl, Pelle, Lisa]
+2024-03-09 15:08:26 [INFO] Sent UsersOnlineMessage: [Karl, Pelle, Lisa] to clients with username: [Karl, Pelle, Lisa]
+2024-03-09 15:08:27 [INFO] Sent Message from: Pelle, to: [Karl, Pelle, Lisa]
+2024-03-09 15:08:27 [INFO] Sent Message from: Pelle, to: [Karl, Pelle, Lisa]
+2024-03-09 15:08:27 [INFO] Sent Message from: Pelle, to: [Karl, Pelle, Lisa]
+2024-03-09 15:09:11 [INFO] Creating new user Pelle
+2024-03-09 15:09:14 [INFO] Connected user Pelle to main server
+2024-03-09 15:09:14 [INFO] Sent UsersOnlineMessage: [Pelle] to clients with username: [Pelle]
+2024-03-09 15:09:16 [INFO] Sent Message from: Pelle, to: [Pelle]
+2024-03-09 15:09:19 [INFO] Creating new user Lisa
+2024-03-09 15:09:22 [INFO] Connected user Lisa to main server
+2024-03-09 15:09:22 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 15:09:22 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 15:09:25 [INFO] Sent Message from: Lisa, to: [Pelle, Lisa]
+2024-03-09 15:09:25 [INFO] Sent Message from: Lisa, to: [Pelle, Lisa]
+2024-03-09 15:09:37 [INFO] Logging in to user Lisa
+2024-03-09 15:09:37 [INFO] Connected user Lisa to main server
+2024-03-09 15:09:37 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-09 15:09:39 [INFO] Sent Message from: Lisa, to: [Lisa]
+2024-03-09 15:09:43 [INFO] Logging in to user Pelle
+2024-03-09 15:09:43 [INFO] Connected user Pelle to main server
+2024-03-09 15:09:43 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 15:09:43 [INFO] Sent UsersOnlineMessage: [Pelle, Lisa] to clients with username: [Pelle, Lisa]
+2024-03-09 15:09:45 [INFO] Sent Message from: Pelle, to: [Pelle, Lisa]
+2024-03-09 15:09:45 [INFO] Sent Message from: Pelle, to: [Pelle, Lisa]
+2024-03-09 15:14:36 [INFO] Creating new user Lisa
+2024-03-09 15:14:39 [INFO] Connected user Lisa to main server
+2024-03-09 15:14:39 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-09 15:14:40 [INFO] Sent Message from: Lisa, to: [Lisa]
+2024-03-09 15:14:44 [INFO] Creating new user bertil
+2024-03-09 15:14:46 [INFO] Connected user bertil to main server
+2024-03-09 15:14:46 [INFO] Sent UsersOnlineMessage: [bertil, Lisa] to clients with username: [bertil, Lisa]
+2024-03-09 15:14:46 [INFO] Sent UsersOnlineMessage: [bertil, Lisa] to clients with username: [bertil, Lisa]
+2024-03-09 15:14:48 [INFO] Sent Message from: bertil, to: [bertil, Lisa]
+2024-03-09 15:14:48 [INFO] Sent Message from: bertil, to: [bertil, Lisa]
+2024-03-09 15:14:55 [INFO] Creating new user kalle
+2024-03-09 15:15:00 [INFO] Connected user kalle to main server
+2024-03-09 15:15:00 [INFO] Sent UsersOnlineMessage: [bertil, kalle, Lisa] to clients with username: [bertil, kalle, Lisa]
+2024-03-09 15:15:00 [INFO] Sent UsersOnlineMessage: [bertil, kalle, Lisa] to clients with username: [bertil, kalle, Lisa]
+2024-03-09 15:15:00 [INFO] Sent UsersOnlineMessage: [bertil, kalle, Lisa] to clients with username: [bertil, kalle, Lisa]
+2024-03-09 15:15:02 [INFO] Sent Message from: kalle, to: [bertil, kalle, Lisa]
+2024-03-09 15:15:02 [INFO] Sent Message from: kalle, to: [bertil, kalle, Lisa]
+2024-03-09 15:15:02 [INFO] Sent Message from: kalle, to: [bertil, kalle, Lisa]
+2024-03-09 15:15:19 [INFO] Logging in to user kalle
+2024-03-09 15:15:19 [INFO] Connected user kalle to main server
+2024-03-09 15:15:19 [INFO] Sent UsersOnlineMessage: [kalle] to clients with username: [kalle]
+2024-03-09 15:15:22 [INFO] Sent Message from: kalle, to: [kalle]
+2024-03-09 15:15:30 [INFO] Logging in to user bertil
+2024-03-09 15:15:30 [INFO] Connected user bertil to main server
+2024-03-09 15:15:30 [INFO] Sent UsersOnlineMessage: [bertil, kalle] to clients with username: [bertil, kalle]
+2024-03-09 15:15:30 [INFO] Sent UsersOnlineMessage: [bertil, kalle] to clients with username: [bertil, kalle]
+2024-03-09 15:15:32 [INFO] Sent Message from: bertil, to: [bertil, kalle]
+2024-03-09 15:15:32 [INFO] Sent Message from: bertil, to: [bertil, kalle]
+2024-03-09 15:15:40 [INFO] Creating new user lisa
