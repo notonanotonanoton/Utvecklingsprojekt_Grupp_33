@@ -20,6 +20,8 @@ public class ClientMainFrame extends JFrame {
     private JPanel buttonPanel;
     private JPanel topPanel;
     private JPanel bottomPanel;
+    private JScrollPane messageWindowScrollPane;
+    private JPanel messageWindowPanel;
     private ImageIcon messageImage;
 
     public ClientMainFrame(ClientMainView mainView) {
@@ -50,8 +52,7 @@ public class ClientMainFrame extends JFrame {
                 return false;
             }
         });
-        messageWindow.setRowHeight(100);
-        messageWindow.setFont(messageTextInput.getFont());
+        messageWindow.getTableHeader().setUI(null);
 
         buttonSend.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -66,67 +67,54 @@ public class ClientMainFrame extends JFrame {
         });
 
         // call onExit() when cross is clicked
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 onExit();
             }
         });
 
-        // call onExit() on ESCAPE
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onExit();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_IN_FOCUSED_WINDOW);
-
-        // call onSend() on ENTER
-        contentPane.registerKeyboardAction(new ActionListener() {
+        // call onSend on ENTER
+        messageTextInput.getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0),
+                "sendMessage");
+        messageTextInput.getActionMap().put("sendMessage", new AbstractAction() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 onSend();
             }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0), JComponent.WHEN_IN_FOCUSED_WINDOW);
+        });
     }
 
     public void addMessageRow(Object[] messageInfo) {
+        //TODO remove test print
         for (Object object : messageInfo) {
             System.out.println("MainFrame Object Read: " + object.toString());
         }
         DefaultTableModel tableModel = (DefaultTableModel) messageWindow.getModel();
         tableModel.addRow(messageInfo);
+
+        //scroll to bottom for every new message
+        SwingUtilities.invokeLater(() ->
+                messageWindow.scrollRectToVisible(messageWindow.getCellRect(messageWindow.getRowCount()-1, 0, true)));
     }
 
     private void onSend() {
-        if(!(messageTextInput.getText() == null && messageImage == null)) {
+        if(!(messageTextInput.getText().isBlank() && messageImage == null)) {
             mainView.createMessage(messageTextInput.getText(), messageImage);
-            messageTextInput.setText(null);
-
-            if(messageImage != null) {
-                toggleInsertColor();
-            }
-            messageImage = null;
+            messageTextInput.setText("");
+            buttonInsert.setBackground(new Color(100,95,95));
         }
     }
 
     private void onInsert() {
         selectMessageImage();
-        if(messageImage == null) {
-            toggleInsertColor();
+        if(messageImage != null) {
+            buttonInsert.setBackground(new Color(100, 150, 100));
         }
     }
 
     private void onExit() {
         dispose();
-    }
-
-    private void toggleInsertColor() {
-        Color greenish = new Color(100, 150, 100);
-
-        if(buttonInsert.getBackground() == greenish) {
-            buttonInsert.setBackground(new Color(100,95,95));
-        } else {
-            buttonInsert.setBackground(greenish);
-        }
     }
 
     private void setupColors(){
@@ -140,7 +128,11 @@ public class ClientMainFrame extends JFrame {
         topPanel.setBackground(baseColor);
         buttonPanel.setBackground(baseColor);
         bottomPanel.setBackground(baseColor);
+        messageWindowPanel.setBackground(mainColor);
         messageWindow.setBackground(mainColor);
+        messageWindowScrollPane.setBackground(mainColor);
+        messageWindowScrollPane.getViewport().setBackground(mainColor);
+        messageWindowScrollPane.setBorder(new MatteBorder(4,4,4,4, mainColor));
         userList.setBackground(mainColor);
         messageTextInput.setBackground(highlightColor);
         buttonInsert.setBackground(highlightColor);
@@ -154,6 +146,11 @@ public class ClientMainFrame extends JFrame {
         userList.setForeground(textColor);
     }
 
+    public void resetInsert() {
+        messageImage = null;
+        buttonInsert.setBackground(new Color(100,95,95));
+    }
+
     //TODO mostly copied from LoginFrame, maybe there's a better solution?
     private void selectMessageImage() {
         JFileChooser fileChooser = new JFileChooser();
@@ -163,13 +160,11 @@ public class ClientMainFrame extends JFrame {
                 File selectedFile = fileChooser.getSelectedFile();
                 try {
                     if (isValidFormat(selectedFile)) {
-                        if (messageImage != null) {
-                            toggleInsertColor();
-                        }
                         messageImage = new ImageIcon(ImageIO.read(selectedFile).getScaledInstance(100, 100, Image.SCALE_SMOOTH));
 
                         break; // Exit the loop if the file is valid
                     } else {
+                        resetInsert();
                         JOptionPane.showMessageDialog(this, "Please select a valid image file.");
                     }
                 } catch (IOException ioException) {

@@ -46,18 +46,11 @@ public class Server implements PropertyChangeListener {
         message.setReceivedByServer(); // correct?
         System.out.println("send to message handler received");
 
-        //TODO remove check
-        if(message.getMessageText() != null) {
-            System.out.println("Message text: " + message.getMessageText());
-        }
-
         for (User user : message.getReceivers()) {
             ClientConnection clientConnection = clientConnectionList.get(user);
             if (clientConnection != null) {
-                System.out.println("woo");
                 clientConnection.getThread().addMessageToHandlerList(message);
             } else {
-                System.out.println("oops");
                 unsentMessages.put(user, message);
             }
         }

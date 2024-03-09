@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activity_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/activity_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/control/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/control/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/control/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/control/LoginHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/entity/RegisteredUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/entity/RegisteredUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" afterDir="false" />
     </list>
     <list id="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" name="Changes by holmberg" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,42 +36,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ActionLogView.executor": "Run",
-    "Application.BoundaryTest.executor": "Run",
-    "Application.Client.executor": "Run",
-    "Application.ClientMain.executor": "Run",
-    "Application.ClientMainFrame.executor": "Run",
-    "Application.LoginFrame.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Server.executor": "Run",
-    "Application.ServerMain.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.ClientTest.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "268",
-    "git-widget-placeholder": "mans__branch",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Asaky/courses/da343a/inlamningsuppgifter/projekt/DA343A_UP_33/client/src/boundary",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.archetype.catalogs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ActionLogView.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BoundaryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ClientMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ClientMainFrame.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LoginFrame.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ServerMain.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.ClientTest.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;268&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;anton__branch&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asaky/courses/da343a/inlamningsuppgifter/projekt/DA343A_UP_33/client/src/boundary&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.archetype.catalogs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Asaky\courses\da343a\inlamningsuppgifter\projekt\DA343A_UP_33\client\src\boundary" />
@@ -85,7 +81,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="ActionLogView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.ActionLogView" />
       <module name="server" />
@@ -131,7 +127,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-3183f394aec4-aba903c2" />
       </set>
     </attachedChunks>
   </component>
@@ -149,6 +146,7 @@
       <workItem from="1709639012758" duration="15624000" />
       <workItem from="1709815197348" duration="22309000" />
       <workItem from="1709979346913" duration="6823000" />
+      <workItem from="1710004631397" duration="206000" />
     </task>
     <servers />
   </component>
