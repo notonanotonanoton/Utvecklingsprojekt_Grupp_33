@@ -62,4 +62,20 @@ public class ClientMainView extends Thread {
     public void createMessage(String messageText, ImageIcon messageImage) {
         client.assembleUserToUserMessage(messageText, messageImage);
     }
+
+    public void updateOnlineUsersGUI(Object[][] usersInfo) {
+        mainFrame.addUserModel(usersInfo);
+    }
+
+    public void addContact(String username) {
+
+    }
+
+    public void removeContact(String username) {
+
+    }
+
+    public void addOrRemoveReceiver(String username) {
+
+    }
 }
