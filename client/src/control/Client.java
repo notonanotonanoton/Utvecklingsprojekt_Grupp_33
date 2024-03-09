@@ -26,9 +26,11 @@ public class Client {
         this.user = user;
         this.clientSocket = clientSocket;
         onlineUsers = new OnlineUsers();
+        //TODO load ClientContacts from file here or inside ClientContacts class?
         clientContacts = new ClientContacts();
         receivers = new Receivers();
         mainView = new ClientMainView(this, oos, ois);
+        updateContactsGUI();
     }
 
     //TODO add full implementation when possible
@@ -90,6 +92,7 @@ public class Client {
         for (User user : onlineUsers.getUserList()) {
             if (user.getUserName().equals(username)) {
                 clientContacts.addContact(user);
+                updateContactsGUI();
                 return;
             }
         }
@@ -97,37 +100,49 @@ public class Client {
 
     public void removeContact(String username) {
         clientContacts.removeContact(username);
+        updateContactsGUI();
     }
 
-    public void addReceiver(String username) {
-        for(User user : onlineUsers.getUserList()) {
-            if(user.getUserName().equals(username)) {
-                receivers.addReceiver(user);
+    public void addOrRemoveReceiver(String username) {
+        for (User user : onlineUsers.getUserList()) {
+            if (user.getUserName().equals(username)) {
+                receivers.addOrRemoveReceiver(user);
                 return;
             }
         }
     }
 
-    public void removeReceiver(String username) {
-        receivers.removeReceiver(username);
-    }
-
     public void updateOnlineUsersGUI() {
         List<User> userList = onlineUsers.getUserList();
-        Object[][] userInfo = new Object[userList.size()][4];
+        Object[][] userInfo = new Object[userList.size()][3];
         for (int i = 0; i < userInfo.length; i++) {
             for (int j = 0; j < userInfo[0].length; j++) {
-                if(j == 0) {
+                if (j == 0) {
                     userInfo[i][j] = userList.get(i).getUserIcon();
                 } else if (j == 1) {
                     userInfo[i][j] = userList.get(i).getUserName();
                 } else if (j == 2) {
-                    //create button from mainframe
-                } else if (j == 3) {
-                    //create button from mainframe
+                    userInfo[i][j] = "+ CONTACT";
                 }
             }
+            mainView.updateOnlineUsersGUI(userInfo);
         }
-        mainView.updateOnlineUsersGUI(userInfo);
+    }
+
+    public void updateContactsGUI() {
+        List<User> contactList = clientContacts.getContactList();
+        Object[][] contactInfo = new Object[contactList.size()][3];
+        for (int i = 0; i < contactInfo.length; i++) {
+            for (int j = 0; j < contactInfo[0].length; j++) {
+                if (j == 0) {
+                    contactInfo[i][j] = contactList.get(i).getUserIcon();
+                } else if (j == 1) {
+                    contactInfo[i][j] = contactList.get(i).getUserName();
+                } else if (j == 2) {
+                    contactInfo[i][j] = "- CONTACT";
+                }
+            }
+            mainView.updateContactsGUI(contactInfo);
+        }
     }
 }

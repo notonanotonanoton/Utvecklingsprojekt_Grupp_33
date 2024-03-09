@@ -12,17 +12,16 @@ public class Receivers {
         receiverList = new ArrayList<>();
     }
 
-    public void addReceiver(User receiver) {
-        receiverList.addLast(receiver);
-    }
-
-    public void removeReceiver(String username) {
-        for (User user : receiverList) {
-            if (user.getUserName().equals(username)) {
+    //true = add, false = remove
+    public boolean addOrRemoveReceiver(User receiver) {
+        for(User user : receiverList) {
+            if(user.equals(receiver)) {
                 receiverList.remove(user);
-                return;
+                return false;
             }
         }
+        receiverList.addLast(receiver);
+        return true;
     }
 
     public List<User> getReceiverList() {

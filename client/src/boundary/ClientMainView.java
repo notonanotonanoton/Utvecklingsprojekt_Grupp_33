@@ -67,15 +67,19 @@ public class ClientMainView extends Thread {
         mainFrame.addUserModel(usersInfo);
     }
 
-    public void addContact(String username) {
+    public void updateContactsGUI(Object[][] contactInfo) {
+        mainFrame.addContactsModel(contactInfo);
+    }
 
+    public void addContact(String username) {
+        client.addContact(username);
     }
 
     public void removeContact(String username) {
-
+        client.removeContact(username);
     }
 
     public void addOrRemoveReceiver(String username) {
-
+        client.addOrRemoveReceiver(username);
     }
 }

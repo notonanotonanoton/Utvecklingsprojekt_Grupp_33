@@ -164,9 +164,9 @@ public class ClientMainFrame extends JFrame {
     }
 
     private void setupTables() {
-        messageWindow.setModel(createTableModel());
-        contactList.setModel(createTableModel());
-        userList.setModel(createTableModel());
+        messageWindow.setModel(createTableModel(4));
+        contactList.setModel(createTableModel(3));
+        userList.setModel(createTableModel(3));
 
         messageWindow.getTableHeader().setUI(null);
         contactList.getTableHeader().setUI(null);
@@ -191,8 +191,8 @@ public class ClientMainFrame extends JFrame {
         });
     }
 
-    private DefaultTableModel createTableModel() {
-        return new DefaultTableModel(0, 4) {
+    private DefaultTableModel createTableModel(int columnNbr) {
+        return new DefaultTableModel(0, columnNbr) {
             //override needed to render ImageIcons in JTable
             @Override
             public Class getColumnClass(int column) {
