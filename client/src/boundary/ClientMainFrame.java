@@ -101,8 +101,7 @@ public class ClientMainFrame extends JFrame {
     private void onSend() {
         if(!(messageTextInput.getText().isBlank() && messageImage == null)) {
             mainView.createMessage(messageTextInput.getText(), messageImage);
-            messageTextInput.setText(null);
-            messageImage = null;
+            messageTextInput.setText("");
             buttonInsert.setBackground(new Color(100,95,95));
         }
     }
@@ -147,6 +146,11 @@ public class ClientMainFrame extends JFrame {
         userList.setForeground(textColor);
     }
 
+    public void resetInsert() {
+        messageImage = null;
+        buttonInsert.setBackground(new Color(100,95,95));
+    }
+
     //TODO mostly copied from LoginFrame, maybe there's a better solution?
     private void selectMessageImage() {
         JFileChooser fileChooser = new JFileChooser();
@@ -160,7 +164,7 @@ public class ClientMainFrame extends JFrame {
 
                         break; // Exit the loop if the file is valid
                     } else {
-                        messageImage = null;
+                        resetInsert();
                         JOptionPane.showMessageDialog(this, "Please select a valid image file.");
                     }
                 } catch (IOException ioException) {
