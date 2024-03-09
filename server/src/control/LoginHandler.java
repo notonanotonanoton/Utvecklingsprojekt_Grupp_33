@@ -79,12 +79,14 @@ public class LoginHandler extends Thread {
                 responseToClient = 11;
                 System.out.println("Logging in to user: " + username);
                 logger.logInfo("Logging in to user " + username, LocalDateTime.now());
+                loginBoundary.writeResponseToClient(responseToClient);
             } else {
                 responseToClient = 12;
                 System.out.println("Creating new user: " + username);
                 logger.logInfo("Creating new user " + username, LocalDateTime.now());
                 user = new User(username);
                 registeredUsers.addUser(user);
+                System.out.println("Added and saved user.");
                 loginBoundary.writeResponseToClient(responseToClient);
                 try {
                     byte[] profilePicture = loginBoundary.readProfilePictureFromClient();
@@ -93,6 +95,7 @@ public class LoginHandler extends Thread {
                     Image scaledImage = bufferedImage.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
                     ImageIcon scaledIcon = new ImageIcon(scaledImage);
                     user.setUserIcon(scaledIcon);
+                    registeredUsers.saveUsersToFile(); // need to update every time probably?
                 } catch (IOException ioe) {
                     ioe.printStackTrace();
                     System.out.println("Login Server: Profile Picture Error");

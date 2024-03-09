@@ -54,7 +54,10 @@ public class Client {
         String messageText = message.getMessageText();
         ImageIcon messageIcon = message.getMessageImage();
         String username = message.getSender().getUserName();
+        System.out.println("Username: " + username);
         ImageIcon userIcon = message.getSender().getUserIcon();
+
+        System.out.println("User Icon: " + userIcon);
 
         //TODO fix better null handling
         if(messageText == null) {
