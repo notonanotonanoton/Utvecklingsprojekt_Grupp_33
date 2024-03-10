@@ -216,16 +216,17 @@ public class ClientMainFrame extends JFrame {
         ListSelectionModel contactModel = contactList.getSelectionModel();
         contactModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         contactModel.addListSelectionListener(e -> {
-            if (e.getValueIsAdjusting()) {
-                int column = contactList.getSelectedColumn();
+            if (!e.getValueIsAdjusting()) {
                 int row = contactList.getSelectedRow();
-                if (column == 2) {
-                    removeContact((String) contactList.getValueAt(row, 1));
-                } else if (column == 0 || column == 1) {
-                    toggleReceiver((String) contactList.getValueAt(row, 1));
+                int column = contactList.getSelectedColumn();
+                if (row != -1 && column != -1) {
+                    if (column == 2) {
+                        removeContact((String) contactList.getValueAt(row, 1));
+                    } else if (column == 0 || column == 1) {
+                        toggleReceiver((String) contactList.getValueAt(row, 1));
+                    }
+                    contactList.clearSelection();
                 }
-                //contactModel.clearSelection();
-                SwingUtilities.invokeLater(() -> contactList.clearSelection());
             }
         });
 
@@ -233,31 +234,33 @@ public class ClientMainFrame extends JFrame {
         userModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         userModel.addListSelectionListener(e -> {
             if (!e.getValueIsAdjusting()) {
-                int column = userList.getSelectedColumn();
                 int row = userList.getSelectedRow();
-                if (column == 2) {
-                    addContact((String) userList.getValueAt(row, 1));
-                } else if (column == 0 || column == 1) {
-                    toggleReceiver((String) userList.getValueAt(row, 1));
+                int column = userList.getSelectedColumn();
+                if (row != -1 && column != -1) {
+                    if (column == 2) {
+                        addContact((String) userList.getValueAt(row, 1));
+                    } else if (column == 0 || column == 1) {
+                        toggleReceiver((String) userList.getValueAt(row, 1));
+                    }
+                    userList.clearSelection();
                 }
-                //userModel.clearSelection();
-                SwingUtilities.invokeLater(() -> userList.clearSelection());
             }
-
         });
 
         ListSelectionModel receiverModel = receiverList.getSelectionModel();
         receiverModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         receiverModel.addListSelectionListener(e -> {
-                    if (!e.getValueIsAdjusting()) {
-                        if (receiverList.getSelectedColumn() == 0) {
-                            toggleReceiver((String) receiverList.getValueAt(receiverList.getSelectedRow(), 0));
-                        }
-                        //receiverModel.clearSelection();
-                        SwingUtilities.invokeLater(() -> receiverList.clearSelection());
+            if (!e.getValueIsAdjusting()) {
+                int row = receiverList.getSelectedRow();
+                int column = receiverList.getSelectedColumn();
+                if (row != -1 && column != -1) {
+                    if (column == 0) {
+                        toggleReceiver((String) receiverList.getValueAt(row, 0));
                     }
+                    receiverList.clearSelection();
                 }
-        );
+            }
+        });
     }
 
     private DefaultTableModel createTableModel(int columnNbr, String tableName) {
