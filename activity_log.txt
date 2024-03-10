@@ -836,3 +836,20 @@
 2024-03-10 20:27:05 [INFO] Sent Message from: barnacle, to: [barnacle]
 2024-03-10 20:27:05 [INFO] Sent Message from: barnacle, to: [barnacle]
 2024-03-10 20:27:06 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 22:26:41 [INFO] Creating new user hejhej
+2024-03-10 22:26:43 [INFO] Connected user hejhej to main server
+2024-03-10 22:26:43 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 22:26:55 [INFO] Creating new user barnaby
+2024-03-10 22:26:57 [INFO] Connected user barnaby to main server
+2024-03-10 22:26:57 [INFO] Sent UsersOnlineMessage: [hejhej, barnaby] to clients with username: [hejhej, barnaby]
+2024-03-10 22:26:57 [INFO] Sent UsersOnlineMessage: [hejhej, barnaby] to clients with username: [hejhej, barnaby]
+2024-03-10 22:27:07 [INFO] Sent Message from: hejhej, to: [hejhej]
+2024-03-10 22:27:12 [INFO] Sent Message from: hejhej, to: [hejhej]
+2024-03-10 22:27:13 [INFO] Sent Message from: hejhej, to: [hejhej]
+2024-03-10 22:27:14 [INFO] Sent Message from: hejhej, to: [hejhej]
+2024-03-10 22:27:15 [INFO] Sent Message from: hejhej, to: [hejhej]
+2024-03-10 22:27:18 [INFO] Sent Message from: hejhej, to: [hejhej]
+2024-03-10 22:27:26 [INFO] Sent Message from: barnaby, to: [barnaby]
+2024-03-10 22:27:33 [INFO] Sent Message from: barnaby, to: [barnaby]
+2024-03-10 22:27:41 [INFO] Sent Message from: barnaby, to: [barnaby]
+2024-03-10 22:27:45 [INFO] Sent UsersOnlineMessage: [barnaby] to clients with username: [barnaby]
