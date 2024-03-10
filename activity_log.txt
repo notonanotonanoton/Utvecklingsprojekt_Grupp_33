@@ -667,3 +667,172 @@
 2024-03-10 17:28:52 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
 2024-03-10 17:28:55 [INFO] Sent Message from: Hugo, to: [Hugo]
 2024-03-10 17:28:58 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-10 19:30:54 [INFO] Logging in to user hejhej
+2024-03-10 19:30:54 [INFO] Connected user hejhej to main server
+2024-03-10 19:30:54 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:31:00 [INFO] Creating new user barnacle
+2024-03-10 19:31:03 [INFO] Connected user barnacle to main server
+2024-03-10 19:31:03 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:31:03 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:31:20 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:33:05 [INFO] Logging in to user hejhej
+2024-03-10 19:33:05 [INFO] Connected user hejhej to main server
+2024-03-10 19:33:05 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:33:09 [INFO] Logging in to user barnacle
+2024-03-10 19:33:09 [INFO] Connected user barnacle to main server
+2024-03-10 19:33:09 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:33:09 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:33:28 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:36:40 [INFO] Logging in to user hejhej
+2024-03-10 19:36:41 [INFO] Connected user hejhej to main server
+2024-03-10 19:36:41 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:36:45 [INFO] Logging in to user barnacle
+2024-03-10 19:36:45 [INFO] Connected user barnacle to main server
+2024-03-10 19:36:45 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:36:45 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:39:42 [INFO] Logging in to user hejhej
+2024-03-10 19:39:42 [INFO] Connected user hejhej to main server
+2024-03-10 19:39:42 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:39:45 [INFO] Logging in to user barnacle
+2024-03-10 19:39:45 [INFO] Connected user barnacle to main server
+2024-03-10 19:39:45 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:39:45 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:39:59 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:41:17 [INFO] Logging in to user hejhej
+2024-03-10 19:41:17 [INFO] Connected user hejhej to main server
+2024-03-10 19:41:17 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:41:20 [INFO] Logging in to user barnacle
+2024-03-10 19:41:20 [INFO] Connected user barnacle to main server
+2024-03-10 19:41:20 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:41:20 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:41:41 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:44:37 [INFO] Logging in to user hejhej
+2024-03-10 19:44:37 [INFO] Connected user hejhej to main server
+2024-03-10 19:44:37 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:44:40 [INFO] Logging in to user barnacle
+2024-03-10 19:44:40 [INFO] Connected user barnacle to main server
+2024-03-10 19:44:40 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:44:40 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:47:00 [INFO] Sent UsersOnlineMessage: [barnacle] to clients with username: [barnacle]
+2024-03-10 19:49:24 [INFO] Logging in to user hejhej
+2024-03-10 19:49:24 [INFO] Connected user hejhej to main server
+2024-03-10 19:49:24 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:49:27 [INFO] Logging in to user barnacle
+2024-03-10 19:49:27 [INFO] Connected user barnacle to main server
+2024-03-10 19:49:27 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:49:27 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:50:41 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:51:30 [INFO] Logging in to user hejhej
+2024-03-10 19:51:30 [INFO] Connected user hejhej to main server
+2024-03-10 19:51:30 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:51:34 [INFO] Logging in to user barnacle
+2024-03-10 19:51:34 [INFO] Connected user barnacle to main server
+2024-03-10 19:51:34 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:51:34 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:51:58 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:54:13 [INFO] Logging in to user hejhej
+2024-03-10 19:54:13 [INFO] Connected user hejhej to main server
+2024-03-10 19:54:13 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 19:54:19 [INFO] Logging in to user barnacle
+2024-03-10 19:54:19 [INFO] Connected user barnacle to main server
+2024-03-10 19:54:19 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:54:19 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 19:54:29 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 19:54:29 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 19:54:42 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:54:42 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:54:45 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:54:45 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:54:49 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:54:49 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:54:49 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:54:49 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:54:56 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:54:56 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:55:01 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:55:01 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:58:40 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:58:40 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:58:50 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:58:50 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:58:59 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:58:59 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:59:07 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:59:07 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:59:17 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 19:59:17 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 19:59:23 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:59:23 [INFO] Sent Message from: hejhej, to: [hejhej, barnacle]
+2024-03-10 19:59:30 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 19:59:30 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 19:59:33 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 20:10:28 [INFO] Logging in to user hejhej
+2024-03-10 20:10:28 [INFO] Connected user hejhej to main server
+2024-03-10 20:10:28 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 20:10:32 [INFO] Logging in to user barnacle
+2024-03-10 20:10:32 [INFO] Connected user barnacle to main server
+2024-03-10 20:10:32 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:10:32 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:10:42 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:10:42 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:10:51 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:10:51 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:13:32 [INFO] Logging in to user hejhej
+2024-03-10 20:13:32 [INFO] Connected user hejhej to main server
+2024-03-10 20:13:32 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 20:13:39 [INFO] Logging in to user barnacle
+2024-03-10 20:13:39 [INFO] Connected user barnacle to main server
+2024-03-10 20:13:39 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:13:39 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:13:40 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 20:14:11 [INFO] Logging in to user hejhej
+2024-03-10 20:14:11 [INFO] Connected user hejhej to main server
+2024-03-10 20:14:11 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 20:14:14 [INFO] Logging in to user barnacle
+2024-03-10 20:14:14 [INFO] Connected user barnacle to main server
+2024-03-10 20:14:14 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:14:14 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:14:26 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:14:26 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:14:29 [INFO] Sent Message from: hejhej, to: [hejhej]
+2024-03-10 20:14:37 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:14:37 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:15:39 [INFO] Logging in to user hejhej
+2024-03-10 20:15:39 [INFO] Connected user hejhej to main server
+2024-03-10 20:15:39 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 20:15:42 [INFO] Logging in to user barnacle
+2024-03-10 20:15:42 [INFO] Connected user barnacle to main server
+2024-03-10 20:15:42 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:15:42 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:15:49 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:15:53 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:16:01 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:19:55 [INFO] Logging in to user hejhej
+2024-03-10 20:19:55 [INFO] Connected user hejhej to main server
+2024-03-10 20:19:55 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 20:19:58 [INFO] Logging in to user barnacle
+2024-03-10 20:19:58 [INFO] Connected user barnacle to main server
+2024-03-10 20:19:58 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:19:58 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:20:08 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:20:08 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:20:15 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:20:15 [INFO] Sent Message from: barnacle, to: [barnacle, hejhej]
+2024-03-10 20:26:48 [INFO] Logging in to user hejhej
+2024-03-10 20:26:48 [INFO] Connected user hejhej to main server
+2024-03-10 20:26:48 [INFO] Sent UsersOnlineMessage: [hejhej] to clients with username: [hejhej]
+2024-03-10 20:26:53 [INFO] Logging in to user barnacle
+2024-03-10 20:26:53 [INFO] Connected user barnacle to main server
+2024-03-10 20:26:53 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:26:53 [INFO] Sent UsersOnlineMessage: [barnacle, hejhej] to clients with username: [barnacle, hejhej]
+2024-03-10 20:26:56 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:26:57 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:26:57 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:26:57 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:27:03 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:27:04 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:27:04 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:27:05 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:27:05 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:27:05 [INFO] Sent Message from: barnacle, to: [barnacle]
+2024-03-10 20:27:06 [INFO] Sent Message from: barnacle, to: [barnacle]

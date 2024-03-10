@@ -53,8 +53,7 @@ public class Client {
         if (messageImage != null) {
             message.setMessageImage(messageImage);
         }
-        message.setSender(user);
-        //TODO get receivers from GUI
+        message.setSender(this.user);
         message.setReceivers(receivers.getReceiverList());
         mainView.sendMessageToServer(message);
         System.out.println("Message '" + message.getMessageText() + "' sent to server");
