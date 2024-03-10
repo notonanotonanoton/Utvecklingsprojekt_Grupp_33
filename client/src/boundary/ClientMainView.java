@@ -59,6 +59,9 @@ public class ClientMainView extends Thread {
     public void notifyServerOnExit() {
         client.assembleExitMessage();
     }
+    public void saveContactsToFile() {
+        client.saveContactsToFile();
+    }
 
     public void handleMessage(Object messageObject) {
         client.handleMessage(messageObject);

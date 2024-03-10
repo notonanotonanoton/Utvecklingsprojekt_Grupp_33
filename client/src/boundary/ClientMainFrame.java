@@ -146,6 +146,7 @@ public class ClientMainFrame extends JFrame {
     }
 
     private void onExit() {
+        mainView.saveContactsToFile();
         mainView.notifyServerOnExit();
         dispose();
     }
