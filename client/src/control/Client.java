@@ -123,8 +123,8 @@ public class Client {
                     userInfo[i][j] = "+ CONTACT";
                 }
             }
-            mainView.updateOnlineUsersGUI(userInfo);
         }
+        mainView.updateOnlineUsersGUI(userInfo);
     }
 
     public void updateContactsGUI() {
@@ -140,7 +140,7 @@ public class Client {
                     contactInfo[i][j] = "- CONTACT";
                 }
             }
-            mainView.updateContactsGUI(contactInfo);
         }
+        mainView.updateContactsGUI(contactInfo);
     }
 }

@@ -91,13 +91,25 @@ public class ClientMainFrame extends JFrame {
                 table.scrollRectToVisible(table.getCellRect(table.getRowCount() - 1, 0, true)));
     }
 
-    public void addContactsModel(Object[][] contactInfo) {
-        contactList.setModel(new DefaultTableModel(contactInfo, null));
+    public void addContactsModel(Object[][] contactsInfo) {
+        DefaultTableModel model = (DefaultTableModel) contactList.getModel();
+        if (model.getRowCount() > 0) {
+            model.setRowCount(0);
+        }
+        for (Object[] row : contactsInfo) {
+            model.addRow(row);
+        }
         scrollTableToBottom(contactList);
     }
 
     public void addUserModel(Object[][] usersInfo) {
-        userList.setModel(new DefaultTableModel(usersInfo, null));
+        DefaultTableModel model = (DefaultTableModel) userList.getModel();
+        if (model.getRowCount() > 0) { // fix for duplicating rows
+            model.setRowCount(0);
+        }
+        for (Object[] row : usersInfo) {
+            model.addRow(row);
+        }
         scrollTableToBottom(userList);
     }
 
