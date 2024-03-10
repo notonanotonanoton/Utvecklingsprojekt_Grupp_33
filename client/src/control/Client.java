@@ -80,6 +80,9 @@ public class Client {
         if (messageIcon == null) {
             messageIcon = new ImageIcon();
         }
+        if (username == null) {
+            username = "";
+        }
         if (userIcon == null) {
             userIcon = new ImageIcon();
         }
@@ -90,6 +93,7 @@ public class Client {
     }
 
     public void addContact(String username) {
+        System.out.println("ADD CONTACT CALLED");
         if(username.equals(this.user.getUserName())) {
             return;
         }
@@ -108,6 +112,7 @@ public class Client {
     }
 
     public void removeContact(String username) {
+        System.out.println("REMOVE CONTACT CALLED");
         if(username.equals(this.user.getUserName())) {
             return;
         }
@@ -116,6 +121,7 @@ public class Client {
     }
 
     public void toggleReceiver(String username) {
+        System.out.println("TOGGLE RECEIVER CALLED");
         if(username.equals(this.user.getUserName())) {
             return;
         }
@@ -158,23 +164,13 @@ public class Client {
 
         for (int i = 0; i < contactInfo.length; i++) {
             for (int j = 0; j < contactInfo[0].length; j++) {
-                contactInfo[i][j] = null;
-            }
-        }
-        int row = 0;
-        for (User contact : contactList) {
-            boolean isDuplicate = false;
-            for (int i = 0; i < row; i++) {
-                if (contactInfo[i][1].equals(contact.getUserName())) {
-                    isDuplicate = true;
-                    break;
+                if (j == 0) {
+                    contactInfo[i][j] = contactList.get(i).getUserIcon();
+                } else if (j == 1) {
+                    contactInfo[i][j] = contactList.get(i).getUserName();
+                } else if (j == 2) {
+                    contactInfo[i][j] = "-CONTACT";
                 }
-            }
-            if (!isDuplicate) {
-                contactInfo[row][0] = contact.getUserIcon();
-                contactInfo[row][1] = contact.getUserName();
-                contactInfo[row][2] = "-CONTACT";
-                row++;
             }
         }
         mainView.updateContactsGUI(contactInfo);
