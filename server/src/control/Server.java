@@ -62,6 +62,7 @@ public class Server implements PropertyChangeListener {
                 clientConnection.getThread().addMessageToHandlerList(message);
             } else {
                 unsentMessages.put(user, message);
+                System.out.println("MESSAGE TO " + user + " PUT IN UNSENTMESSAGES!!!! \n");
             }
         }
     }

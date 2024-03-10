@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/Client2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/activity_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/activity_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ClientMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/control/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/control/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/entity/Receivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entity/Receivers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/boundary/ServerBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/boundary/ServerBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/control/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/control/LoginHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/control/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/control/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/entity/RegisteredUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/entity/RegisteredUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared_entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared_entity/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared_entity/user/UserStatus.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/users.dat" afterDir="false" />
     </list>
     <list id="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" name="Changes by holmberg" comment="" />
@@ -45,6 +51,7 @@
     "Application.ActionLogView.executor": "Run",
     "Application.BoundaryTest.executor": "Run",
     "Application.Client.executor": "Run",
+    "Application.Client2.executor": "Run",
     "Application.ClientMain.executor": "Run",
     "Application.ClientMainFrame.executor": "Run",
     "Application.LoginFrame.executor": "Run",
@@ -84,8 +91,11 @@
       <recent name="C:\Users\Asaky\courses\da343a\inlamningsuppgifter\projekt\DA343A_UP_33\client\src\boundary" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Client2">
     <configuration name="ActionLogView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.ActionLogView" />
       <module name="server" />
@@ -108,6 +118,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Client2" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Client2" />
+      <module name="client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Server" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -120,6 +139,7 @@
     <list>
       <item itemvalue="Application.Server" />
       <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Client2" />
       <item itemvalue="Application.ActionLogView" />
     </list>
     <recent_temporary>
@@ -163,7 +183,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/client/src/control/Client.java</url>
-          <line>68</line>
+          <line>69</line>
           <properties class="control.Client">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -181,7 +201,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/client/src/control/Client.java</url>
-          <line>118</line>
+          <line>119</line>
           <properties class="control.Client">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

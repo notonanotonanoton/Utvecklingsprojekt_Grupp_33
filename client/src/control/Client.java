@@ -41,6 +41,7 @@ public class Client {
             onlineUsers.setUserList(message.getReceivers());
             updateOnlineUsersGUI();
         } else {
+            System.out.println("display message called!!: " + user);
             displayMessageFromServer(message);
         }
     }
