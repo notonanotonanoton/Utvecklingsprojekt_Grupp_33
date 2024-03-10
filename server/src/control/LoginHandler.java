@@ -26,7 +26,7 @@ public class LoginHandler extends Thread {
 
     public LoginHandler(ServerSocket serverSocket, Server server, RegisteredUsers registeredUsers) {
         this.serverSocket = serverSocket;
-        this.registeredUsers = registeredUsers; //TODO read from file instead
+        this.registeredUsers = registeredUsers;
         clientConnectionList = ClientConnectionList.getInstance();
         this.server = server;
         this.logger = new ActivityFileLogger();

@@ -1,14 +1,11 @@
 package shared_entity.user;
 
-import javax.swing.*;
+import javax.swing.ImageIcon;
 import java.io.Serializable;
-import java.util.List;
-
 
 public class User implements Serializable {
     private String userName;
     private ImageIcon userIcon;
-    private List<User> contacts;
 
     public User(String userName) {
         this.userName = userName;
@@ -40,10 +37,6 @@ public class User implements Serializable {
 
     public void setUserIcon(ImageIcon userIcon) {
         this.userIcon = userIcon;
-    }
-
-    public void addContact(User user) {
-        contacts.add(user);
     }
 
     @Override

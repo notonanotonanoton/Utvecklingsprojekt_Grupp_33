@@ -49,6 +49,7 @@ public class ClientMainView extends Thread {
         try {
             oos.writeObject(messageObject);
             oos.flush();
+            oos.reset();
         } catch (IOException ioe) {
             ioe.printStackTrace();
             System.out.println("Client View: Message Error: " + ioe.getMessage());
