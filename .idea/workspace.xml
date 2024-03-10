@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/activity_log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/control/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/control/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/boundary/ServerBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/boundary/ServerBoundary.java" afterDir="false" />
     </list>
     <list id="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" name="Changes by holmberg" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +149,7 @@
       <workItem from="1709979346913" duration="6823000" />
       <workItem from="1710004631397" duration="13095000" />
       <workItem from="1710025802137" duration="1580000" />
-      <workItem from="1710082259029" duration="5179000" />
+      <workItem from="1710082259029" duration="5858000" />
     </task>
     <servers />
   </component>
@@ -170,7 +170,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/client/src/boundary/ClientMainView.java</url>
-          <line>69</line>
+          <line>73</line>
           <properties class="boundary.ClientMainView" method="updateOnlineUsersGUI">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

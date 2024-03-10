@@ -2,6 +2,7 @@ package boundary;
 
 import control.Server;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -31,6 +32,9 @@ public class ServerBoundary extends Thread {
                     server.sendMessageToHandler(ois.readObject());
                 } catch (ClassNotFoundException cnfe) {
                     System.out.println("Server: Message Type Mismatch");
+                } catch (EOFException eofe) {
+                    System.out.println("Server Boundary: Client Disconnected");
+                    break;
                 }
             }
             System.out.println("Server Boundary: Client Handler Thread Closed");

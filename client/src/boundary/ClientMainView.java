@@ -4,6 +4,7 @@ import control.Client;
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.SocketException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -30,6 +31,9 @@ public class ClientMainView extends Thread {
                 System.out.println("Client View: Trying to Read Message");
                 handleMessage(ois.readObject());
                 System.out.println("Client View: Read Message");
+            } catch (SocketException se) {
+                System.out.println("Socket closed. Exiting client view thread.");
+                break;
             } catch (ClassNotFoundException cnfe) {
                 cnfe.printStackTrace();
                 System.out.println("Client View: Message Type Mismatch");
@@ -74,6 +78,7 @@ public class ClientMainView extends Thread {
     public void updateContactsGUI(Object[][] contactInfo) {
         mainFrame.addContactsModel(contactInfo);
     }
+
     public void updateReceiversGUI(Object[][] receiversInfo) {
         mainFrame.addReceiverModel(receiversInfo);
     }

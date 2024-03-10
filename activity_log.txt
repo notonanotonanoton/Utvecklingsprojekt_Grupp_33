@@ -612,3 +612,58 @@
 2024-03-10 17:15:00 [INFO] Sent UsersOnlineMessage: [Karl, Hugo] to clients with username: [Karl, Hugo]
 2024-03-10 17:15:00 [INFO] Sent UsersOnlineMessage: [Karl, Hugo] to clients with username: [Karl, Hugo]
 2024-03-10 17:15:03 [INFO] Sent UsersOnlineMessage: [Karl] to clients with username: [Karl]
+2024-03-10 17:19:28 [INFO] Logging in to user Lisa
+2024-03-10 17:19:28 [INFO] Connected user Lisa to main server
+2024-03-10 17:19:28 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-10 17:19:31 [INFO] Logging in to user Hugo
+2024-03-10 17:19:31 [INFO] Connected user Hugo to main server
+2024-03-10 17:19:31 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:19:31 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:19:34 [INFO] Sent UsersOnlineMessage: [Hugo] to clients with username: [Hugo]
+2024-03-10 17:20:04 [INFO] Logging in to user Lisa
+2024-03-10 17:20:04 [INFO] Connected user Lisa to main server
+2024-03-10 17:20:04 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-10 17:20:08 [INFO] Logging in to user Karl
+2024-03-10 17:20:08 [INFO] Connected user Karl to main server
+2024-03-10 17:20:08 [INFO] Sent UsersOnlineMessage: [Karl, Lisa] to clients with username: [Karl, Lisa]
+2024-03-10 17:20:08 [INFO] Sent UsersOnlineMessage: [Karl, Lisa] to clients with username: [Karl, Lisa]
+2024-03-10 17:20:13 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-10 17:20:49 [INFO] Logging in to user Lisa
+2024-03-10 17:20:49 [INFO] Connected user Lisa to main server
+2024-03-10 17:20:49 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-10 17:20:51 [INFO] Logging in to user Hugo
+2024-03-10 17:20:51 [INFO] Connected user Hugo to main server
+2024-03-10 17:20:51 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:20:51 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:20:53 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-10 17:21:24 [INFO] Logging in to user Hugo
+2024-03-10 17:21:24 [INFO] Connected user Hugo to main server
+2024-03-10 17:21:24 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:21:24 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:21:27 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-10 17:21:34 [INFO] Sent Message from: Lisa, to: [Lisa]
+2024-03-10 17:22:49 [INFO] Logging in to user Lisa
+2024-03-10 17:22:49 [INFO] Connected user Lisa to main server
+2024-03-10 17:22:49 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-10 17:22:53 [INFO] Logging in to user Hugo
+2024-03-10 17:22:53 [INFO] Connected user Hugo to main server
+2024-03-10 17:22:53 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:22:53 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:22:55 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-10 17:26:50 [INFO] Logging in to user Lisa
+2024-03-10 17:26:50 [INFO] Connected user Lisa to main server
+2024-03-10 17:26:50 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-10 17:26:53 [INFO] Logging in to user Hugo
+2024-03-10 17:26:53 [INFO] Connected user Hugo to main server
+2024-03-10 17:26:53 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:26:53 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:26:55 [INFO] Sent UsersOnlineMessage: [Hugo] to clients with username: [Hugo]
+2024-03-10 17:28:50 [INFO] Logging in to user Lisa
+2024-03-10 17:28:50 [INFO] Connected user Lisa to main server
+2024-03-10 17:28:50 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-10 17:28:52 [INFO] Logging in to user Hugo
+2024-03-10 17:28:52 [INFO] Connected user Hugo to main server
+2024-03-10 17:28:52 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:28:52 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-10 17:28:55 [INFO] Sent Message from: Hugo, to: [Hugo]
+2024-03-10 17:28:58 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
