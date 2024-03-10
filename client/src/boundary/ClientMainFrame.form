@@ -126,13 +126,14 @@
                   <component id="8b2ef" class="javax.swing.JTable" binding="contactList">
                     <constraints/>
                     <properties>
-                      <autoCreateRowSorter value="true"/>
+                      <autoCreateRowSorter value="false"/>
                       <autoResizeMode value="1"/>
                       <font name="Verdana" size="10"/>
                       <intercellSpacing width="10" height="1"/>
                       <rowHeight value="50"/>
                       <showHorizontalLines value="true"/>
                       <showVerticalLines value="false"/>
+                      <updateSelectionOnSort value="true"/>
                     </properties>
                   </component>
                 </children>
@@ -152,7 +153,7 @@
                   <component id="6c1" class="javax.swing.JTable" binding="userList">
                     <constraints/>
                     <properties>
-                      <autoCreateRowSorter value="true"/>
+                      <autoCreateRowSorter value="false"/>
                       <autoResizeMode value="1"/>
                       <enabled value="true"/>
                       <fillsViewportHeight value="false"/>
@@ -162,6 +163,7 @@
                       <rowHeight value="50"/>
                       <showHorizontalLines value="true"/>
                       <showVerticalLines value="false"/>
+                      <updateSelectionOnSort value="true"/>
                     </properties>
                   </component>
                 </children>

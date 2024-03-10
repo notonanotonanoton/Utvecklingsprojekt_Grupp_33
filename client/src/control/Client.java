@@ -31,7 +31,7 @@ public class Client {
         clientContacts = new ClientContacts();
         receivers = new Receivers(user);
         mainView = new ClientMainView(this, oos, ois);
-        updateContactsGUI();
+        updateReceiversGUI();
     }
 
     public void handleMessage(Object messageObject) {
@@ -75,13 +75,10 @@ public class Client {
 
         //TODO fix better null handling
         if (messageText == null) {
-            messageText = " ";
+            messageText = "";
         }
         if (messageIcon == null) {
             messageIcon = new ImageIcon();
-        }
-        if (username == null) {
-            username = " ";
         }
         if (userIcon == null) {
             userIcon = new ImageIcon();
@@ -93,12 +90,17 @@ public class Client {
     }
 
     public void addContact(String username) {
-        if(username.equals(user.getUserName())) {
+        if(username.equals(this.user.getUserName())) {
             return;
         }
-        for (User user : onlineUsers.getUserList()) {
-            if (user.getUserName().equals(username)) {
-                clientContacts.addContact(user);
+        for (User contactUser : clientContacts.getContactList()) {
+            if (contactUser.getUserName().equals(username)) {
+                return;
+            }
+        }
+        for (User onlineUser : onlineUsers.getUserList()) {
+            if (onlineUser.getUserName().equals(username)) {
+                clientContacts.addContact(onlineUser);
                 updateContactsGUI();
                 return;
             }
@@ -106,7 +108,7 @@ public class Client {
     }
 
     public void removeContact(String username) {
-        if(username.equals(user.getUserName())) {
+        if(username.equals(this.user.getUserName())) {
             return;
         }
         clientContacts.removeContact(username);
@@ -114,12 +116,19 @@ public class Client {
     }
 
     public void toggleReceiver(String username) {
-        if(username.equals(user.getUserName())) {
+        if(username.equals(this.user.getUserName())) {
             return;
         }
-        for (User user : onlineUsers.getUserList()) {
-            if (user.getUserName().equals(username)) {
-                receivers.toggleReceiver(user);
+        for (User userContact : clientContacts.getContactList()) {
+            if (userContact.getUserName().equals(username)) {
+                receivers.toggleReceiver(userContact);
+                updateReceiversGUI();
+                return;
+            }
+        }
+        for (User userOnline : onlineUsers.getUserList()) {
+            if (userOnline.getUserName().equals(username)) {
+                receivers.toggleReceiver(userOnline);
                 updateReceiversGUI();
                 return;
             }
@@ -173,11 +182,9 @@ public class Client {
 
     public void updateReceiversGUI() {
         List<User> receiverList = receivers.getReceiverList();
-        Object[][] receiverInfo = new Object[receiverList.size()][2];
+        Object[][] receiverInfo = new Object[receiverList.size()][1];
         for (int i = 0; i < receiverInfo.length; i++) {
-            if(!receiverInfo[i][0].equals(user.getUserName())) {
                 receiverInfo[i][0] = receiverList.get(i).getUserName();
-            }
         }
         mainView.updateReceiversGUI(receiverInfo);
     }
