@@ -55,7 +55,7 @@ public class LoginView {
         return ois.readObject();
     }
 
-    public void closeLoginWindow() {
+    public void closeLogin() {
         loginFrame.dispose();
     }
 

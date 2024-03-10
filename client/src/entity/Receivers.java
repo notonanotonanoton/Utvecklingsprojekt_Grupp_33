@@ -8,12 +8,13 @@ import java.util.List;
 public class Receivers {
     private List<User> receiverList;
 
-    public Receivers() {
+    public Receivers(User user) {
         receiverList = new ArrayList<>();
+        receiverList.addLast(user);
     }
 
     //true = add, false = remove
-    public boolean addOrRemoveReceiver(User receiver) {
+    public boolean toggleReceiver(User receiver) {
         for(User user : receiverList) {
             if(user.equals(receiver)) {
                 receiverList.remove(user);

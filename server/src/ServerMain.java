@@ -10,7 +10,7 @@ public class ServerMain {
     public static void main(String[] args) {
         ServerSocket serverSocket = null;
         try {
-            serverSocket = new ServerSocket(3343); //TODO there may be a better way to do this
+            serverSocket = new ServerSocket(3343);
         } catch (IOException ioe) {
             System.out.println("ServerMain: Port Error");
         }

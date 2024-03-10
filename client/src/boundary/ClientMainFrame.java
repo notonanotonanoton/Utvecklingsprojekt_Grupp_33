@@ -3,9 +3,9 @@ package boundary;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
+import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -30,6 +30,9 @@ public class ClientMainFrame extends JFrame {
     private JScrollPane userListScrollPane;
     private JScrollPane contactListScrollPane;
     private JTable contactList;
+    private JPanel usersPanel;
+    private JTable receiverList;
+    private JScrollPane receiverListScrollPane;
     private ImageIcon messageImage;
     private Color baseColor = new Color(70, 70, 70);
     private Color mainColor = new Color(45, 45, 50);
@@ -76,10 +79,6 @@ public class ClientMainFrame extends JFrame {
 
 
     public void addMessageRow(Object[] messageInfo) {
-        //TODO remove test print
-        for (Object object : messageInfo) {
-            System.out.println("MainFrame Object Read: " + object.toString());
-        }
         DefaultTableModel tableModel = (DefaultTableModel) messageWindow.getModel();
         tableModel.addRow(messageInfo);
 
@@ -99,7 +98,6 @@ public class ClientMainFrame extends JFrame {
         for (Object[] row : contactsInfo) {
             model.addRow(row);
         }
-        scrollTableToBottom(contactList);
     }
 
     public void addUserModel(Object[][] usersInfo) {
@@ -110,7 +108,16 @@ public class ClientMainFrame extends JFrame {
         for (Object[] row : usersInfo) {
             model.addRow(row);
         }
-        scrollTableToBottom(userList);
+    }
+
+    public void addReceiverModel(Object[][] receiversInfo) {
+        DefaultTableModel model = (DefaultTableModel) receiverList.getModel();
+        if (model.getRowCount() > 0) { // fix for duplicating rows
+            model.setRowCount(0);
+        }
+        for (Object[] row : receiversInfo) {
+            model.addRow(row);
+        }
     }
 
     public void addContact(String username) {
@@ -121,15 +128,19 @@ public class ClientMainFrame extends JFrame {
         mainView.removeContact(username);
     }
 
-    public void addOrRemoveReceiver(String username) {
-        mainView.addOrRemoveReceiver(username);
+    public void toggleReceiver(String username) {
+        mainView.toggleReceiver(username);
     }
 
     private void onSend() {
         if (!(messageTextInput.getText().isBlank() && messageImage == null)) {
-            mainView.createMessage(messageTextInput.getText(), messageImage);
-            messageTextInput.setText("");
-            buttonInsert.setBackground(highlightColor);
+            if(messageTextInput.getText().length() < 250) {
+                mainView.createMessage(messageTextInput.getText(), messageImage);
+                messageTextInput.setText("");
+                buttonInsert.setBackground(highlightColor);
+            } else {
+                JOptionPane.showMessageDialog(this, "Message too long!");
+            }
         }
     }
 
@@ -141,6 +152,7 @@ public class ClientMainFrame extends JFrame {
     }
 
     private void onExit() {
+
         dispose();
     }
 
@@ -150,10 +162,12 @@ public class ClientMainFrame extends JFrame {
         topPanel.setBackground(baseColor);
         buttonPanel.setBackground(baseColor);
         bottomPanel.setBackground(baseColor);
+        usersPanel.setBackground(baseColor);
         messageWindowPanel.setBackground(mainColor);
         messageWindow.setBackground(mainColor);
         userList.setBackground(mainColor);
         contactList.setBackground(mainColor);
+        receiverList.setBackground(mainColor);
         messageTextInput.setBackground(highlightColor);
         buttonInsert.setBackground(highlightColor);
         buttonSend.setBackground(highlightColor);
@@ -163,6 +177,7 @@ public class ClientMainFrame extends JFrame {
         messageWindow.setForeground(textColor);
         userList.setForeground(textColor);
         contactList.setForeground(textColor);
+        receiverList.setForeground(textColor);
 
         messageWindowScrollPane.setBackground(mainColor);
         messageWindowScrollPane.getViewport().setBackground(mainColor);
@@ -173,16 +188,34 @@ public class ClientMainFrame extends JFrame {
         userListScrollPane.setBackground(mainColor);
         userListScrollPane.getViewport().setBackground(mainColor);
         userListScrollPane.setBorder(new MatteBorder(4, 4, 4, 4, mainColor));
+        receiverListScrollPane.setBackground(mainColor);
+        receiverListScrollPane.getViewport().setBackground(mainColor);
+        receiverListScrollPane.setBorder(new MatteBorder(4, 4, 4, 4, mainColor));
+
+        JTableHeader contactsHeader = contactList.getTableHeader();
+        contactsHeader.setBackground(highlightColor);
+        contactsHeader.setForeground(textColor);
+        contactsHeader.setBorder(new MatteBorder(2,2,2,2, buttonBorder));
+        JTableHeader usersHeader = userList.getTableHeader();
+        usersHeader.setBackground(highlightColor);
+        usersHeader.setForeground(textColor);
+        usersHeader.setBorder(new MatteBorder(2, 2, 2, 2, buttonBorder));
+        JTableHeader receiversHeader = receiverList.getTableHeader();
+        receiversHeader.setBackground(highlightColor);
+        receiversHeader.setForeground(textColor);
+        receiversHeader.setBorder(new MatteBorder(2, 2, 2, 2, buttonBorder));
     }
 
     private void setupTables() {
-        messageWindow.setModel(createTableModel(4));
-        contactList.setModel(createTableModel(3));
-        userList.setModel(createTableModel(3));
+        messageWindow.setModel(createTableModel(4, null));
+        TableColumn messageColumn = messageWindow.getColumnModel().getColumn(0);
+        messageColumn.setPreferredWidth(500);
+        messageColumn.setCellRenderer(new WordWrapRenderer(mainColor,textColor,messageWindow.getFont()));
+        contactList.setModel(createTableModel(3, "Contacts"));
+        userList.setModel(createTableModel(3, "Online"));
+        receiverList.setModel(createTableModel(1, "Receivers"));
 
         messageWindow.getTableHeader().setUI(null);
-        contactList.getTableHeader().setUI(null);
-        userList.getTableHeader().setUI(null);
     }
 
     private void setupTableListeners() {
@@ -190,20 +223,24 @@ public class ClientMainFrame extends JFrame {
             if(contactList.getSelectedColumn() == 2) {
                 removeContact((String) contactList.getValueAt(contactList.getSelectedRow(), 1));
             } else if (contactList.getSelectedColumn() == 0 || contactList.getSelectedColumn() == 2) {
-                addOrRemoveReceiver((String) contactList.getValueAt(contactList.getSelectedRow(), 1));
+                toggleReceiver((String) contactList.getValueAt(contactList.getSelectedRow(), 1));
             }
         });
 
         userList.getSelectionModel().addListSelectionListener(e -> {
             if(userList.getSelectedColumn() == 2) {
                 addContact((String) userList.getValueAt(userList.getSelectedRow(), 1));
-            } else if (userList.getSelectedColumn() == 0 || userList.getSelectedColumn() == 2) {
-                addOrRemoveReceiver((String) userList.getValueAt(userList.getSelectedRow(), 1));
+            } else if (userList.getSelectedColumn() == 0 || userList.getSelectedColumn() == 1) {
+                toggleReceiver((String) userList.getValueAt(userList.getSelectedRow(), 1));
             }
         });
+
+        receiverList.getSelectionModel().addListSelectionListener(e ->
+                        toggleReceiver((String) receiverList.getValueAt(receiverList.getSelectedRow(), 0))
+                );
     }
 
-    private DefaultTableModel createTableModel(int columnNbr) {
+    private DefaultTableModel createTableModel(int columnNbr, String tableName) {
         return new DefaultTableModel(0, columnNbr) {
             //override needed to render ImageIcons in JTable
             @Override
@@ -214,6 +251,16 @@ public class ClientMainFrame extends JFrame {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
+            }
+
+            @Override
+            public String getColumnName(int column) {
+                if(columnNbr == 1) {
+                    String[] titles = {tableName};
+                    return titles[column];
+                }
+                String[] titles = {"", tableName, "", ""};
+                return titles[column];
             }
         };
     }

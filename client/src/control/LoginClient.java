@@ -41,7 +41,7 @@ public class LoginClient {
                 loginView.selectProfilePicture();
             }
 
-            loginView.closeLoginWindow();
+            loginView.closeLogin();
             if (!clientSocket.isClosed()) {
                 try {
                     Message message = (Message)loginView.getUserMessageFromServer();

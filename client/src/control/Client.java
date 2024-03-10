@@ -28,12 +28,11 @@ public class Client {
         onlineUsers = new OnlineUsers();
         //TODO load ClientContacts from file here or inside ClientContacts class?
         clientContacts = new ClientContacts();
-        receivers = new Receivers();
+        receivers = new Receivers(user);
         mainView = new ClientMainView(this, oos, ois);
         updateContactsGUI();
     }
 
-    //TODO add full implementation when possible
     public void handleMessage(Object messageObject) {
         Message message = (Message) messageObject;
         message.setReceivedByUser(); // correct?
@@ -87,6 +86,9 @@ public class Client {
     }
 
     public void addContact(String username) {
+        if(username.equals(user.getUserName())) {
+            return;
+        }
         for (User user : onlineUsers.getUserList()) {
             if (user.getUserName().equals(username)) {
                 clientContacts.addContact(user);
@@ -97,14 +99,21 @@ public class Client {
     }
 
     public void removeContact(String username) {
+        if(username.equals(user.getUserName())) {
+            return;
+        }
         clientContacts.removeContact(username);
         updateContactsGUI();
     }
 
-    public void addOrRemoveReceiver(String username) {
+    public void toggleReceiver(String username) {
+        if(username.equals(user.getUserName())) {
+            return;
+        }
         for (User user : onlineUsers.getUserList()) {
             if (user.getUserName().equals(username)) {
-                receivers.addOrRemoveReceiver(user);
+                receivers.toggleReceiver(user);
+                updateReceiversGUI();
                 return;
             }
         }
@@ -120,7 +129,7 @@ public class Client {
                 } else if (j == 1) {
                     userInfo[i][j] = userList.get(i).getUserName();
                 } else if (j == 2) {
-                    userInfo[i][j] = "+ CONTACT";
+                    userInfo[i][j] = "+CONTACT";
                 }
             }
         }
@@ -137,10 +146,21 @@ public class Client {
                 } else if (j == 1) {
                     contactInfo[i][j] = contactList.get(i).getUserName();
                 } else if (j == 2) {
-                    contactInfo[i][j] = "- CONTACT";
+                    contactInfo[i][j] = "-CONTACT";
                 }
             }
         }
         mainView.updateContactsGUI(contactInfo);
+    }
+
+    public void updateReceiversGUI() {
+        List<User> receiverList = receivers.getReceiverList();
+        Object[][] receiverInfo = new Object[receiverList.size()][2];
+        for (int i = 0; i < receiverInfo.length; i++) {
+            if(!receiverInfo[i][0].equals(user.getUserName())) {
+                receiverInfo[i][0] = receiverList.get(i).getUserName();
+            }
+        }
+        mainView.updateReceiversGUI(receiverInfo);
     }
 }

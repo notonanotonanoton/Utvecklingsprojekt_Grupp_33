@@ -10,13 +10,17 @@ public class LoginFrame extends JFrame {
 
     private LoginView loginView;
 
-    //TODO add LoginView parameter
     LoginFrame(LoginView loginView) {
         initComponents();
         this.loginView = loginView;
-        this.setTitle("Login");
-        this.setSize(300, 200);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setTitle("Login");
+        setSize(300, 200);
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                onExit();
+            }
+        });
         this.setVisible(true);
     }
 
@@ -70,7 +74,7 @@ public class LoginFrame extends JFrame {
         return name.endsWith(".jpg") || name.endsWith(".jpeg") || name.endsWith(".png");
     }
 
-//    public static void main(String[] args) {
-//        LoginFrame loginFrame = new LoginFrame();
-//    }
+    public void onExit() {
+        dispose();
+    }
 }

@@ -70,6 +70,9 @@ public class ClientMainView extends Thread {
     public void updateContactsGUI(Object[][] contactInfo) {
         mainFrame.addContactsModel(contactInfo);
     }
+    public void updateReceiversGUI(Object[][] receiversInfo) {
+        mainFrame.addReceiverModel(receiversInfo);
+    }
 
     public void addContact(String username) {
         client.addContact(username);
@@ -79,7 +82,7 @@ public class ClientMainView extends Thread {
         client.removeContact(username);
     }
 
-    public void addOrRemoveReceiver(String username) {
-        client.addOrRemoveReceiver(username);
+    public void toggleReceiver(String username) {
+        client.toggleReceiver(username);
     }
 }
