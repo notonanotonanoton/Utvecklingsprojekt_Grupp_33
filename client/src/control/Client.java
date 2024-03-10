@@ -54,10 +54,8 @@ public class Client {
         String messageText = message.getMessageText();
         ImageIcon messageIcon = message.getMessageImage();
         String username = message.getSender().getUserName();
-        System.out.println("Username: " + username);
+        String formattedUsername = "From: " + username;
         ImageIcon userIcon = message.getSender().getUserIcon();
-
-        System.out.println("User Icon: " + userIcon);
 
         //TODO fix better null handling
         if(messageText == null) {
@@ -73,7 +71,7 @@ public class Client {
             userIcon = new ImageIcon();
         }
 
-        Object[] messageInfo = new Object[]{messageText, messageIcon, username, userIcon};
+        Object[] messageInfo = new Object[]{messageText, messageIcon, formattedUsername, userIcon};
 
         mainView.addMessageRow(messageInfo);
     }

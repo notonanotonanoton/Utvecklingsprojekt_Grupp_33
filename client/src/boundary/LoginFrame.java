@@ -1,5 +1,7 @@
 package boundary;
 import javax.swing.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,7 +16,7 @@ public class LoginFrame extends JFrame {
         this.loginView = loginView;
         this.setTitle("Login");
         this.setSize(300, 200);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
     }
 

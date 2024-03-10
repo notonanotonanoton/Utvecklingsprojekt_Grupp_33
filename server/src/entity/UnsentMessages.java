@@ -31,6 +31,10 @@ public class UnsentMessages {
         userMessages.add(message);
     }
 
+    public synchronized void remove(User user) {
+        unsentMessages.remove(user);
+    }
+
     public synchronized LinkedList<Message> get(User user) {
         return unsentMessages.get(user); // kan returnerna null
     }

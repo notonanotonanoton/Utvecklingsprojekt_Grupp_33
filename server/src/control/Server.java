@@ -11,6 +11,7 @@ import java.beans.PropertyChangeListener;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.time.LocalDateTime;
+import java.util.LinkedList;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class Server implements PropertyChangeListener {
@@ -37,6 +38,7 @@ public class Server implements PropertyChangeListener {
         if(event.getPropertyName().equals("clients")) {
             System.out.println("Got ClientConnectionList update, sending Message");
             UsersOnlineMessage onlineMessage = new UsersOnlineMessage(clientConnectionList.getAllUsers());
+            System.out.println(clientConnectionList.getAllUsers());
             sendMessageToHandler(onlineMessage);
         }
     }
@@ -73,6 +75,7 @@ public class Server implements PropertyChangeListener {
             this.serverBoundary = new ServerBoundary(Server.this, clientSocket,
                     clientConnection.getOutputStream(), clientConnection.getInputStream());
             messageList = new LinkedBlockingQueue<>();
+            loadUnsentMessages(); // testing this
             logger = new ActivityFileLogger();
             //careful of timing, ClientConnectionList has listener that sends Message
             clientConnectionList.put(user, clientConnection);
@@ -100,6 +103,16 @@ public class Server implements PropertyChangeListener {
             } catch (InterruptedException ie) {
                 //thread waiting to put Messages
                 System.out.println("Server: Interrupted Put");
+            }
+        }
+
+        private void loadUnsentMessages() {
+            LinkedList<Message> userMessages = unsentMessages.get(user);
+            if (userMessages != null) {
+                for (Message message : userMessages) {
+                    addMessageToHandlerList(message);
+                }
+                unsentMessages.remove(user);
             }
         }
     }
