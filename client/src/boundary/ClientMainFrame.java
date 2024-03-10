@@ -92,9 +92,7 @@ public class ClientMainFrame extends JFrame {
 
     public void addContactsModel(Object[][] contactsInfo) {
         DefaultTableModel model = (DefaultTableModel) contactList.getModel();
-        if (model.getRowCount() > 0) {
-            model.setRowCount(0);
-        }
+        model.setRowCount(0);
         for (Object[] row : contactsInfo) {
             model.addRow(row);
         }
@@ -102,9 +100,7 @@ public class ClientMainFrame extends JFrame {
 
     public void addUserModel(Object[][] usersInfo) {
         DefaultTableModel model = (DefaultTableModel) userList.getModel();
-        if (model.getRowCount() > 0) { // fix for duplicating rows
-            model.setRowCount(0);
-        }
+        model.setRowCount(0);
         for (Object[] row : usersInfo) {
             model.addRow(row);
         }
@@ -112,9 +108,7 @@ public class ClientMainFrame extends JFrame {
 
     public void addReceiverModel(Object[][] receiversInfo) {
         DefaultTableModel model = (DefaultTableModel) receiverList.getModel();
-        if (model.getRowCount() > 0) { // fix for duplicating rows
-            model.setRowCount(0);
-        }
+        model.setRowCount(0);
         for (Object[] row : receiversInfo) {
             model.addRow(row);
         }
@@ -134,7 +128,7 @@ public class ClientMainFrame extends JFrame {
 
     private void onSend() {
         if (!(messageTextInput.getText().isBlank() && messageImage == null)) {
-            if(messageTextInput.getText().length() < 250) {
+            if (messageTextInput.getText().length() < 250) {
                 mainView.createMessage(messageTextInput.getText(), messageImage);
                 messageTextInput.setText("");
                 buttonInsert.setBackground(highlightColor);
@@ -195,7 +189,7 @@ public class ClientMainFrame extends JFrame {
         JTableHeader contactsHeader = contactList.getTableHeader();
         contactsHeader.setBackground(highlightColor);
         contactsHeader.setForeground(textColor);
-        contactsHeader.setBorder(new MatteBorder(2,2,2,2, buttonBorder));
+        contactsHeader.setBorder(new MatteBorder(2, 2, 2, 2, buttonBorder));
         JTableHeader usersHeader = userList.getTableHeader();
         usersHeader.setBackground(highlightColor);
         usersHeader.setForeground(textColor);
@@ -210,7 +204,7 @@ public class ClientMainFrame extends JFrame {
         messageWindow.setModel(createTableModel(4, null));
         TableColumn messageColumn = messageWindow.getColumnModel().getColumn(0);
         messageColumn.setPreferredWidth(500);
-        messageColumn.setCellRenderer(new WordWrapRenderer(mainColor,textColor,messageWindow.getFont()));
+        messageColumn.setCellRenderer(new WordWrapRenderer(mainColor, textColor, messageWindow.getFont()));
         contactList.setModel(createTableModel(3, "Contacts"));
         userList.setModel(createTableModel(3, "Online"));
         receiverList.setModel(createTableModel(1, "Receivers"));
@@ -219,25 +213,51 @@ public class ClientMainFrame extends JFrame {
     }
 
     private void setupTableListeners() {
-        contactList.getSelectionModel().addListSelectionListener(e -> {
-            if(contactList.getSelectedColumn() == 2) {
-                removeContact((String) contactList.getValueAt(contactList.getSelectedRow(), 1));
-            } else if (contactList.getSelectedColumn() == 0 || contactList.getSelectedColumn() == 2) {
-                toggleReceiver((String) contactList.getValueAt(contactList.getSelectedRow(), 1));
+        ListSelectionModel contactModel = contactList.getSelectionModel();
+        contactModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        contactModel.addListSelectionListener(e -> {
+            if (e.getValueIsAdjusting()) {
+                int column = contactList.getSelectedColumn();
+                int row = contactList.getSelectedRow();
+                if (column == 2) {
+                    removeContact((String) contactList.getValueAt(row, 1));
+                } else if (column == 0 || column == 1) {
+                    toggleReceiver((String) contactList.getValueAt(row, 1));
+                }
+                //contactModel.clearSelection();
+                SwingUtilities.invokeLater(() -> contactList.clearSelection());
             }
         });
 
-        userList.getSelectionModel().addListSelectionListener(e -> {
-            if(userList.getSelectedColumn() == 2) {
-                addContact((String) userList.getValueAt(userList.getSelectedRow(), 1));
-            } else if (userList.getSelectedColumn() == 0 || userList.getSelectedColumn() == 1) {
-                toggleReceiver((String) userList.getValueAt(userList.getSelectedRow(), 1));
+        ListSelectionModel userModel = userList.getSelectionModel();
+        userModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        userModel.addListSelectionListener(e -> {
+            if (!e.getValueIsAdjusting()) {
+                int column = userList.getSelectedColumn();
+                int row = userList.getSelectedRow();
+                if (column == 2) {
+                    addContact((String) userList.getValueAt(row, 1));
+                } else if (column == 0 || column == 1) {
+                    toggleReceiver((String) userList.getValueAt(row, 1));
+                }
+                //userModel.clearSelection();
+                SwingUtilities.invokeLater(() -> userList.clearSelection());
             }
+
         });
 
-        receiverList.getSelectionModel().addListSelectionListener(e ->
-                        toggleReceiver((String) receiverList.getValueAt(receiverList.getSelectedRow(), 0))
-                );
+        ListSelectionModel receiverModel = receiverList.getSelectionModel();
+        receiverModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        receiverModel.addListSelectionListener(e -> {
+                    if (!e.getValueIsAdjusting()) {
+                        if (receiverList.getSelectedColumn() == 0) {
+                            toggleReceiver((String) receiverList.getValueAt(receiverList.getSelectedRow(), 0));
+                        }
+                        //receiverModel.clearSelection();
+                        SwingUtilities.invokeLater(() -> receiverList.clearSelection());
+                    }
+                }
+        );
     }
 
     private DefaultTableModel createTableModel(int columnNbr, String tableName) {
@@ -255,7 +275,7 @@ public class ClientMainFrame extends JFrame {
 
             @Override
             public String getColumnName(int column) {
-                if(columnNbr == 1) {
+                if (columnNbr == 1) {
                     String[] titles = {tableName};
                     return titles[column];
                 }
