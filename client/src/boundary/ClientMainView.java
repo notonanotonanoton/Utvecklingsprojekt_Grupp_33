@@ -18,7 +18,7 @@ public class ClientMainView extends Thread {
         this.client = client;
         this.oos = oos;
         this.ois = ois;
-        mainFrame = new ClientMainFrame(this, client.getUsernameFromClient());
+        mainFrame = new ClientMainFrame(this);
         start();
     }
 

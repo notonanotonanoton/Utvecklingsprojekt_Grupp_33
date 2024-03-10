@@ -63,6 +63,7 @@ public class Client {
     public void assembleExitMessage() {
         ExitMessage exitMessage = new ExitMessage(user);
         mainView.sendMessageToServer(exitMessage);
+        closeClient();
     }
 
     public void displayMessageFromServer(Message message) {
@@ -187,9 +188,5 @@ public class Client {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public String getUsernameFromClient() {
-        return user.getUserName();
     }
 }
