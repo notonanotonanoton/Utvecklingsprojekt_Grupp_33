@@ -45,6 +45,7 @@ public final class RegisteredUsers {
     public synchronized void saveUsersToFile() {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             out.writeObject(userList);
+            out.flush();
             System.out.println("Users saved to file!");
         } catch (IOException e) {
             System.out.println("IOException, failed to save users to file - " + e.getMessage());

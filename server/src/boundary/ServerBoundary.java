@@ -44,7 +44,7 @@ public class ServerBoundary extends Thread {
         }
     }
 
-    public void writeMessageToClient(Object messageObject) {
+    public synchronized void writeMessageToClient(Object messageObject) {
         try {
             System.out.println("writing message to client");
             oos.writeObject(messageObject);

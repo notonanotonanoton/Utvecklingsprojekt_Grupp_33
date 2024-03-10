@@ -8,13 +8,11 @@ import java.util.List;
 public class User implements Serializable {
     private String userName;
     private ImageIcon userIcon;
-    private UserStatus status;
     private List<User> contacts;
 
     public User(String userName) {
         this.userName = userName;
         userIcon = new ImageIcon();
-        status = UserStatus.OFFLINE;
     }
 
     @Override
@@ -42,14 +40,6 @@ public class User implements Serializable {
 
     public void setUserIcon(ImageIcon userIcon) {
         this.userIcon = userIcon;
-    }
-
-    public UserStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(UserStatus status) {
-        this.status = status;
     }
 
     public void addContact(User user) {
