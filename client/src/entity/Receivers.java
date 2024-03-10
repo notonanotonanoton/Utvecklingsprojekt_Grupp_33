@@ -13,16 +13,16 @@ public class Receivers {
         receiverList.addLast(user);
     }
 
-    //true = add, false = remove
-    public boolean toggleReceiver(User receiver) {
+    public void toggleReceiver(User receiver) {
         for(User user : receiverList) {
             if(user.equals(receiver)) {
                 receiverList.remove(user);
-                return false;
+                System.out.println("Removed " + user + " from Receivers");
+                return;
             }
         }
+        System.out.println("Added " + receiver + " to Receivers");
         receiverList.addLast(receiver);
-        return true;
     }
 
     public List<User> getReceiverList() {
