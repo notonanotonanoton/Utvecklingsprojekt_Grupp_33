@@ -27,11 +27,12 @@ public class Client {
         this.user = user;
         this.clientSocket = clientSocket;
         onlineUsers = new OnlineUsers();
-        //TODO load ClientContacts from file here or inside ClientContacts class?
-        clientContacts = new ClientContacts();
+        clientContacts = new ClientContacts(user.getUserName());
+        System.out.println("Loaded clients for user: "  + user.getUserName() + ": " + clientContacts.getContactList());
         receivers = new Receivers(user);
         mainView = new ClientMainView(this, oos, ois);
         updateReceiversGUI();
+        updateContactsGUI();
     }
 
     public void handleMessage(Object messageObject) {
@@ -64,6 +65,10 @@ public class Client {
         ExitMessage exitMessage = new ExitMessage(user);
         mainView.sendMessageToServer(exitMessage);
         closeClient();
+    }
+
+    public void saveContactsToFile() {
+        clientContacts.saveUsersToFile();
     }
 
     public void displayMessageFromServer(Message message) {

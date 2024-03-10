@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/control/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/control/LoginHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared_entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared_entity/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/activity_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Client2.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Client2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/control/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/control/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/entity/ClientContacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entity/ClientContacts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/users.dat" afterDir="false" />
     </list>
     <list id="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" name="Changes by holmberg" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +62,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "268",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "mans__branch",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
@@ -87,7 +91,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager">
     <configuration name="ActionLogView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.ActionLogView" />
       <module name="server" />
@@ -174,18 +178,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/client/src/control/Client.java</url>
-          <line>69</line>
-          <properties class="control.Client">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/client/src/boundary/ClientMainView.java</url>
-          <line>73</line>
-          <properties class="boundary.ClientMainView" method="updateOnlineUsersGUI">
+          <line>76</line>
+          <properties class="boundary.ClientMainView">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -193,7 +188,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/client/src/control/Client.java</url>
-          <line>119</line>
+          <line>124</line>
           <properties class="control.Client">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

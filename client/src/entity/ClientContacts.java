@@ -2,16 +2,17 @@ package entity;
 
 import shared_entity.user.User;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO write to file before exit!
 public class ClientContacts {
     private List<User> contactList;
+    private final String userFileName;
 
-    //TODO load from file instead!
-    public ClientContacts() {
-        contactList = new ArrayList<>();
+    public ClientContacts(String username) {
+        this.userFileName = username + "_contacts.dat";
+        contactList = loadContactsFromFile();
     }
 
     public void addContact(User contact) {
@@ -26,6 +27,26 @@ public class ClientContacts {
                 System.out.println("Removed " + user + " from Contacts");
                 return;
             }
+        }
+    }
+
+    private List<User> loadContactsFromFile() {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(userFileName))) {
+            return (ArrayList<User>) in.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Error loading contacts from file: " + e.getMessage());
+            return new ArrayList<>();
+        }
+    }
+
+    public void saveUsersToFile() {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(userFileName))) {
+            out.writeObject(contactList);
+            out.flush();
+            System.out.println("Contacts saved to file!");
+        } catch (IOException e) {
+            System.out.println("Error saving contacts to file: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
