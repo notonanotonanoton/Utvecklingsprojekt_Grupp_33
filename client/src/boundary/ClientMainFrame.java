@@ -152,7 +152,7 @@ public class ClientMainFrame extends JFrame {
     }
 
     private void onExit() {
-
+        mainView.notifyServerOnExit();
         dispose();
     }
 

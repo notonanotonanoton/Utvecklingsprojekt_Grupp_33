@@ -4,6 +4,7 @@ import boundary.ClientMainView;
 import entity.ClientContacts;
 import entity.OnlineUsers;
 import entity.Receivers;
+import shared_entity.message.ExitMessage;
 import shared_entity.message.Message;
 import shared_entity.message.UsersOnlineMessage;
 import shared_entity.user.User;
@@ -57,6 +58,12 @@ public class Client {
         message.setReceivers(receivers.getReceiverList());
         mainView.sendMessageToServer(message);
         System.out.println("Message '" + message.getMessageText() + "' sent to server");
+    }
+
+    public void assembleExitMessage() {
+        ExitMessage exitMessage = new ExitMessage(user);
+        mainView.sendMessageToServer(exitMessage);
+        closeClient();
     }
 
     public void displayMessageFromServer(Message message) {
@@ -139,15 +146,26 @@ public class Client {
     public void updateContactsGUI() {
         List<User> contactList = clientContacts.getContactList();
         Object[][] contactInfo = new Object[contactList.size()][3];
+
         for (int i = 0; i < contactInfo.length; i++) {
             for (int j = 0; j < contactInfo[0].length; j++) {
-                if (j == 0) {
-                    contactInfo[i][j] = contactList.get(i).getUserIcon();
-                } else if (j == 1) {
-                    contactInfo[i][j] = contactList.get(i).getUserName();
-                } else if (j == 2) {
-                    contactInfo[i][j] = "-CONTACT";
+                contactInfo[i][j] = null;
+            }
+        }
+        int row = 0;
+        for (User contact : contactList) {
+            boolean isDuplicate = false;
+            for (int i = 0; i < row; i++) {
+                if (contactInfo[i][1].equals(contact.getUserName())) {
+                    isDuplicate = true;
+                    break;
                 }
+            }
+            if (!isDuplicate) {
+                contactInfo[row][0] = contact.getUserIcon();
+                contactInfo[row][1] = contact.getUserName();
+                contactInfo[row][2] = "-CONTACT";
+                row++;
             }
         }
         mainView.updateContactsGUI(contactInfo);
@@ -162,5 +180,13 @@ public class Client {
             }
         }
         mainView.updateReceiversGUI(receiverInfo);
+    }
+
+    public void closeClient() {
+        try {
+            clientSocket.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
