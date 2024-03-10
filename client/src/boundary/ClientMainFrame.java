@@ -34,6 +34,7 @@ public class ClientMainFrame extends JFrame {
     private JTable receiverList;
     private JScrollPane receiverListScrollPane;
     private ImageIcon messageImage;
+    private String username;
     private Color baseColor = new Color(70, 70, 70);
     private Color mainColor = new Color(45, 45, 50);
     private Color highlightColor = new Color(100, 95, 95);
@@ -41,7 +42,8 @@ public class ClientMainFrame extends JFrame {
     private Color textColor = new Color(200, 200, 200);
     private Color buttonBorder = new Color(115, 110, 110);
 
-    public ClientMainFrame(ClientMainView mainView) {
+    public ClientMainFrame(ClientMainView mainView, String username) {
+        this.username = username;
         this.mainView = mainView;
         setResizable(false);
         setSize(1280, 720);
@@ -152,7 +154,7 @@ public class ClientMainFrame extends JFrame {
     }
 
     private void onExit() {
-
+        mainView.notifyServerOnExit();
         dispose();
     }
 

@@ -2,6 +2,7 @@ package control;
 
 import boundary.ServerBoundary;
 import entity.*;
+import shared_entity.message.ExitMessage;
 import shared_entity.message.Message;
 import shared_entity.message.UsersOnlineMessage;
 import shared_entity.user.User;
@@ -47,6 +48,13 @@ public class Server implements PropertyChangeListener {
         Message message = (Message) messageObject;
         message.setReceivedByServer(); // correct?
         System.out.println("send to message handler received");
+
+        if (message instanceof ExitMessage) {
+            System.out.println("Server: Exit Message Received");
+            ExitMessage exitMessage = (ExitMessage) message;
+            clientConnectionList.removeClient(exitMessage.getSender());
+            return;
+        }
 
         for (User user : message.getReceivers()) {
             ClientConnection clientConnection = clientConnectionList.get(user);

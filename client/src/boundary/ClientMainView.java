@@ -18,7 +18,7 @@ public class ClientMainView extends Thread {
         this.client = client;
         this.oos = oos;
         this.ois = ois;
-        mainFrame = new ClientMainFrame(this);
+        mainFrame = new ClientMainFrame(this, client.getUsernameFromClient());
         start();
     }
 
@@ -49,6 +49,10 @@ public class ClientMainView extends Thread {
             ioe.printStackTrace();
             System.out.println("Client View: Message Error: " + ioe.getMessage());
         }
+    }
+
+    public void notifyServerOnExit() {
+        client.assembleExitMessage();
     }
 
     public void handleMessage(Object messageObject) {
