@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activity_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/activity_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ClientMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/boundary/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/LoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientMainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/ClientMainView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/control/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/control/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/entity/OnlineUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entity/OnlineUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/control/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/control/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/entity/UnsentMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/entity/UnsentMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/users.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/entity/Receivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entity/Receivers.java" afterDir="false" />
     </list>
     <list id="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" name="Changes by holmberg" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,7 +58,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;268&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;mans__branch&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;anton__branch&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -88,7 +84,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="ActionLogView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.ActionLogView" />
       <module name="server" />
@@ -153,7 +149,8 @@
       <workItem from="1709639012758" duration="15624000" />
       <workItem from="1709815197348" duration="22309000" />
       <workItem from="1709979346913" duration="6823000" />
-      <workItem from="1710004631397" duration="206000" />
+      <workItem from="1710004631397" duration="13095000" />
+      <workItem from="1710025802137" duration="1580000" />
     </task>
     <servers />
   </component>
@@ -161,6 +158,19 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/client/src/control/Client.java</url>
+          <line>62</line>
+          <properties class="control.Client" method="displayMessageFromServer">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="javax.swing.ImageIcon" memberName="loadStatus" />
