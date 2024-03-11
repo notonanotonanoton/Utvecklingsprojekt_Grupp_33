@@ -15,6 +15,11 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.List;
 
+/**
+ * Represents a client in the chat system.
+ * Each client is associated with a user, maintains communication with the server,
+ * and manages user interactions through the main view.
+ */
 public class Client {
     private User user;
     private Socket clientSocket;
@@ -35,6 +40,12 @@ public class Client {
         updateContactsGUI();
     }
 
+    /**
+     * Handles incoming messages from the server.
+     * Updates the online users list if the message is a UsersOnlineMessage.
+     * Displays the message in the main view if it's not a UsersOnlineMessage.
+     * @param messageObject The message received from the server
+     */
     public void handleMessage(Object messageObject) {
         Message message = (Message) messageObject;
         message.setReceivedByUser();
@@ -47,6 +58,11 @@ public class Client {
         }
     }
 
+    /**
+     * Assembles and sends a user-to-user message to the server.
+     * @param messageText The text content of the message
+     * @param messageImage The image attached to the message
+     */
     public void assembleUserToUserMessage(String messageText, ImageIcon messageImage) {
         Message message = new Message();
         if (messageText != null) {
@@ -61,16 +77,27 @@ public class Client {
         System.out.println("Message '" + message.getMessageText() + "' sent to server");
     }
 
+    /**
+     * Assembles and sends an exit message to the server.
+     * Closes the client after sending the message.
+     */
     public void assembleExitMessage() {
         ExitMessage exitMessage = new ExitMessage(user);
         mainView.sendMessageToServer(exitMessage);
         closeClient();
     }
 
+    /**
+     * Saves the client's contacts to a file.
+     */
     public void saveContactsToFile() {
         clientContacts.saveUsersToFile();
     }
 
+    /**
+     * Displays a message received from the server in the main view.
+     * @param message The message received from the server
+     */
     public void displayMessageFromServer(Message message) {
         String messageText = message.getMessageText();
         ImageIcon messageIcon = message.getMessageImage();
@@ -96,6 +123,10 @@ public class Client {
         mainView.addMessageRow(messageInfo);
     }
 
+    /**
+     * Adds a contact to the client's contact list.
+     * @param username The username of the contact to add
+     */
     public void addContact(String username) {
         System.out.println("ADD CONTACT CALLED");
         if(username.equals(this.user.getUserName())) {
@@ -115,6 +146,10 @@ public class Client {
         }
     }
 
+    /**
+     * Removes a contact from the client's contact list.
+     * @param username The username of the contact to remove
+     */
     public void removeContact(String username) {
         System.out.println("REMOVE CONTACT CALLED");
         if(username.equals(this.user.getUserName())) {
@@ -124,6 +159,10 @@ public class Client {
         updateContactsGUI();
     }
 
+    /**
+     * Toggles a receiver's status in the receiver list.
+     * @param username The username of the receiver
+     */
     public void toggleReceiver(String username) {
         System.out.println("TOGGLE RECEIVER CALLED");
         if(username.equals(this.user.getUserName())) {
@@ -145,6 +184,9 @@ public class Client {
         }
     }
 
+    /**
+     * Updates the GUI with the current list of online users.
+     */
     public void updateOnlineUsersGUI() {
         List<User> userList = onlineUsers.getUserList();
         Object[][] userInfo = new Object[userList.size()][3];
@@ -162,6 +204,9 @@ public class Client {
         mainView.updateOnlineUsersGUI(userInfo);
     }
 
+    /**
+     * Updates the GUI with the current list of contacts.
+     */
     public void updateContactsGUI() {
         List<User> contactList = clientContacts.getContactList();
         Object[][] contactInfo = new Object[contactList.size()][3];
@@ -180,6 +225,9 @@ public class Client {
         mainView.updateContactsGUI(contactInfo);
     }
 
+    /**
+     * Updates the GUI with the current list of receivers.
+     */
     public void updateReceiversGUI() {
         List<User> receiverList = receivers.getReceiverList();
         Object[][] receiverInfo = new Object[receiverList.size()][1];
@@ -189,6 +237,9 @@ public class Client {
         mainView.updateReceiversGUI(receiverInfo);
     }
 
+    /**
+     * Closes the client by closing the client socket.
+     */
     public void closeClient() {
         try {
             clientSocket.close();
