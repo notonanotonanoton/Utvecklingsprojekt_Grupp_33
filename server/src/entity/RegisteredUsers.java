@@ -4,10 +4,11 @@ import shared_entity.user.User;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-
+/**
+ * The RegisteredUsers class manages the collection of registered users in the chat system.
+ * It provides methods to find, add, save, and load users from a file.
+ */
 public final class RegisteredUsers {
 
     private static RegisteredUsers INSTANCE;

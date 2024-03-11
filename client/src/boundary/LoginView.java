@@ -6,6 +6,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+/**
+ * The LoginView class is responsible for communication between the client-side application and the server during the login process.
+ * It manages the elements related to logging in, including sending the username and profile picture to the server.
+ */
 public class LoginView {
     private LoginClient loginClient;
     private LoginFrame loginFrame;

@@ -9,6 +9,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+/**
+ * The ClientMainView class manages the graphical user interface and communication with the server in the client-side application.
+ * It handles displaying messages, sending messages to the server, and updating the user interface based on server responses.
+ */
 public class ClientMainView extends Thread {
     private Client client;
     private ObjectOutputStream oos;

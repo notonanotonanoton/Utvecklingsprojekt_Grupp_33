@@ -6,6 +6,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+/**
+ * The ClientConnection class represents a connection between the server and a client.
+ */
 public class ClientConnection {
     private Socket socket;
     private ObjectOutputStream oos;
@@ -26,10 +29,6 @@ public class ClientConnection {
         return socket;
     }
 
-    public void setSocket(Socket socket) {
-        this.socket = socket;
-    }
-
     public ObjectOutputStream getOutputStream() {
         if (ois == null) {
             System.out.println("Warning! Get called on null OutputStream");
@@ -37,19 +36,11 @@ public class ClientConnection {
         return oos;
     }
 
-    public void setOutputStream(ObjectOutputStream oos) {
-        this.oos = oos;
-    }
-
     public ObjectInputStream getInputStream() {
         if (ois == null) {
             System.out.println("Warning! Get called on null InputStream");
         }
         return ois;
-    }
-
-    public void setInputStream(ObjectInputStream ois) {
-        this.ois = ois;
     }
 
     public void addThread(Server.ClientHandler clientHandler) {

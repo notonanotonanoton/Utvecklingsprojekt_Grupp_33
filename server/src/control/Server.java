@@ -15,20 +15,31 @@ import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.concurrent.LinkedBlockingQueue;
 
+/**
+ * The Server class represents the main server logic for handling client connections
+ * and message communication.
+ */
 public class Server implements PropertyChangeListener {
     private ServerSocket serverSocket;
     private ClientConnectionList clientConnectionList;
-    private RegisteredUsers registeredUsers;
     private UnsentMessages unsentMessages;
 
+    /**
+     * Constructor for the Server class.
+     * @param serverSocket The ServerSocket object for server communication.
+     */
     public Server(ServerSocket serverSocket) {
         this.serverSocket = serverSocket;
         clientConnectionList = ClientConnectionList.getInstance();
         clientConnectionList.addPropertyChangeListener(this);
         unsentMessages = UnsentMessages.getInstance();
-        registeredUsers = RegisteredUsers.getInstance(); //TODO read from file instead
     }
 
+    /**
+     * Method to connect a client to the server.
+     * @param user The User object representing the client.
+     * @param clientConnection The ClientConnection object representing the client's connection.
+     */
     public synchronized void connectClient(User user, ClientConnection clientConnection) {
         new ClientHandler(user, clientConnection).start();
     }
@@ -44,9 +55,13 @@ public class Server implements PropertyChangeListener {
         }
     }
 
+    /**
+     * Method to send a message to the appropriate client handler.
+     * @param messageObject The message to be sent.
+     */
     public synchronized void sendMessageToHandler(Object messageObject) {
         Message message = (Message) messageObject;
-        message.setReceivedByServer(); // correct?
+        message.setReceivedByServer();
         System.out.println("send to message handler received");
 
         if (message instanceof ExitMessage) {
@@ -67,6 +82,9 @@ public class Server implements PropertyChangeListener {
         }
     }
 
+    /**
+     * Inner class representing a client handler thread.
+     */
     public class ClientHandler extends Thread {
         private User user;
         private ClientConnection clientConnection;
@@ -75,6 +93,11 @@ public class Server implements PropertyChangeListener {
         private ServerBoundary serverBoundary;
         private ActivityFileLogger logger;
 
+        /**
+         * Constructor for ClientHandler.
+         * @param user The User object associated with this handler.
+         * @param clientConnection The ClientConnection object for this handler.
+         */
         public ClientHandler(User user, ClientConnection clientConnection) {
             this.user = user;
             this.clientConnection = clientConnection;
@@ -84,12 +107,14 @@ public class Server implements PropertyChangeListener {
             this.serverBoundary = new ServerBoundary(Server.this, clientSocket,
                     clientConnection.getOutputStream(), clientConnection.getInputStream());
             messageList = new LinkedBlockingQueue<>();
-            loadUnsentMessages(); // testing this
+            loadUnsentMessages();
             logger = new ActivityFileLogger();
-            //careful of timing, ClientConnectionList has listener that sends Message
             clientConnectionList.put(user, clientConnection);
         }
 
+        /**
+         * Main execution logic for the client handler thread.
+         */
         @Override
         public void run() {
             System.out.println("Server: Client Handler Started");
@@ -99,22 +124,27 @@ public class Server implements PropertyChangeListener {
                     serverBoundary.writeMessageToClient(message);
                     logger.logInfo(message.toString(), LocalDateTime.now());
                 } catch (InterruptedException ie) {
-                    //waiting for messageList
                     System.out.println("Server: Interrupted Take");
                 }
             }
             System.out.println("Server: Client Socket Closed");
         }
 
+        /**
+         * Method to add a message to the handler's message list.
+         * @param message The message to be added.
+         */
         public void addMessageToHandlerList(Message message) {
             try {
                 messageList.put(message);
             } catch (InterruptedException ie) {
-                //thread waiting to put Messages
                 System.out.println("Server: Interrupted Put");
             }
         }
 
+        /**
+         * Method to load unsent messages for the user associated with this handler.
+         */
         private void loadUnsentMessages() {
             LinkedList<Message> userMessages = unsentMessages.get(user);
             if (userMessages != null) {

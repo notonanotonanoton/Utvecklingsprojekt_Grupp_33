@@ -8,12 +8,21 @@ import shared_entity.user.User;
 import java.io.*;
 import java.net.Socket;
 
+/**
+ * The LoginClient class is responsible for client-side handling login functionality.
+ */
 public class LoginClient {
     private Socket clientSocket;
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
     private LoginView loginView;
 
+    /**
+     * Constructor for the LoginClient class.
+     * Establishes a connection with the server and initializes input/output streams.
+     * @param ip The IP address of the server.
+     * @param port The port number of the server.
+     */
     public LoginClient(String ip, int port) {
         try {
             clientSocket = new Socket(ip, port);

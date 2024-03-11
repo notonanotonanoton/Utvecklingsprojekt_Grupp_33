@@ -37,7 +37,7 @@ public class Client {
 
     public void handleMessage(Object messageObject) {
         Message message = (Message) messageObject;
-        message.setReceivedByUser(); // correct?
+        message.setReceivedByUser();
         if (message instanceof UsersOnlineMessage) {
             onlineUsers.setUserList(message.getReceivers());
             updateOnlineUsersGUI();
@@ -78,7 +78,6 @@ public class Client {
         String formattedUsername = "From: " + username;
         ImageIcon userIcon = message.getSender().getUserIcon();
 
-        //TODO fix better null handling
         if (messageText == null) {
             messageText = "";
         }

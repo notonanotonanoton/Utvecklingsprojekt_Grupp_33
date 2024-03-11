@@ -7,6 +7,12 @@ import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * The ClientConnectionList class manages the mapping of users to their respective client connections.
+ * It provides methods for adding, retrieving, and removing client connections, as well as notifying
+ * listeners (server) about changes to the client connections.
+ */
+
 public final class ClientConnectionList {
     private static ClientConnectionList INSTANCE;
     private HashMap<User, ClientConnection> clients = new HashMap<>();

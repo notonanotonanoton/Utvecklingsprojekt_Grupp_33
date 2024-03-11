@@ -3,6 +3,10 @@ package shared_entity.user;
 import javax.swing.ImageIcon;
 import java.io.Serializable;
 
+/**
+ * Represents a user in the chat system.
+ * Each user has a username and a user icon.
+ */
 public class User implements Serializable {
     private String userName;
     private ImageIcon userIcon;
