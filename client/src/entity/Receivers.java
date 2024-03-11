@@ -2,12 +2,11 @@ package entity;
 
 import shared_entity.user.User;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Receivers {
-    private ArrayList<User> receiverList;
+    private List<User> receiverList;
 
     public Receivers(User user) {
         receiverList = new ArrayList<>();

@@ -12,12 +12,8 @@ public class ClientConnection {
     private ObjectInputStream ois;
     private Server.ClientHandler clientHandler;
 
-    public ClientConnection(Socket socket) {
-        this.socket = socket;
-    }
-
     public ClientConnection(Socket socket, ObjectOutputStream oos, ObjectInputStream ois) {
-        this(socket);
+        this.socket = socket;
         this.oos = oos;
         this.ois = ois;
     }

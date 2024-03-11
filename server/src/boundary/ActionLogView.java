@@ -43,11 +43,4 @@ public class ActionLogView { // remove print statements in server to use? show a
             e.printStackTrace();
         }
     }
-
-    public static void main(String[] args) {
-        ActionLogView actionLogView = new ActionLogView();
-        LocalDateTime startTime = LocalDateTime.parse("2024-02-20 12:00:00", actionLogView.formatter);
-        LocalDateTime endTime = LocalDateTime.parse("2024-03-08 22:59:54", actionLogView.formatter);
-        actionLogView.displayTrafficBetweenDates("activity_log.txt", startTime, endTime);
-    }
 }

@@ -32,5 +32,4 @@ public class ActivityFileLogger implements ActivityLogger{
             ioe.printStackTrace();
         }
     }
-    //TODO writes activity to file. Methods should be called from LoginHandler and ClientHandler
 }

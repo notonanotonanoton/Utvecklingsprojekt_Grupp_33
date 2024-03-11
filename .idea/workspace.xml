@@ -6,9 +6,37 @@
   <component name="ChangeListManager">
     <list default="true" id="0a4f56d3-b626-4e8e-8fc8-34a298da6ec8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/boundary/ClientContactsView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/boundary/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/boundary/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/control/LoginClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/control/LoginClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/entity/Receivers.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entity/Receivers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_008d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_009d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_010d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_011d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_012d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_013d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_014d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_015d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_016d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_017d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_018d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_019d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_020d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_021d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_022d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_023d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_024d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram/UP_33_Class_Diagram.vpp.bak_025d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/ServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/boundary/ActionLogView.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/boundary/ActionLogView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/boundary/LoginBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/boundary/LoginBoundary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/control/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/control/LoginHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared_entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared_entity/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/control/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/control/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/entity/ActivityFileLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/entity/ActivityFileLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/entity/ClientConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/entity/ClientConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ClientTest.java" afterDir="false" />
     </list>
     <list id="05f1bac1-5e56-4c70-9f78-fd92ab4dc6e9" name="Changes by holmberg" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +86,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "268",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "anton__branch",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
@@ -185,7 +213,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/client/src/boundary/ClientMainView.java</url>
           <line>73</line>
-          <properties class="boundary.ClientMainView" method="updateOnlineUsersGUI">
+          <properties class="boundary.ClientMainView">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

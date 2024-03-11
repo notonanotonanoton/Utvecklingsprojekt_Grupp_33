@@ -7,12 +7,10 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class LoginBoundary {
-    private LoginHandler.ClientLogin clientLogin;
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
 
-    public LoginBoundary(LoginHandler.ClientLogin clientLogin, ObjectOutputStream oos, ObjectInputStream ois) {
-        this.clientLogin = clientLogin;
+    public LoginBoundary(ObjectOutputStream oos, ObjectInputStream ois) {
         this.oos = oos;
         this.ois = ois;
     }

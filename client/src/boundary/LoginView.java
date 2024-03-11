@@ -7,13 +7,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class LoginView {
-    private LoginClient loginClient;
     private LoginFrame loginFrame;
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
 
-    public LoginView(LoginClient loginClient, ObjectOutputStream oos, ObjectInputStream ois) {
-        this.loginClient = loginClient;
+    public LoginView(ObjectOutputStream oos, ObjectInputStream ois) {
         this.oos = oos;
         this.ois = ois;
         this.loginFrame = new LoginFrame(this);

@@ -9,24 +9,19 @@ import shared_entity.user.User;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class Server implements PropertyChangeListener {
-    private ServerSocket serverSocket;
     private ClientConnectionList clientConnectionList;
-    private RegisteredUsers registeredUsers;
     private UnsentMessages unsentMessages;
 
-    public Server(ServerSocket serverSocket) {
-        this.serverSocket = serverSocket;
+    public Server() {
         clientConnectionList = ClientConnectionList.getInstance();
         clientConnectionList.addPropertyChangeListener(this);
         unsentMessages = UnsentMessages.getInstance();
-        registeredUsers = RegisteredUsers.getInstance(); //TODO read from file instead
     }
 
     public synchronized void connectClient(User user, ClientConnection clientConnection) {
@@ -69,7 +64,6 @@ public class Server implements PropertyChangeListener {
 
     public class ClientHandler extends Thread {
         private User user;
-        private ClientConnection clientConnection;
         private Socket clientSocket;
         private LinkedBlockingQueue<Message> messageList;
         private ServerBoundary serverBoundary;
@@ -77,7 +71,6 @@ public class Server implements PropertyChangeListener {
 
         public ClientHandler(User user, ClientConnection clientConnection) {
             this.user = user;
-            this.clientConnection = clientConnection;
             clientConnection.addThread(this);
             System.out.println("Added user '" + user.getUserName() + "' and connection to ClientConnectionList");
             this.clientSocket = clientConnection.getSocket();
