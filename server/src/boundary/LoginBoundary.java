@@ -11,18 +11,15 @@ import java.io.ObjectOutputStream;
  * It provides methods to read and write login-related information to and from the client.
  */
 public class LoginBoundary {
-    private LoginHandler.ClientLogin clientLogin;
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
 
     /**
      * Constructor for the LoginBoundary class.
-     * @param clientLogin The ClientLogin object associated with this boundary.
      * @param oos The ObjectOutputStream for writing objects to the client.
      * @param ois The ObjectInputStream for reading objects from the client.
      */
-    public LoginBoundary(LoginHandler.ClientLogin clientLogin, ObjectOutputStream oos, ObjectInputStream ois) {
-        this.clientLogin = clientLogin;
+    public LoginBoundary(ObjectOutputStream oos, ObjectInputStream ois) {
         this.oos = oos;
         this.ois = ois;
     }

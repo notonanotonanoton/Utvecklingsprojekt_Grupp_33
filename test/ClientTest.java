@@ -17,7 +17,7 @@ public class ClientTest {
         } catch (IOException ioe) {
             System.out.println("ServerMain: Port Error");
         }
-        Server server = new Server(serverSocket);
+        Server server = new Server();
         new LoginHandler(serverSocket, server, RegisteredUsers.getInstance());
         //try {
         //Thread.sleep(1000);

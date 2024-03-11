@@ -3,7 +3,6 @@ package control;
 import boundary.LoginBoundary;
 import entity.ActivityFileLogger;
 import entity.ClientConnection;
-import entity.ClientConnectionList;
 import entity.RegisteredUsers;
 import shared_entity.message.LoginMessage;
 import shared_entity.user.User;
@@ -25,14 +24,12 @@ import java.time.LocalDateTime;
 public class LoginHandler extends Thread {
     private ServerSocket serverSocket;
     private RegisteredUsers registeredUsers;
-    private ClientConnectionList clientConnectionList;
     private Server server;
     private ActivityFileLogger logger;
 
     public LoginHandler(ServerSocket serverSocket, Server server, RegisteredUsers registeredUsers) {
         this.serverSocket = serverSocket;
         this.registeredUsers = registeredUsers;
-        clientConnectionList = ClientConnectionList.getInstance();
         this.server = server;
         this.logger = new ActivityFileLogger();
         start();
@@ -61,7 +58,7 @@ public class LoginHandler extends Thread {
                 oos.flush(); //required because of buffer
                 ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(clientSocket.getInputStream()));
                 clientConnection = new ClientConnection(clientSocket, oos, ois);
-                loginBoundary = new LoginBoundary(this, oos, ois);
+                loginBoundary = new LoginBoundary(oos, ois);
             } catch (IOException ioe) {
                 ioe.printStackTrace();
                 System.out.println("Login Server: Initialization Error");

@@ -12,14 +12,13 @@ import java.net.ServerSocket;
  */
 public class ServerMain {
     public static void main(String[] args) {
-        ServerSocket serverSocket = null;
         try {
-            serverSocket = new ServerSocket(3343);
+            ServerSocket serverSocket = new ServerSocket(3343);
+            Server server = new Server();
+            LoginHandler loginHandler = new LoginHandler(serverSocket, server, RegisteredUsers.getInstance());
+            ActionLogView actionLogView = new ActionLogView();
         } catch (IOException ioe) {
-            System.out.println("ServerMain: Port Error");
+            System.out.println("Server Main: Port Error");
         }
-        Server server = new Server(serverSocket);
-        ActionLogView actionLogView = new ActionLogView();
-        new LoginHandler(serverSocket, server, RegisteredUsers.getInstance());
     }
 }

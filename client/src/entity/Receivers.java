@@ -10,7 +10,7 @@ import java.util.List;
  * It provides methods to add, remove, and retrieve receivers.
  */
 public class Receivers {
-    private ArrayList<User> receiverList;
+    private List<User> receiverList;
 
     public Receivers(User user) {
         receiverList = new ArrayList<>();

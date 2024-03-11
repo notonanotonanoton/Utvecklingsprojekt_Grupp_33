@@ -33,7 +33,7 @@ public class LoginClient {
             ioe.printStackTrace();
             System.out.println("Client: Server Connection Failed");
         }
-        this.loginView = new LoginView(this, oos, ois);
+        this.loginView = new LoginView(oos, ois);
         login();
     }
 

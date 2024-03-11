@@ -11,13 +11,11 @@ import java.io.ObjectOutputStream;
  * It manages the elements related to logging in, including sending the username and profile picture to the server.
  */
 public class LoginView {
-    private LoginClient loginClient;
     private LoginFrame loginFrame;
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
 
-    public LoginView(LoginClient loginClient, ObjectOutputStream oos, ObjectInputStream ois) {
-        this.loginClient = loginClient;
+    public LoginView(ObjectOutputStream oos, ObjectInputStream ois) {
         this.oos = oos;
         this.ois = ois;
         this.loginFrame = new LoginFrame(this);
