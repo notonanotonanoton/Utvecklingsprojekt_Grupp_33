@@ -14,6 +14,12 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * The ClientMainFrame class represents the main graphical user interface for the client-side application.
+ * It provides functionality for sending messages, managing contacts, displaying messages, and interacting with the user.
+ * Works together with the ClientMainView to display messages, manage contacts etc.
+ * See ClientMainFrame.form for the GUI layout
+ */
 public class ClientMainFrame extends JFrame {
     private ClientMainView mainView;
     private JPanel contentPane;
@@ -78,6 +84,7 @@ public class ClientMainFrame extends JFrame {
     }
 
 
+    // Adds a new row to the message window table with the provided message information.
     public void addMessageRow(Object[] messageInfo) {
         DefaultTableModel tableModel = (DefaultTableModel) messageWindow.getModel();
         tableModel.addRow(messageInfo);
@@ -90,6 +97,7 @@ public class ClientMainFrame extends JFrame {
                 table.scrollRectToVisible(table.getCellRect(table.getRowCount() - 1, 0, true)));
     }
 
+    // Updates the contact list model in the GUI.
     public void addContactsModel(Object[][] contactsInfo) {
         DefaultTableModel model = (DefaultTableModel) contactList.getModel();
         model.setRowCount(0);
@@ -98,6 +106,7 @@ public class ClientMainFrame extends JFrame {
         }
     }
 
+    // Method to update the user model in the user interface
     public void addUserModel(Object[][] usersInfo) {
         DefaultTableModel model = (DefaultTableModel) userList.getModel();
         model.setRowCount(0);
@@ -106,6 +115,7 @@ public class ClientMainFrame extends JFrame {
         }
     }
 
+    // Method to update the receivers model in the user interface
     public void addReceiverModel(Object[][] receiversInfo) {
         DefaultTableModel model = (DefaultTableModel) receiverList.getModel();
         model.setRowCount(0);
@@ -126,6 +136,7 @@ public class ClientMainFrame extends JFrame {
         mainView.toggleReceiver(username);
     }
 
+    // Method to handle sending a message
     private void onSend() {
         if (!(messageTextInput.getText().isBlank() && messageImage == null)) {
             if (messageTextInput.getText().length() < 250) {
@@ -138,6 +149,7 @@ public class ClientMainFrame extends JFrame {
         }
     }
 
+    // Method to handle inserting an image into a message
     private void onInsert() {
         selectMessageImage();
         if (messageImage != null) {
@@ -145,12 +157,14 @@ public class ClientMainFrame extends JFrame {
         }
     }
 
+    // Method to handle exiting the application
     private void onExit() {
         mainView.saveContactsToFile();
         mainView.notifyServerOnExit();
         dispose();
     }
 
+    // Method to set up the colors of the graphical user interface components
     private void setupColors() {
 
         contentPane.setBackground(baseColor);
@@ -201,6 +215,7 @@ public class ClientMainFrame extends JFrame {
         receiversHeader.setBorder(new MatteBorder(2, 2, 2, 2, buttonBorder));
     }
 
+    // Method to set up the tables in the graphical user interface
     private void setupTables() {
         messageWindow.setModel(createTableModel(4, null));
         TableColumn messageColumn = messageWindow.getColumnModel().getColumn(0);
@@ -213,6 +228,7 @@ public class ClientMainFrame extends JFrame {
         messageWindow.getTableHeader().setUI(null);
     }
 
+    // Method to set up event listeners for the tables
     private void setupTableListeners() {
         ListSelectionModel contactModel = contactList.getSelectionModel();
         contactModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -264,6 +280,7 @@ public class ClientMainFrame extends JFrame {
         });
     }
 
+    // Method to create a default table model with specified column number and table name
     private DefaultTableModel createTableModel(int columnNbr, String tableName) {
         return new DefaultTableModel(0, columnNbr) {
             //override needed to render ImageIcons in JTable
@@ -289,12 +306,13 @@ public class ClientMainFrame extends JFrame {
         };
     }
 
+    // Method to reset the image insert functionality
     private void resetInsert() {
         messageImage = null;
         buttonInsert.setBackground(highlightColor);
     }
 
-    //TODO mostly copied from LoginFrame, maybe there's a better solution?
+    // Method to select an image to be inserted into a message
     private void selectMessageImage() {
         JFileChooser fileChooser = new JFileChooser();
         while (true) {
@@ -304,8 +322,7 @@ public class ClientMainFrame extends JFrame {
                 try {
                     if (isValidFormat(selectedFile)) {
                         messageImage = new ImageIcon(ImageIO.read(selectedFile).getScaledInstance(100, 100, Image.SCALE_SMOOTH));
-
-                        break; // Exit the loop if the file is valid
+                        break;
                     } else {
                         resetInsert();
                         JOptionPane.showMessageDialog(this, "Please select a valid image file.");
@@ -319,7 +336,7 @@ public class ClientMainFrame extends JFrame {
         }
     }
 
-    //TODO copied from LoginFrame, maybe there's a better solution?
+    // Method to check if a file has a valid image format
     private boolean isValidFormat(File file) {
         String name = file.getName().toLowerCase();
         return name.endsWith(".jpg") || name.endsWith(".jpeg") || name.endsWith(".png");

@@ -967,3 +967,85 @@
 2024-03-11 00:20:10 [INFO] Sent UsersOnlineMessage: [Karl, Lisa] to clients with username: [Karl, Lisa]
 2024-03-11 00:20:10 [INFO] Sent UsersOnlineMessage: [Karl, Lisa] to clients with username: [Karl, Lisa]
 2024-03-11 00:20:18 [INFO] Sent UsersOnlineMessage: [Karl] to clients with username: [Karl]
+2024-03-11 00:27:24 [INFO] Creating new user Hajdar
+2024-03-11 00:27:32 [INFO] Connected user Hajdar to main server
+2024-03-11 00:27:32 [INFO] Sent UsersOnlineMessage: [Hajdar] to clients with username: [Hajdar]
+2024-03-11 00:27:39 [INFO] Sent Message from: Hajdar, to: [Hajdar]
+2024-03-11 00:27:49 [INFO] Creating new user Lina
+2024-03-11 00:27:56 [INFO] Connected user Lina to main server
+2024-03-11 00:27:56 [INFO] Sent UsersOnlineMessage: [Hajdar, Lina] to clients with username: [Hajdar, Lina]
+2024-03-11 00:27:56 [INFO] Sent UsersOnlineMessage: [Hajdar, Lina] to clients with username: [Hajdar, Lina]
+2024-03-11 00:28:02 [INFO] Logging in to user Hugo
+2024-03-11 00:28:02 [INFO] Connected user Hugo to main server
+2024-03-11 00:28:02 [INFO] Sent UsersOnlineMessage: [Hajdar, Lina, Hugo] to clients with username: [Hajdar, Lina, Hugo]
+2024-03-11 00:28:02 [INFO] Sent UsersOnlineMessage: [Hajdar, Lina, Hugo] to clients with username: [Hajdar, Lina, Hugo]
+2024-03-11 00:28:02 [INFO] Sent UsersOnlineMessage: [Hajdar, Lina, Hugo] to clients with username: [Hajdar, Lina, Hugo]
+2024-03-11 00:28:28 [INFO] Sent Message from: Hugo, to: [Hugo, Lina, Hajdar, Karl, Lisa]
+2024-03-11 00:28:28 [INFO] Sent Message from: Hugo, to: [Hugo, Lina, Hajdar, Karl, Lisa]
+2024-03-11 00:28:28 [INFO] Sent Message from: Hugo, to: [Hugo, Lina, Hajdar, Karl, Lisa]
+2024-03-11 00:28:54 [INFO] Logging in to user Karl
+2024-03-11 00:28:54 [INFO] Connected user Karl to main server
+2024-03-11 00:28:54 [INFO] Sent UsersOnlineMessage: [Hajdar, Karl, Lina, Hugo] to clients with username: [Hajdar, Karl, Lina, Hugo]
+2024-03-11 00:28:54 [INFO] Sent UsersOnlineMessage: [Hajdar, Karl, Lina, Hugo] to clients with username: [Hajdar, Karl, Lina, Hugo]
+2024-03-11 00:28:54 [INFO] Sent UsersOnlineMessage: [Hajdar, Karl, Lina, Hugo] to clients with username: [Hajdar, Karl, Lina, Hugo]
+2024-03-11 00:28:54 [INFO] Sent Message from: Hugo, to: [Hugo, Lina, Hajdar, Karl, Lisa]
+2024-03-11 00:28:54 [INFO] Sent UsersOnlineMessage: [Hajdar, Karl, Lina, Hugo] to clients with username: [Hajdar, Karl, Lina, Hugo]
+2024-03-11 00:29:21 [INFO] Sent Message from: Karl, to: [Karl, Hajdar, Hugo]
+2024-03-11 00:29:21 [INFO] Sent Message from: Karl, to: [Karl, Hajdar, Hugo]
+2024-03-11 00:29:21 [INFO] Sent Message from: Karl, to: [Karl, Hajdar, Hugo]
+2024-03-11 00:29:41 [INFO] Sent UsersOnlineMessage: [Karl, Lina, Hugo] to clients with username: [Karl, Lina, Hugo]
+2024-03-11 00:29:41 [INFO] Sent UsersOnlineMessage: [Karl, Lina, Hugo] to clients with username: [Karl, Lina, Hugo]
+2024-03-11 00:29:41 [INFO] Sent UsersOnlineMessage: [Karl, Lina, Hugo] to clients with username: [Karl, Lina, Hugo]
+2024-03-11 00:29:42 [INFO] Sent UsersOnlineMessage: [Karl, Hugo] to clients with username: [Karl, Hugo]
+2024-03-11 00:29:42 [INFO] Sent UsersOnlineMessage: [Karl, Hugo] to clients with username: [Karl, Hugo]
+2024-03-11 00:29:43 [INFO] Sent UsersOnlineMessage: [Karl] to clients with username: [Karl]
+2024-03-11 00:29:57 [INFO] Logging in to user Hajdar
+2024-03-11 00:29:57 [INFO] Connected user Hajdar to main server
+2024-03-11 00:29:57 [INFO] Sent UsersOnlineMessage: [Hajdar] to clients with username: [Hajdar]
+2024-03-11 00:30:08 [INFO] Sent Message from: Hajdar, to: [Hajdar, Lina]
+2024-03-11 00:30:13 [INFO] Logging in to user Lina
+2024-03-11 00:30:13 [INFO] Connected user Lina to main server
+2024-03-11 00:30:13 [INFO] Sent UsersOnlineMessage: [Hajdar, Lina] to clients with username: [Hajdar, Lina]
+2024-03-11 00:30:13 [INFO] Sent Message from: Hajdar, to: [Hajdar, Lina]
+2024-03-11 00:30:13 [INFO] Sent UsersOnlineMessage: [Hajdar, Lina] to clients with username: [Hajdar, Lina]
+2024-03-11 00:30:14 [INFO] Sent UsersOnlineMessage: [Hajdar] to clients with username: [Hajdar]
+2024-03-11 00:44:41 [INFO] Logging in to user Lisa
+2024-03-11 00:44:41 [INFO] Connected user Lisa to main server
+2024-03-11 00:44:41 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-11 00:45:22 [INFO] Logging in to user Karl
+2024-03-11 00:45:22 [INFO] Connected user Karl to main server
+2024-03-11 00:45:22 [INFO] Sent UsersOnlineMessage: [Karl, Lisa] to clients with username: [Karl, Lisa]
+2024-03-11 00:45:22 [INFO] Sent UsersOnlineMessage: [Karl, Lisa] to clients with username: [Karl, Lisa]
+2024-03-11 00:45:31 [INFO] Sent Message from: Karl, to: [Karl, Lisa]
+2024-03-11 00:45:31 [INFO] Sent Message from: Karl, to: [Karl, Lisa]
+2024-03-11 00:45:39 [INFO] Sent Message from: Karl, to: [Karl, Lisa]
+2024-03-11 00:45:39 [INFO] Sent Message from: Karl, to: [Karl, Lisa]
+2024-03-11 00:45:42 [INFO] Sent Message from: Karl, to: [Karl]
+2024-03-11 00:45:44 [INFO] Sent UsersOnlineMessage: [Karl] to clients with username: [Karl]
+2024-03-11 01:21:02 [INFO] Logging in to user Lisa
+2024-03-11 01:21:02 [INFO] Connected user Lisa to main server
+2024-03-11 01:21:02 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]
+2024-03-11 01:21:09 [INFO] Sent Message from: Lisa, to: [Lisa, Hugo]
+2024-03-11 01:21:16 [INFO] Logging in to user Hugo
+2024-03-11 01:21:16 [INFO] Connected user Hugo to main server
+2024-03-11 01:21:16 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-11 01:21:16 [INFO] Sent Message from: Lisa, to: [Lisa, Hugo]
+2024-03-11 01:21:16 [INFO] Sent UsersOnlineMessage: [Hugo, Lisa] to clients with username: [Hugo, Lisa]
+2024-03-11 01:21:25 [INFO] Sent Message from: Lisa, to: [Lisa, Hugo]
+2024-03-11 01:21:25 [INFO] Sent Message from: Lisa, to: [Lisa, Hugo]
+2024-03-11 01:21:49 [INFO] Sent Message from: Hugo, to: [Hugo, Hajdar, Karl]
+2024-03-11 01:21:54 [INFO] Logging in to user Karl
+2024-03-11 01:21:54 [INFO] Connected user Karl to main server
+2024-03-11 01:21:54 [INFO] Sent UsersOnlineMessage: [Karl, Hugo, Lisa] to clients with username: [Karl, Hugo, Lisa]
+2024-03-11 01:21:54 [INFO] Sent UsersOnlineMessage: [Karl, Hugo, Lisa] to clients with username: [Karl, Hugo, Lisa]
+2024-03-11 01:21:54 [INFO] Sent Message from: Hugo, to: [Hugo, Hajdar, Karl]
+2024-03-11 01:21:54 [INFO] Sent UsersOnlineMessage: [Karl, Hugo, Lisa] to clients with username: [Karl, Hugo, Lisa]
+2024-03-11 01:22:01 [INFO] Sent Message from: Karl, to: [Karl, Hugo]
+2024-03-11 01:22:01 [INFO] Sent Message from: Karl, to: [Karl, Hugo]
+2024-03-11 01:22:13 [INFO] Sent Message from: Karl, to: [Karl]
+2024-03-11 01:22:20 [INFO] Sent Message from: Karl, to: [Karl, Hugo]
+2024-03-11 01:22:20 [INFO] Sent Message from: Karl, to: [Karl, Hugo]
+2024-03-11 01:22:24 [INFO] Sent Message from: Karl, to: [Karl]
+2024-03-11 01:22:26 [INFO] Sent UsersOnlineMessage: [Karl, Lisa] to clients with username: [Karl, Lisa]
+2024-03-11 01:22:26 [INFO] Sent UsersOnlineMessage: [Karl, Lisa] to clients with username: [Karl, Lisa]
+2024-03-11 01:22:26 [INFO] Sent UsersOnlineMessage: [Lisa] to clients with username: [Lisa]

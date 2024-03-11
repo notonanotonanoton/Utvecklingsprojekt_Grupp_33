@@ -17,6 +17,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.time.LocalDateTime;
 
+/**
+ * The LoginHandler class manages client logins and communication during the login process.
+ * It listens for incoming client connections, handles user authentication, and notifies the server
+ * upon successful login.
+ */
 public class LoginHandler extends Thread {
     private ServerSocket serverSocket;
     private RegisteredUsers registeredUsers;
@@ -94,7 +99,7 @@ public class LoginHandler extends Thread {
                     Image scaledImage = bufferedImage.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
                     ImageIcon scaledIcon = new ImageIcon(scaledImage);
                     user.setUserIcon(scaledIcon);
-                    registeredUsers.saveUsersToFile(); // need to update every time probably?
+                    registeredUsers.saveUsersToFile();
                 } catch (IOException ioe) {
                     ioe.printStackTrace();
                     System.out.println("Login Server: Profile Picture Error");

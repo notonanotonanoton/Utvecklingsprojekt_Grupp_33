@@ -7,6 +7,10 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * The Message class serves as a superclass for messages sent.
+ */
+
 public class Message implements Serializable {
     private User sender;
     private List<User> receivers;

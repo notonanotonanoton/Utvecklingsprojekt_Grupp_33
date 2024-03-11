@@ -6,6 +6,11 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
+/**
+ * The LoginFrame class represents the graphical user interface for the login window.
+ * It allows users to input their username and select a profile picture before logging in, if they aren't already registered.
+
+ */
 public class LoginFrame extends JFrame {
 
     private LoginView loginView;

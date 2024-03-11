@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+//  The ActivityFileLogger class implements the ActivityLogger interface to log server-activity to a file.
 public class ActivityFileLogger implements ActivityLogger{
     private static final String LOG_FILE_PATH = "activity_log.txt";
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); // DateTimeFormatter thread-safe
@@ -14,12 +15,6 @@ public class ActivityFileLogger implements ActivityLogger{
     @Override
     public void logInfo(String message, LocalDateTime date) {
         writeToLogFile("[INFO] " + message, date);
-    }
-
-    @Override
-    public void logError(String message, LocalDateTime date) {
-        writeToLogFile("[ERROR] " + message, date);
-
     }
 
     private void writeToLogFile(String logMessage, LocalDateTime date) {
@@ -32,5 +27,4 @@ public class ActivityFileLogger implements ActivityLogger{
             ioe.printStackTrace();
         }
     }
-    //TODO writes activity to file. Methods should be called from LoginHandler and ClientHandler
 }

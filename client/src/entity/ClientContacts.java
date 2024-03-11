@@ -6,6 +6,10 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The ClientContacts class manages a list of contacts for a specific user.
+ * It provides methods to add, remove, load, and save contacts to/from a file.
+ */
 public class ClientContacts {
     private List<User> contactList;
     private final String userFileName;
