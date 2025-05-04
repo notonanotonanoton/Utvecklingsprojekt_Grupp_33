@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Utvecklingsprojekt_Grupp_33.iml" filepath="$PROJECT_DIR$/Utvecklingsprojekt_Grupp_33.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LocalZero.iml" filepath="$PROJECT_DIR$/LocalZero.iml" />
       <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
       <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
       <module fileurl="file://$PROJECT_DIR$/shared_entity/shared_entity.iml" filepath="$PROJECT_DIR$/shared_entity/shared_entity.iml" />
